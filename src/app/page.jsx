@@ -3,7 +3,6 @@
 import { useEffect, useState ,useRef} from 'react';
 import Slide from './component/slide'
 import Link from 'next/link';
-import Image from 'next/image';
 import Footer from './component/footer';
 import NavBar from "./component/navBar"
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
@@ -22,7 +21,7 @@ const slidesData = [
   },
   {
     imgSrc: '/images/machine.jpg',
-    text: '⦁ Industrial Automation Solutions/Services Provider',
+    text: 'Industrial Automation Solutions/Services Provider',
     parag:
       'El Sewedy Automation Founders have over 25 years of proven technical expertise, they established the Legal Form of El Sewedy Automation Company as S.A.E for Industrial Automation Solutions/Services Provider since 2009',
   },
@@ -35,7 +34,7 @@ const slidesData = [
   {
     imgSrc: '/images/training.jpg',
     text: <>
-    ⦁ El Sewedy Automation Has Privileging to Own the
+     El Sewedy Automation Has Privileging to Own the
     <br />
     Top Talented Automation Engineers" in the industrial Markets
   </>
@@ -102,10 +101,10 @@ const services =[
   },
 ];
 const productsLogos = [
+  '/images/partners/allen-removebg-preview (1).png',
+  '/images/partners/semins-removebg-preview.png',
+  '/images/partners/ghm-removebg-preview.png',
   '/images/partners/partner.png',
-  '/images/partners/partner1.png',
-  '/images/partners/partner2-removebg-preview.png',
-  '/images/partners/partner3.png',
 ];
 
 const ProgressBar = ({ title, number, icon, widthClass }) => {
@@ -173,7 +172,7 @@ function Clients() {
         </h2>
         <div className="overflow-x-auto flex items-center pt-5 ">
           {clientsLogos.map((logoUrl, index) => (
-            <Image
+            <img
               key={index} 
               className="grayscale h-32 col-span-2 w-full object-contain "
               src={logoUrl}
@@ -190,6 +189,8 @@ export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const solutionRef = useRef(null);
   const welcomeRef = useRef(null)
+  const productsRef = useRef(null)
+  const productsisInView = useInView(productsRef);
   const isInView = useInView(solutionRef);
   const wIsInView = useInView(welcomeRef);
   return (
@@ -272,18 +273,21 @@ export default function Home() {
       </div>
       <div className="products">
         <h1 className="text-4xl font-semibold text-center">products Brands</h1>
-        <div className="w-11/12 mx-auto grid sm:grid-cols-4 grid-cols-2">
+        <div className="w-11/12 mx-auto grid sm:grid-cols-4 grid-cols-2" ref={productsRef}>
         {productsLogos.map((imageUrl, index) => (
         <motion.div
           key={index}
+          initial={{ y:0,opacity: 0}}
+          animate={{y:productsisInView?-20:0, opacity:productsisInView? 1:0}}
+          transition={{duration:.7}}
           className='h-52 flex items-center justify-center'
         >
-          <Image
+          <img
             src={imageUrl}
             alt={`Partner ${index + 1}`}
             className="rounded-lg "
-            width={150} 
-            height={100} 
+            width={200} 
+            height={120} 
           />
         </motion.div>
       ))}

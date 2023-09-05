@@ -153,8 +153,16 @@ const  Footer =()=>{
                 </div>
                </div>
             </div>
-            <div className="mx-auto my-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d863.3339266235723!2d31.243343456749805!3d30.055910320440727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840947cf2b563%3A0x3b2239915d3275e!2sEl%20Sewedy%20Automation!5e0!3m2!1sar!2seg!4v1693912396972!5m2!1sar!2seg" width="400" height="300" style={{border:"0"}} allowFullScreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div className="mx-auto my-5 w-full sm:my-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d863.3339266235723!2d31.243343456749805!3d30.055910320440727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840947cf2b563%3A0x3b2239915d3275e!2sEl%20Sewedy%20Automation!5e0!3m2!1sar!2seg!4v1693912396972!5m2!1sar!2seg" 
+            width="400" 
+            height="300" 
+            style={{border:"0"}} 
+            allowFullScreen 
+            loading="lazy" 
+            className='mx-auto'
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             </div>
             <div className="text-center mx-auto mt-8 border-t border-gray-100 pt-8">
