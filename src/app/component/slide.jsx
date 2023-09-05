@@ -25,8 +25,8 @@ const Slide = ({ text, parag, imgSrc , isActive}) => {
               className="rounded"
               style={textContainerStyle}
             >
-              <div className="text-shadow text-[#9c1c27] text-3xl sm:text-4xl font-bold py-5">{text}</div>
-              <p className="text-xl text-shadow text-white font-semibold">{parag}</p>
+              <div className="text-shadow text-[#9c1c27] text-xl sm:text-3xl sm:text-4xl font-bold py-5">{text}</div>
+              <p className="sm:text-xl text-shadow text-white font-semibold">{parag}</p>
             </motion.div>
           )}
         </AnimatePresence>

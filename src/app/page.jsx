@@ -3,6 +3,8 @@
 import { useEffect, useState ,useRef} from 'react';
 import Slide from './component/slide'
 import Link from 'next/link';
+import Image from 'next/image';
+import Footer from './component/footer';
 import NavBar from "./component/navBar"
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import CountUp from 'react-countup';
@@ -99,6 +101,12 @@ const services =[
     icon: ChartBarSquareIcon, // Replace HeroIcon4 with the appropriate HeroIcons icon component
   },
 ];
+const productsLogos = [
+  '/images/partners/partner.png',
+  '/images/partners/partner1.png',
+  '/images/partners/partner2-removebg-preview.png',
+  '/images/partners/partner3.png',
+];
 
 const ProgressBar = ({ title, number, icon, widthClass }) => {
   const ref = useRef(null);
@@ -111,7 +119,7 @@ const ProgressBar = ({ title, number, icon, widthClass }) => {
         className='w-1/2 red transtion duration-300'>
         {icon}
         </svg>
-        <p className="ml-2 text-gray-700 text-md dark:text-gray-50">
+        <p className="text-gray-700 text-md dark:text-gray-50">
         {title}
         </p>
     </div>
@@ -124,7 +132,7 @@ const ProgressBar = ({ title, number, icon, widthClass }) => {
          <CountUp className='text-4xl font-bold' end={number} duration={1} />
          ):null}
         </div>
-        <div className={`relative h-2 rounded w-[${widthClass}%]`}>
+        <div className={`relative h-2 rounded w-[${widthClass}%] bg-[#ff00003d]`}>
             <div className="absolute top-0 left-0 w-2/3 h-2 bg-[#9c1c27] rounded">
             </div>
         </div>
@@ -133,7 +141,7 @@ const ProgressBar = ({ title, number, icon, widthClass }) => {
 
   );
 };
-function ServicesCard({ isInView,feature }) {
+function ServicesCard({isInView, feature }) {
   return (
     <motion.div
     initial={{y:-20}}
@@ -156,17 +164,16 @@ function ServicesCard({ isInView,feature }) {
     </motion.div>
   );
 }
-
 function Clients() {
   return (
-    <div className="bg-white py-10">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 className="text-center text-lg font-semibold  text-gray-900">
+    <div className="bg-white py-10 overflow-x-hidden">
+      <div className="mx-auto lg:px-8">
+        <h2 className="text-center text-lg font-semibold text-gray-900">
           Trusted by the world’s most innovative teams
         </h2>
-        <div className="flex items-center space-x-8 pt-5 ">
+        <div className="overflow-x-auto flex items-center pt-5 ">
           {clientsLogos.map((logoUrl, index) => (
-            <img
+            <Image
               key={index} 
               className="grayscale h-32 col-span-2 w-full object-contain "
               src={logoUrl}
@@ -178,7 +185,7 @@ function Clients() {
         </div>
       </div>
     </div>
-  );}
+)}
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const solutionRef = useRef(null);
@@ -205,7 +212,7 @@ export default function Home() {
     ))}
     </Carousel>
     <Clients />
-    <div className="flex w-11/9 mx-auto">      
+    <div className="grid grid-cols-2 sm:grid-cols-4 w-11/9 mx-auto">      
       {progressData.map((data, index) => (
         <ProgressBar
           key={index}
@@ -220,9 +227,10 @@ export default function Home() {
      <motion.div 
      className="welcome">
      <h1 
-      ref={welcomeRef} 
      className='text-center text-5xl py-10'>Welcome to Elsewedy Automation</h1>
-      <div className="flex sm:flex-row flex-col w-full justify-between">
+      <div 
+      ref={welcomeRef} 
+      className="flex sm:flex-row flex-col w-full justify-between">
       <div className='sm:w-[45%]'>
         <motion.p
          initial={{opacity:0 , x:-50}}        
@@ -264,14 +272,26 @@ export default function Home() {
       </div>
       <div className="products">
         <h1 className="text-4xl font-semibold text-center">products Brands</h1>
-        <div className="flex">
-
+        <div className="w-11/12 mx-auto grid sm:grid-cols-4 grid-cols-2">
+        {productsLogos.map((imageUrl, index) => (
+        <motion.div
+          key={index}
+          className='h-52 flex items-center justify-center'
+        >
+          <Image
+            src={imageUrl}
+            alt={`Partner ${index + 1}`}
+            className="rounded-lg "
+            width={150} 
+            height={100} 
+          />
+        </motion.div>
+      ))}
         </div>
       </div>
     </section>
+    <Footer />
     </main>
     </>
   )
 }
-  
-
