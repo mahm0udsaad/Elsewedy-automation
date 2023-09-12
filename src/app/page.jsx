@@ -79,19 +79,19 @@ const services =[
     name: 'Offering High Standard Industrial Automation Products',
     description:
       'through different Industrial Automation brands. ',
-    icon: PresentationChartBarIcon, // Replace HeroIcon1 with the appropriate HeroIcons icon component
+    icon: PresentationChartBarIcon, 
   },
   {
     name: 'Turn-Key Projects for Automated Process Solutions',
     description:
       'for major clients across a variety of industry sectors.',
-    icon: CubeIcon, // Replace HeroIcon2 with the appropriate HeroIcons icon component
+    icon: CubeIcon, 
   },
   {
     name: 'Providing Technical Support Services',
     description:
       'Enhance our client’s business performance by providing great that add value and enhance their return on investments.',
-    icon: CogIcon, // Replace HeroIcon3 with the appropriate HeroIcons icon component
+    icon: CogIcon, 
   },
   {
     name: 'Conducting Outstanding Progressive Training Courses',
@@ -118,14 +118,14 @@ const ProgressBar = ({ title, number, icon, widthClass }) => {
         className='w-1/2 red transtion duration-300'>
         {icon}
         </svg>
-        <p className="text-gray-700 text-md dark:text-gray-50">
+        <p className="text-md">
         {title}
         </p>
     </div>
     <div
     ref={ref}
     className="flex flex-col justify-start">
-        <div className="w-full flex justify-center my-5 text-center text-gray-800 dark:text-white">
+        <div className="w-full flex justify-center my-5 text-center text-gray-800">
          <p className='text-4xl'>+</p>
          {isInView?(
          <CountUp className='text-4xl font-bold' end={number} duration={1} />
