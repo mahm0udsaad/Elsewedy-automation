@@ -13,7 +13,7 @@ const Slide = ({ text, parag, imgSrc , isActive}) => {
     };
   
     return (
-      <div className="relative w-full md:h-[75vh] sm:h-[60vh]" style={backgroundStyle}>
+      <div className="relative w-full h-[60vh] md:h-[75vh] sm:h-[60vh]" style={backgroundStyle}>
         <div className="absolute inset-0 mx-auto flex flex-col items-center justify-center w-4/5">
         <AnimatePresence>
           {isActive && (
