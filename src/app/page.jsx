@@ -109,12 +109,12 @@ const productsLogos = [
 
 const ProgressBar = ({ title, number, icon, widthClass }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref);
+  const isInView = useInView(ref,{once:true});
   return (
     <div className="p-4 rounded-2xl w-full my-5">
     <div className="flex flex-col items-center">
        <svg
-        style={{opacity:isInView? '1':' 0'}}
+        style={{opacity:isInView? '1':'0'}}
         className='w-1/2 red transtion duration-300'>
         {icon}
         </svg>
@@ -174,7 +174,7 @@ function Clients() {
           {clientsLogos.map((logoUrl, index) => (
             <img
               key={index} 
-              className="grayscale h-32 col-span-2 w-full object-contain "
+              className="h-32 col-span-2 w-full object-contain "
               src={logoUrl}
               alt={`Client Logo ${index + 1}`}
               width={170}
@@ -186,116 +186,129 @@ function Clients() {
     </div>
 )}
 export default function Home() {
+  const [start , setStart] = useState(false)
   const [currentSlide, setCurrentSlide] = useState(0);
   const solutionRef = useRef(null);
   const welcomeRef = useRef(null)
   const productsRef = useRef(null)
-  const productsisInView = useInView(productsRef);
-  const isInView = useInView(solutionRef);
-  const wIsInView = useInView(welcomeRef);
+  const productsisInView = useInView(productsRef,{once:true});
+  const isInView = useInView(solutionRef , {once:true});
+  const wIsInView = useInView(welcomeRef , {once:true});
+  useEffect(()=>{
+    const introSlide = setTimeout(()=>{
+      setStart(false)
+    },3200)
+  },[])
+  console.log(wIsInView);
   return (
     <>
-    <main className="w-full bg-white">
-    <Carousel
-    onChange={(index) => setCurrentSlide(index)}
-    infiniteLoop={true}
-    showArrows={false} 
-    showThumbs={false} 
-    autoPlay={true}> 
-    {slidesData.map((slide, index) => (
-      <Slide
-        key={index}
-        imgSrc={slide.imgSrc}
-        text={slide.text}
-        parag={slide.parag}
-        isActive={index === currentSlide}
-        />
-    ))}
-    </Carousel>
-    <Clients />
-    <div className="grid grid-cols-2 sm:grid-cols-4 w-11/9 mx-auto">      
-      {progressData.map((data, index) => (
-        <ProgressBar
-          key={index}
-          title={data.title}
-          number={data.number}
-          icon={data.icon}
-          widthClass={data.widthClass}
-        />
-      ))}
-    </div>
-    <section className='w-11/12 mx-auto'>
-     <motion.div 
-     className="welcome">
-     <h1 
-     className='text-center text-5xl py-10'>Welcome to Elsewedy Automation</h1>
-      <div 
-      ref={welcomeRef} 
-      className="flex sm:flex-row flex-col w-full justify-between">
-      <div className='sm:w-[45%]'>
-        <motion.p
-         initial={{opacity:0 , x:-50}}        
-         animate={{ opacity: wIsInView ? 1 : 0, x: wIsInView ? 0 : -50 }}
-         transition={{duration:.5}}
-        className="text-lg">El-Sewedy Automation Company S.A.E. offers a comprehensive range of products and services, starting from control system Design, Integration, Retrofitting, and Development. The company delivers its services through the assembly of control and distribution panels. The company also offers system testing, field Installation, and commissioning as well as providing capacity-building services through its training center or even onsite based on customer needs. Finally, the company offers outstanding technical support and consultancy services for its customers.</motion.p>
-        </div>
-        <br />
-        <div className='sm:w-[45%]'>
-        <motion.p
-        initial={{opacity:0 , x:50}}       
-        animate={{ opacity: wIsInView ? 1 : 0, x: wIsInView ? 0 : 50 }}
-        transition={{duration:.5}}
-        className='text-lg'>The co-founders of El-Sewedy Automation Company are “Ph.D. Engineers” with vast experience and skills in automation field practices supported by a strong academic background knowledge basis, in addition to other talented and skilled workforce in different fields of automation business. El-Sewedy Automation has shown continued strength and success in fulfilling its esteemed clients’ needs through a highly qualified technical team that provides different successful automation solutions. <Link className='text-blue-500' href={'/about'}>more info..</Link></motion.p>
-        </div>
+    {start ? (
+      <div className="h-screen bg-white flex flex-col justify-center">
+        <h1 className='text-center text-6xl'></h1>
       </div>
-     </motion.div>
-        <motion.div
-        initial={{opacity:0}}
-        animate={{opacity:isInView? 1:0}}
-        ref={solutionRef} 
-        className="solution-section w-11/12 mx-auto pt-10">
-          <h1  className="text-5xl font-semibo text-center">
-            Solution & Services
-          </h1>
-          <div className="py-10 grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-          {services.map((feature, index) => (
-            <ServicesCard isInView={isInView} feature={feature} key={index} />
-            ))}
-          </div>
-        </motion.div>
-    </section>
-    <section>
-      <div className="markets pt-10">
-        <h1 className="text-4xl font-semibold text-center">
-          Industrial Markets
-        </h1>
-        <Markets />
-      </div>
-      <div className="products">
-        <h1 className="text-4xl font-semibold text-center">products Brands</h1>
-        <div className="w-11/12 mx-auto grid sm:grid-cols-4 grid-cols-2" ref={productsRef}>
-        {productsLogos.map((imageUrl, index) => (
-        <motion.div
+    ):(
+      <main className="w-full bg-white">
+      <Carousel
+      onChange={(index) => setCurrentSlide(index)}
+      infiniteLoop={true}
+      showArrows={false} 
+      showThumbs={false} 
+      autoPlay={true}> 
+      {slidesData.map((slide, index) => (
+        <Slide
           key={index}
-          initial={{ y:0,opacity: 0}}
-          animate={{y:productsisInView?-20:0, opacity:productsisInView? 1:0}}
-          transition={{duration:.7}}
-          className='h-52 flex items-center justify-center'
-        >
-          <img
-            src={imageUrl}
-            alt={`Partner ${index + 1}`}
-            className="rounded-lg "
-            width={200} 
-            height={120} 
+          imgSrc={slide.imgSrc}
+          text={slide.text}
+          parag={slide.parag}
+          isActive={index === currentSlide}
           />
-        </motion.div>
       ))}
-        </div>
+      </Carousel>
+      <Clients />
+      <div className="grid grid-cols-2 sm:grid-cols-4 w-11/9 mx-auto">      
+        {progressData.map((data, index) => (
+          <ProgressBar
+            key={index}
+            title={data.title}
+            number={data.number}
+            icon={data.icon}
+            widthClass={data.widthClass}
+          />
+        ))}
       </div>
-    </section>
-    <Footer />
-    </main>
+      <section className='w-11/12 mx-auto'>
+       <motion.div 
+       className="welcome">
+       <h1 
+         ref={welcomeRef} 
+        className='text-center text-5xl py-10'>Welcome to Elsewedy Automation</h1>
+        <div 
+        className="flex sm:flex-row flex-col w-full justify-between">
+        <div className='sm:w-[45%]'>
+          <motion.p
+           initial={{opacity:0 , x:-50}}        
+           animate={{ opacity: wIsInView ? 1 : 0, x: wIsInView ? 0 : -50 }}
+           transition={{duration:.5}}
+          className="text-lg">El-Sewedy Automation Company S.A.E. offers a comprehensive range of products and services, starting from control system Design, Integration, Retrofitting, and Development. The company delivers its services through the assembly of control and distribution panels. The company also offers system testing, field Installation, and commissioning as well as providing capacity-building services through its training center or even onsite based on customer needs. Finally, the company offers outstanding technical support and consultancy services for its customers.</motion.p>
+          </div>
+          <br />
+          <div className='sm:w-[45%]'>
+          <motion.p
+          initial={{opacity:0 , x:50}}       
+          animate={{ opacity: wIsInView ? 1 : 0, x: wIsInView ? 0 : 50 }}
+          transition={{duration:.5}}
+          className='text-lg'>The co-founders of El-Sewedy Automation Company are “Ph.D. Engineers” with vast experience and skills in automation field practices supported by a strong academic background knowledge basis, in addition to other talented and skilled workforce in different fields of automation business. El-Sewedy Automation has shown continued strength and success in fulfilling its esteemed clients’ needs through a highly qualified technical team that provides different successful automation solutions. <Link className='text-blue-500' href={'/about'}>more info..</Link></motion.p>
+          </div>
+        </div>
+       </motion.div>
+          <motion.div
+          initial={{opacity:0}}
+          animate={{opacity:isInView? 1:0}}
+          ref={solutionRef} 
+          className="solution-section w-11/12 mx-auto pt-10">
+            <h1  className="text-5xl font-semibo text-center">
+              Solution & Services
+            </h1>
+            <div className="py-10 grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+            {services.map((feature, index) => (
+              <ServicesCard isInView={isInView} feature={feature} key={index} />
+              ))}
+            </div>
+          </motion.div>
+      </section>
+      <section>
+        <div className="markets pt-10">
+          <h1 className="text-4xl font-semibold text-center">
+            Industrial Markets
+          </h1>
+          <Markets />
+        </div>
+        <div className="products">
+          <h1 className="text-4xl font-semibold text-center">products Brands</h1>
+          <div className="w-11/12 mx-auto grid sm:grid-cols-4 grid-cols-2" ref={productsRef}>
+          {productsLogos.map((imageUrl, index) => (
+          <motion.div
+            key={index}
+            initial={{ y:0,opacity: 0}}
+            animate={{y:productsisInView?-20:0, opacity:productsisInView? 1:0}}
+            transition={{duration:.7}}
+            className='h-52 flex items-center justify-center'
+          >
+            <img
+              src={imageUrl}
+              alt={`Partner ${index + 1}`}
+              className="rounded-lg "
+              width={200} 
+              height={120} 
+            />
+          </motion.div>
+        ))}
+          </div>
+        </div>
+      </section>
+      <Footer />
+      </main>
+    )}
     </>
   )
 }

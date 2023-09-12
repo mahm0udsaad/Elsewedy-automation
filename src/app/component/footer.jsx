@@ -162,7 +162,7 @@ const  Footer =()=>{
             allowFullScreen 
             loading="lazy" 
             className='mx-auto'
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+            ></iframe>
             </div>
             </div>
             <div className="text-center mx-auto mt-8 border-t border-gray-100 pt-8">

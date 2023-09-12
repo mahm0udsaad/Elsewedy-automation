@@ -1,3 +1,4 @@
+"use client"
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
   export default function Markets() {
@@ -20,10 +21,12 @@ import { useRef } from "react"
             <motion.div
               initial={{x:-50}}              
               animate={{x:isInView?0:-50}}
-              transition={{duration:.7}}
+              transition={{duration:.5}}
             >
               <img
-                className="rounded-xl h-[100%]"
+                width={300}
+                height={300}
+                className="h-full rounded-xl"
                 loading="lazy"
                 src="/images/markets/oil.jpg"
                 alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
@@ -35,7 +38,9 @@ import { useRef } from "react"
               transition={{duration:.7}}
             >
               <img
-                className="rounded-xl h-[100%]"
+                width={300}
+                height={300}
+                className="h-full rounded-xl"
                 loading="lazy"
                 src="/images/markets/steel.jpg"
                 alt="Top down view of walnut card tray with embedded magnets and card groove."
@@ -47,7 +52,9 @@ import { useRef } from "react"
               transition={{duration:.7}}
             >
               <img
-                className="rounded-xl h-[100%]"
+                width={300}
+                height={300}
+                className="h-full rounded-xl"
                 loading="lazy"
                  src="/images/markets/food.jpg"
                 alt="Side of walnut card tray with card groove and recessed card area."
@@ -59,7 +66,9 @@ import { useRef } from "react"
               transition={{duration:.7}}
             >
               <img
-                className="rounded-xl h-[100%]"
+                width={300}
+                height={300}
+                className="h-full rounded-xl"
                 loading="lazy"
                 src="/images/markets/power.jpg"
                 alt="Walnut card tray filled with cards and card angled in dedicated groove."
