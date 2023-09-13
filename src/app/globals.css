@@ -2,9 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+  --icon-color: #991b1b ;
+}
+
 .red svg{
-  color: #9c1c27;
+  color: var(--icon-color);
 }
 .icon{
   box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5);
+}
+.k-card-body > .k-card-actions {
+  margin-top: 20px;
+}
+.k-card-image{
+  padding: 3rem;
+}
+.k-timeline-vertical.k-timeline-alternating{
+  width: 100%;
+}
+.k-timeline .k-timeline-flag, .k-timeline-circle {
+  background-color: var(--icon-color) !important;
+}
+@media (max-width: 768px) {
+  .k-timeline .k-timeline-date{
+    display: none;
+  }
+  .k-timeline-vertical{
+    padding-left: 2rem !important;
+    width: 100%;
+    }
+    .k-card .k-card-inner {
+      width: 80%;
+  }
+    .k-timeline-vertical.k-timeline-alternating {
+      padding: 0px !important;
+  }
+  .k-card-image{
+    padding: 0rem;
+  }
 }

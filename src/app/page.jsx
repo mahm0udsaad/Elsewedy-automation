@@ -3,7 +3,6 @@
 import { useEffect, useState ,useRef} from 'react';
 import Slide from './component/slide'
 import Link from 'next/link';
-import Footer from './component/footer';
 import NavBar from "./component/navBar"
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import CountUp from 'react-countup';
@@ -21,6 +20,10 @@ const slidesData = [
   },
   {
     imgSrc: '/images/machine.jpg',
+    text: 'Provide Sustainability and Innovation Engineering and Services Technology.',
+    
+  }, {
+    imgSrc: '/images/idea.jpg',
     text: 'Industrial Automation Solutions/Services Provider',
     parag:
       'El Sewedy Automation Founders have over 25 years of proven technical expertise, they established the Legal Form of El Sewedy Automation Company as S.A.E for Industrial Automation Solutions/Services Provider since 2009',
@@ -80,24 +83,30 @@ const services =[
     description:
       'through different Industrial Automation brands. ',
     icon: PresentationChartBarIcon, 
+    to :'/products'
   },
   {
     name: 'Turn-Key Projects for Automated Process Solutions',
     description:
       'for major clients across a variety of industry sectors.',
     icon: CubeIcon, 
+    to :'/services'
   },
   {
     name: 'Providing Technical Support Services',
     description:
       'Enhance our client’s business performance by providing great that add value and enhance their return on investments.',
     icon: CogIcon, 
+    to :'/services'
+
   },
   {
     name: 'Conducting Outstanding Progressive Training Courses',
     description:
       'customized to different industrial automation fields using the most advanced Rockwell-Automation Workstations. ',
-    icon: ChartBarSquareIcon, // Replace HeroIcon4 with the appropriate HeroIcons icon component
+    icon: ChartBarSquareIcon, 
+    to:'/training'
+
   },
 ];
 const productsLogos = [
@@ -106,7 +115,6 @@ const productsLogos = [
   '/images/partners/ghm-removebg-preview.png',
   '/images/partners/partner.png',
 ];
-
 const ProgressBar = ({ title, number, icon, widthClass }) => {
   const ref = useRef(null);
   const isInView = useInView(ref,{once:true});
@@ -148,7 +156,7 @@ const ProgressBar = ({ title, number, icon, widthClass }) => {
 
   );
 };
-function ServicesCard({isInView, feature }) {
+export function ServicesCard({isInView, feature , to}) {
   return (
     <motion.div
     initial={{y:50}}
@@ -169,7 +177,7 @@ function ServicesCard({isInView, feature }) {
         </h1>
       </dt>
       <dd className="mt-2 text-base leading-7 text-gray-600">
-        {feature.description}
+        {feature.description} {to && <Link href={to} className='text-blue-500 hover:opacity-50'>More info...</Link>}
       </dd>
     </motion.div>
   );
@@ -283,7 +291,7 @@ export default function Home() {
             ref={solutionRef} 
             className="py-10 grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
             {services.map((feature, index) => (
-              <ServicesCard isInView={isInView} feature={feature} key={index} />
+              <ServicesCard isInView={isInView} feature={feature} key={index} to={feature.to} />
               ))}
             </div>
           </motion.div>
@@ -319,7 +327,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Footer />
       </main>
     )}
     </>
