@@ -48,16 +48,16 @@ const progressData = [
     widthClass: 'w-[60%]',
   },
   {
-    title: 'Happy Clients',
-    number: '1000',
-    icon: <UserIcon className="h-6 w-6 text-blue-500" />,
-    widthClass: 'w-[90%]',
-  },
-  {
     title: 'Successful Projects',
     number: '200',
     icon: <ChartBarIcon className="h-6 w-6 text-blue-500" />,
     widthClass: 'w-3/4',
+  },
+  {
+    title: 'Happy Clients',
+    number: '1000',
+    icon: <UserIcon className="h-6 w-6 text-blue-500" />,
+    widthClass: 'w-[90%]',
   },
   {
     title: 'Trainings',
@@ -124,7 +124,7 @@ const ProgressBar = ({ title, number, icon, widthClass }) => {
         className='w-1/2 red transtion duration-300'>
         {icon}
         </svg>
-        <p className="text-md">
+        <p className="text-md text-center">
         {title}
         </p>
     </div>
@@ -156,11 +156,14 @@ function ServicesCard({isInView, feature }) {
     transition={{duration:.7}}
     className="relative pl-16">
       <dt className="text-base font-semibold leading-7 text-gray-900">
-        <div className="icon absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-red-800 shadow-2xl">
+        <motion.div
+         initial={{ boxShadow: '0px 0px 0px rgba(0, 0, 0, 0)' }}
+         animate={{ boxShadow: isInView?'0px 5px 20px rgba(255, 0, 0, 0.2)':'0px 0px 0px rgba(0, 0, 0, 0)' }}
+        className="icon absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-red-800 shadow-2xl">
           {feature.icon && (
             <feature.icon className="shadow-2xl h-6 w-6 text-white" aria-hidden="true" />
           )}
-        </div>
+        </motion.div>
         <h1 className="text-xl font-semibold leading-6 text-gray-900">
           {feature.name}
         </h1>
