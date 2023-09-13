@@ -110,8 +110,14 @@ const productsLogos = [
 const ProgressBar = ({ title, number, icon, widthClass }) => {
   const ref = useRef(null);
   const isInView = useInView(ref,{once:true});
+  const shadow = useRef(null);
+  const shadowInview = useInView(shadow);
   return (
-    <div className="p-4 rounded-2xl w-full my-5">
+    <motion.div
+    initial={{ boxShadow: '0px 0px 0px rgba(0, 0, 0, 0)' }}
+    animate={{ boxShadow: shadowInview?'0px 5px 10px rgba(255, 0, 0, 0.2)':'0px 0px 0px rgba(0, 0, 0, 0)' }}
+    transition={{duration:.5}}
+    className="p-4 rounded-2xl my-5  w-11/12 hover:-translate-y-5 transition duration-300 cursor-pointer">
     <div className="flex flex-col items-center">
        <svg
         style={{opacity:isInView? '1':'0'}}
@@ -132,25 +138,27 @@ const ProgressBar = ({ title, number, icon, widthClass }) => {
          ):null}
         </div>
         <div className={`relative h-2 rounded w-[${widthClass}%] bg-[#ff00003d]`}>
-            <div className="absolute top-0 left-0 w-2/3 h-2 bg-[#9c1c27] rounded">
+            <div 
+            ref={shadow}
+            className="absolute top-0 left-0 w-2/3 h-2 bg-[#9c1c27] rounded">
             </div>
         </div>
     </div>
-</div>
+</motion.div>
 
   );
 };
 function ServicesCard({isInView, feature }) {
   return (
     <motion.div
-    initial={{y:-20}}
-    animate={{y:isInView?0:-30}}
+    initial={{y:50}}
+    animate={{y:isInView?0:30}}
     transition={{duration:.7}}
     className="relative pl-16">
       <dt className="text-base font-semibold leading-7 text-gray-900">
-        <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-red-800">
+        <div className="icon absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-red-800 shadow-2xl">
           {feature.icon && (
-            <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
+            <feature.icon className="shadow-2xl h-6 w-6 text-white" aria-hidden="true" />
           )}
         </div>
         <h1 className="text-xl font-semibold leading-6 text-gray-900">
@@ -199,7 +207,6 @@ export default function Home() {
       setStart(false)
     },3200)
   },[])
-  console.log(wIsInView);
   return (
     <>
     {start ? (
@@ -225,7 +232,7 @@ export default function Home() {
       ))}
       </Carousel>
       <Clients />
-      <div className="grid grid-cols-2 sm:grid-cols-4 w-11/9 mx-auto">      
+      <div className="grid grid-cols-2 sm:grid-cols-4 w-11/12 mx-auto">      
         {progressData.map((data, index) => (
           <ProgressBar
             key={index}
@@ -240,11 +247,12 @@ export default function Home() {
        <motion.div 
        className="welcome">
        <h1 
-         ref={welcomeRef} 
         className='text-center text-5xl py-10'>Welcome to Elsewedy Automation</h1>
         <div 
-        className="flex sm:flex-row flex-col w-full justify-between">
-        <div className='sm:w-[45%]'>
+        className="flex sm:flex-row flex-col w-full justify-between font-semibold text-center leading-10">
+        <div
+        ref={welcomeRef} 
+        className='sm:w-[45%]'>
           <motion.p
            initial={{opacity:0 , x:-50}}        
            animate={{ opacity: wIsInView ? 1 : 0, x: wIsInView ? 0 : -50 }}
@@ -257,19 +265,20 @@ export default function Home() {
           initial={{opacity:0 , x:50}}       
           animate={{ opacity: wIsInView ? 1 : 0, x: wIsInView ? 0 : 50 }}
           transition={{duration:.5}}
-          className='text-lg'>The co-founders of El-Sewedy Automation Company are “Ph.D. Engineers” with vast experience and skills in automation field practices supported by a strong academic background knowledge basis, in addition to other talented and skilled workforce in different fields of automation business. El-Sewedy Automation has shown continued strength and success in fulfilling its esteemed clients’ needs through a highly qualified technical team that provides different successful automation solutions. <Link className='text-blue-500' href={'/about'}>more info..</Link></motion.p>
+          className='text-lg'>The co-founders of El-Sewedy Automation Company are “Ph.D. Engineers” with vast experience and skills in automation field practices supported by a strong academic background knowledge basis, in addition to other talented and skilled workforce in different fields of automation business. El-Sewedy Automation has shown continued strength and success in fulfilling its esteemed clients’ needs through a highly qualified technical team that provides different successful automation solutions. <Link className='text-blue-500' href={'/about'}>Read more..</Link></motion.p>
           </div>
         </div>
        </motion.div>
           <motion.div
           initial={{opacity:0}}
           animate={{opacity:isInView? 1:0}}
-          ref={solutionRef} 
           className="solution-section w-11/12 mx-auto pt-10">
             <h1  className="text-5xl font-semibo text-center">
               Solution & Services
             </h1>
-            <div className="py-10 grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+            <div 
+            ref={solutionRef} 
+            className="py-10 grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
             {services.map((feature, index) => (
               <ServicesCard isInView={isInView} feature={feature} key={index} />
               ))}
@@ -285,11 +294,12 @@ export default function Home() {
         </div>
         <div className="products">
           <h1 className="text-4xl font-semibold text-center">products Brands</h1>
-          <div className="w-11/12 mx-auto grid sm:grid-cols-4 grid-cols-2" ref={productsRef}>
+          <div className="w-11/12 mx-auto grid sm:grid-cols-4 grid-cols-2">
           {productsLogos.map((imageUrl, index) => (
           <motion.div
+            ref={productsRef}
             key={index}
-            initial={{ y:0,opacity: 0}}
+            initial={{ y:-20,opacity: 0}}
             animate={{y:productsisInView?-20:0, opacity:productsisInView? 1:0}}
             transition={{duration:.7}}
             className='h-52 flex items-center justify-center'

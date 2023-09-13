@@ -5,7 +5,9 @@ import { useRef } from "react"
     const marketsRef = useRef(null)
     const isInView = useInView(marketsRef)
     return (
-      <div className="bg-white">
+      <div 
+      ref={marketsRef}
+      className="bg-white">
         <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
           <div>
           <ul className="text-4xl space-y-5">
@@ -17,17 +19,17 @@ import { useRef } from "react"
             <li >Power & Water & Others</li>
             </ul>
           </div>
-          <div ref={marketsRef} className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
             <motion.div
               initial={{x:-50}}              
               animate={{x:isInView?0:-50}}
               transition={{duration:.5}}
             >
               <img
-                width={300}
-                height={300}
+                loading="eager"
+                width={350}
+                height={350}
                 className="h-full rounded-xl"
-                loading="lazy"
                 src="/images/markets/oil.jpg"
                 alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
                />
@@ -38,10 +40,10 @@ import { useRef } from "react"
               transition={{duration:.7}}
             >
               <img
-                width={300}
-                height={300}
+                loading="eager"
+                width={350}
+                height={350}
                 className="h-full rounded-xl"
-                loading="lazy"
                 src="/images/markets/steel.jpg"
                 alt="Top down view of walnut card tray with embedded magnets and card groove."
                />
@@ -52,10 +54,10 @@ import { useRef } from "react"
               transition={{duration:.7}}
             >
               <img
-                width={300}
-                height={300}
+                loading="eager"
+                width={350}
+                height={350}
                 className="h-full rounded-xl"
-                loading="lazy"
                  src="/images/markets/food.jpg"
                 alt="Side of walnut card tray with card groove and recessed card area."
                />
@@ -66,10 +68,10 @@ import { useRef } from "react"
               transition={{duration:.7}}
             >
               <img
-                width={300}
-                height={300}
+                loading="eager"
+                width={350}
+                height={350}
                 className="h-full rounded-xl"
-                loading="lazy"
                 src="/images/markets/power.jpg"
                 alt="Walnut card tray filled with cards and card angled in dedicated groove."
                />

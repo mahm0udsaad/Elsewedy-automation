@@ -5,3 +5,6 @@
 .red svg{
   color: #9c1c27;
 }
+.icon{
+  box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5);
+}

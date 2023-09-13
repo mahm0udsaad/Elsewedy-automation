@@ -7,13 +7,13 @@ const  Footer =()=>{
     return (
             <footer className="bg-white py-10 border-t-[1px] border-gray-300">
             <div className="social">
-            <ul className="mt-2 space-x-5 justify-center text-sm flex text-xl">
+            <ul className="mt-2 space-x-5 justify-center flex text-2xl">
           <li>
             <a
               href="https://www.facebook.com/ElsewedyAutomationS.A.E?mibextid=LQQJ4d"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-700 transition hover:opacity-75"
+              className="text-gray-700 transition hover:text-blue-800"
             >
               <FaFacebookSquare />
             </a>
@@ -23,7 +23,7 @@ const  Footer =()=>{
               href="https://www.linkedin.com/company/el-sewedy-automation/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-700 transition hover:opacity-75"
+              className="text-gray-700 transition hover:text-blue-500"
             >
               <FaLinkedin />
             </a>
@@ -33,7 +33,7 @@ const  Footer =()=>{
               href="https://www.instagram.com/elsewedy_automation/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-700 transition hover:opacity-75"
+              className="text-gray-700 transition hover:text-rose-500"
             >
               <FaInstagram />
             </a>
@@ -43,7 +43,7 @@ const  Footer =()=>{
               href="https://www.youtube.com/@El-sewedyAutomation"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-700 transition hover:opacity-75"
+              className="text-gray-700 transition hover:text-red-700"
             >
               <FaYoutube />
             </a>
@@ -53,22 +53,22 @@ const  Footer =()=>{
               href="https://twitter.com/ElsewedyAuto"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-700 transition hover:opacity-75"
+              className="text-gray-700 transition hover:text-blue-300"
             >
               <FaTwitter />
             </a>
           </li>
              </ul>
             </div>
-            <div className="sm:flex pt-10">
+            <div className="lg:flex pt-10">
             <div className="px-8">
                <div className="sm:flex space-y-5">
                <div>
                     <p className="font-medium text-gray-900">Contact</p>
                     <ul className="mt-6 space-y-4 text-sm">
-                <li>
+                <li className='w-5/6'>
                     <a href="#" className="text-gray-700 transition hover:opacity-75">
-                    Address: Head Quarter: 27 Orabi St., 7th Floor, Office (706), Orabi Street, Al-Azbakia, 11111 - Cairo.
+                    Address:<br /> Head Quarter: 27 Orabi St., 7th Floor, Office (706), Orabi Street, Al-Azbakia, 11111 - Cairo.
                     </a>
                 </li>
 
@@ -98,7 +98,7 @@ const  Footer =()=>{
                 </li>
                 </ul>
                 </div>
-                <div className="grid grid-cols-2 gap-5">
+                <div className="w-full grid grid-cols-2 gap-5">
                <div>
                 <p className="font-medium text-gray-900">Services</p>
 
