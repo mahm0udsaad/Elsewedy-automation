@@ -1,23 +1,27 @@
 "use client"
+
 import { Fragment, useEffect ,useState} from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
-
-const navigation = [
-    { name: 'Products', href: '../products', current: false },
-    { name: 'Solutions & Services', href: '/services', current: false },
-    { name: 'Training', href: '/training', current: false },
-    { name: 'About US', href: '/about', current: false },
-    { name: 'Contact Us', href: '/contact', current: false },
-]
+import { usePathname, useRouter } from 'next/navigation';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function NavBar() {
+  const [navigation , setNavigation] = useState(
+    [
+      { name: 'About US', href: '/about', current: false },
+        { name: 'Products', href: '../products', current: false },
+        { name: 'Solutions & Services', href: '/services', current: false },
+        { name: 'Training', href: '/training', current: false },
+        { name: 'Contact Us', href: '/contact', current: false },
+    ]
+  )
+  const path = usePathname();
   const [showOldLogo , setShowOldLogo] = useState(false)
   useEffect(() => {
     const intervalDuration = !showOldLogo ? 2000 : 6000; 
@@ -29,6 +33,16 @@ export default function NavBar() {
       clearInterval(time);
     };
   }, [showOldLogo]);
+  useEffect(()=>{
+     const updatedNavigation = navigation.map((nav)=>{
+      if (nav.href === path) {
+      return {...nav , current : true} 
+      }else{
+        return {...nav , current : false} 
+      }
+    })
+    setNavigation(updatedNavigation)
+  },[path])
   return (
     <>
       <div className="min-h-full">
@@ -59,7 +73,7 @@ export default function NavBar() {
                             href={item.href}
                             className={classNames(
                               item.current
-                                ? 'bg-gray-900 text-white'
+                                ? 'bg-red-800 text-white'
                                 : 'transtion duration-300 hover:bg-red-800 hover:text-white',
                               'rounded-md px-3 py-2 text-sm font-medium'
                             )}

@@ -24,6 +24,7 @@
 .k-timeline .k-timeline-flag, .k-timeline-circle {
   background-color: var(--icon-color) !important;
 }
+
 @media (max-width: 768px) {
   .k-timeline .k-timeline-date{
     display: none;

@@ -46,5 +46,11 @@ const TapContent = ({title,content , openTab , i , id , image,intro}) => (
     </div>
   );
 
-
-export {TapContent , Tap } ;
+  const ServicesTap = ({children , openTab , i }) => (
+    <div className={openTab === i ? "block w-full " : "hidden"} >
+        <div className="content">
+        {children}
+      </div>
+    </div>
+  );
+export {TapContent , Tap , ServicesTap} ;

@@ -28,7 +28,8 @@
     "react-countup": "^6.4.2",
     "react-dom": "18.2.0",
     "react-icons": "^4.11.0",
-    "react-responsive-carousel": "^3.2.23"
+    "react-responsive-carousel": "^3.2.23",
+    "tw-elements-react": "^1.0.0-alpha1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.15",
