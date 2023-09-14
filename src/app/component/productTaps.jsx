@@ -23,8 +23,8 @@ const Tap = ({title , openTab , setOpenTab , i})=>{
             </li>
     )
 }
-const TapContent = ({title,content , openTab , i , id , image,intro}) => (
-    <div className={openTab === i ? "block w-full" : "hidden"} id={id}>
+const TapContent = ({title,content , openTab , i , id , image ,intro}) => (
+    <div  className={openTab === i ? "block w-full" : "hidden"} id={id}>
         <div className="content">
         <div className="header text-2xl sm:text-4xl font-semibold py-5">{intro}</div>
       <div>

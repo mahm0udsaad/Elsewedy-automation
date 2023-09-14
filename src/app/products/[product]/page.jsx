@@ -1,8 +1,7 @@
 "use client"
 import { ProductsDetails } from '@/app/data/productsDetails';
-import { useState } from 'react';
 
-const Details = ({ Data , title}) => {
+const Details = ({ Data }) => {
   
   return (
     <>

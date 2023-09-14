@@ -27,17 +27,18 @@ export default function Products() {
           <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
             <div className="px-4 py-5 flex-auto">
               <div className="tab-content tab-space">
-              {companiesLevelOne.map((info , i)=>(
-                  <TapContent 
-                      content={info.content}
-                      openTab={openTab}
-                      intro={info.intro}
-                      i={i+1}
-                      id={`'link'${i}`}
-                      title={info.title}
-                      image={info.image}
-                      />
-                ))}
+              {companiesLevelOne.map((info, i) => (
+              <TapContent
+              key={info.id || `${info.title}-${i}`} // Use id if available, or combine properties
+              content={info.content}
+                openTab={openTab}
+                intro={info.intro}
+                i={i }
+                id={`link${i}`}
+                title={info.title}
+                image={info.image}
+              />
+              ))}
               </div>
             </div>
           </div>

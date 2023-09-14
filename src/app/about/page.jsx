@@ -104,7 +104,7 @@ function ValuesCards({value}){
 
         <div className="py-4 text-center">
           <div ref={shadow} className="font-bold text-xl mb-2">{value.title}</div>
-          <p class="text-gray-700 text-base">
+          <p className="text-gray-700 text-base">
             {value.description}
           </p>
         </div>
