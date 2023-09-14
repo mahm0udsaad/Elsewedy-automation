@@ -4,7 +4,8 @@ import { AnimatePresence ,motion} from "framer-motion"
 import { Tap , ServicesTap} from "../component/productTaps";
 import { useState } from "react";
 import { Projects , technicalSuport} from "../data/services";
-import Accordion from "../component/accordion";
+import Accordioncmp from "../component/accordion";
+import AccordionCmp from "../component/accordion";
 
 export default function Services() {
   const [openTab, setOpenTab] = useState(1);
@@ -23,21 +24,19 @@ export default function Services() {
     <div className="content w-11/12 mx-auto">
     <ServicesTap openTab={openTab} i={1}>
     {Projects.map((project, index) => (
-        <Accordion
+        <AccordionCmp
           key={index}
           title={project.title}
           content={project.content}
-          id={`element${index + 1}`}
         />
       ))}
     </ServicesTap>
     <ServicesTap openTab={openTab} i={2}>
     {technicalSuport.map((project, index) => (
-        <Accordion
+        <AccordionCmp
           key={index}
           title={project.title}
           content={project.content}
-          id={`element${index + 1}`}
         />
       ))}
     </ServicesTap>
