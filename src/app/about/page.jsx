@@ -77,11 +77,7 @@ const coreValues = [
     icon: FaBalanceScale
   }
 ];
-const getRandomColorClass = () => {
-  const colors = ['bg-red-500', 'bg-blue-500', 'bg-green-500', 'bg-yellow-500', 'bg-purple-500'];
-  const randomIndex = Math.floor(Math.random() * colors.length);
-  return colors[randomIndex];
-};
+
 function ValuesCards({value}){
   const ref = useRef(null);
   const isInView = useInView(ref,{once:true});
@@ -105,6 +101,7 @@ function ValuesCards({value}){
             <value.icon className="shadow-2xl h-6 w-6 text-white" aria-hidden="true" />
           )}
         </motion.div>
+
         <div className="py-4 text-center">
           <div ref={shadow} className="font-bold text-xl mb-2">{value.title}</div>
           <p class="text-gray-700 text-base">
@@ -148,7 +145,7 @@ export default function About() {
       <motion.div 
        className="welcome">
        <h1 
-        className='text-center text-5xl py-10'>About El-Sewedy Automation</h1>
+        className='text-center text-3xl sm:text-5xl py-10 leading-10'>About <br /> El-Sewedy Automation</h1>
         <div
         ref={aboutRef} 
         className=''>
@@ -156,7 +153,7 @@ export default function About() {
            initial={{opacity:0 , x:-50}}        
            animate={{ opacity: wIsInView ? 1 : 0, x: wIsInView ? 0 : -50 }}
            transition={{duration:.5}}
-          className="text-lg font-semibold ">El Sewedy Automation is a leading Egyptian company in designing, supplying, installing, and commissioning of industrial automation systems for a wide range of industrial markets. The company Founders have over 25 years of proven technical expertise, they established the Legal Form of El Sewedy Automation Company as S.A.E for Industrial Automation Solutions/Services Provider since 2009. 
+          className="text-lg font-semibold leading-9">El Sewedy Automation is a leading Egyptian company in designing, supplying, installing, and commissioning of industrial automation systems for a wide range of industrial markets. The company Founders have over 25 years of proven technical expertise, they established the Legal Form of El Sewedy Automation Company as S.A.E for Industrial Automation Solutions/Services Provider since 2009. 
           Over the years, “El Sewedy Automation" has gained its Goodwell and Reputation for its quality products & services through its talented team who brings their extensive knowledge in industrial automation technology and practices to provide the company customers with innovative, reliable, and cost-effective automation solutions/services “On-time and within Budget”. 
           El Sewedy Automaton offers the lowest market price while maintaining the high quality of its
           solution/service to help its customers to improve business efficiency and maximize their

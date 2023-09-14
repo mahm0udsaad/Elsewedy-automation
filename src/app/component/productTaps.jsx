@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 const Tap = ({title , openTab , setOpenTab , i})=>{
     return(
         <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
@@ -23,7 +23,7 @@ const Tap = ({title , openTab , setOpenTab , i})=>{
             </li>
     )
 }
-const TapContent = ({content , openTab , i , id , image,intro}) => (
+const TapContent = ({title,content , openTab , i , id , image,intro}) => (
     <div className={openTab === i ? "block w-full" : "hidden"} id={id}>
         <div className="content">
         <div className="header text-2xl sm:text-4xl font-semibold py-5">{intro}</div>
@@ -39,6 +39,7 @@ const TapContent = ({content , openTab , i , id , image,intro}) => (
         <div className="content-p pt-10">
         {content}
         </div>
+        <Link href={`products/${encodeURIComponent(title.split(" ")[0])}`} className="text-blue-500">More information...</Link>
         </div>
       </div>
       </div>

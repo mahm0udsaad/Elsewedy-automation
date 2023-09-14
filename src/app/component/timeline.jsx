@@ -24,7 +24,7 @@ const TimeLine = () => {
   }, []);
   return (
           <div  className="app-wrapper">
-              <Timeline events={sortedEvents} alterMode={alterMode} collapsibleEvents={true} />
+              <Timeline events={sortedEvents} alterMode={alterMode} collapsibleEvents={false} />
             </div>
         )
 };
