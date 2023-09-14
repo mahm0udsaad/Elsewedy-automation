@@ -23,28 +23,33 @@ const Tap = ({title , openTab , setOpenTab , i})=>{
             </li>
     )
 }
-const TapContent = ({title,content , openTab , i , id , image ,intro}) => (
-    <div  className={openTab === i ? "block w-full" : "hidden"} id={id}>
-        <div className="content">
-        <div className="header text-2xl sm:text-4xl font-semibold py-5">{intro}</div>
+const TapContent = ({ title, content, openTab, i, id, image, intro }) => (
+  <div className={openTab === i ? "block w-full" : "hidden"} id={id}>
+    <div className="content">
+      <div className="header text-2xl sm:text-4xl font-semibold py-5">{intro}</div>
       <div>
-      <div className="justify-center py-8 w-full">
-       <div className="wrapper flex justify-center">
-       {Array.isArray(image) ? (
-          image.map((e, index) => <div className="inner-wrapper"><img key={index} src={e} alt="details" className="w-full h-full"/></div>)
-        ) : (
-          null
-        )}
-       </div>
-        <div className="content-p pt-10">
-        {content}
+        <div className="justify-center py-8 w-full">
+          <div className="wrapper flex justify-center">
+            {Array.isArray(image) && image.length > 0 ? (
+              image.map((e, index) => (
+                <div className="inner-wrapper" key={index}>
+                  <img src={e} alt="details" className="w-full h-full" />
+                </div>
+              ))
+            ) : (
+              null
+            )}
+          </div>
+          <div className="content-p pt-10">{content}</div>
+          <Link href={`products/${encodeURIComponent(title.split(" ")[0])}`} className="text-blue-500">
+            More information...
+          </Link>
         </div>
-        <Link href={`products/${encodeURIComponent(title.split(" ")[0])}`} className="text-blue-500">More information...</Link>
-        </div>
-      </div>
       </div>
     </div>
-  );
+  </div>
+);
+
 
   const ServicesTap = ({children , openTab , i }) => (
     <div className={openTab === i ? "block w-full " : "hidden"} >
