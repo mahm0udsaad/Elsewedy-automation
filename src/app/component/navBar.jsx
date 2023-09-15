@@ -21,28 +21,18 @@ export default function NavBar() {
         { name: 'Contact Us', href: '/contact', current: false },
     ]
   )
-  const path = usePathname();
   const [showOldLogo , setShowOldLogo] = useState(false)
   useEffect(() => {
     const intervalDuration = !showOldLogo ? 2000 : 6000; 
     const time = setInterval(() => {
       setShowOldLogo((prevShowOldLogo) => !prevShowOldLogo);
     }, intervalDuration);
-  
+    
     return () => {
       clearInterval(time);
     };
   }, [showOldLogo]);
-  useEffect(()=>{
-     const updatedNavigation = navigation.map((nav)=>{
-      if (nav.href === path) {
-      return {...nav , current : true} 
-      }else{
-        return {...nav , current : false} 
-      }
-    })
-    setNavigation(updatedNavigation)
-  },[path])
+
   return (
     <>
       <div className="min-h-full">

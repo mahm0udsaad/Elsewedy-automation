@@ -7,21 +7,33 @@ export async function generateStaticParams() {
   const productsArray = productKeys.map((key) => ({
     product: key,
   }));
-
   return productsArray;
 }
 export default async function ProductDetails({params})  {
   const productData = ProductsDetails[params.product]
+  let logo = '';
+
+  if (params.product === 'Siemens') {
+    logo = '/images/partners/semins-removebg-preview.png';
+  } else {
+    logo = '/images/partners/allen-removebg-preview (1).png';
+  }
+  
   return (
-    <div>
-      <div className="grid gap-8 w-11/12 mx-auto">
-        {productData ? (
-            <Details key={productData.length} Data={productData} />
-        ) : (
-          <h1 className="text-center text-4xl pt-20">No information provided</h1>
-        )}
+    (productData ? (
+        <div>
+        <div className="logo">
+        <img src={logo} alt={params.product} />
       </div>
-    </div>
+      <div className="grid gap-8 w-11/12 mx-auto">
+        {productData && (
+            <Details key={productData.length} Data={productData} />
+            )}
+             </div>
+      </div>
+      ):(   
+         <h1 className="text-center text-4xl pt-20">No information provided</h1>
+      ))
   );
 };
 
