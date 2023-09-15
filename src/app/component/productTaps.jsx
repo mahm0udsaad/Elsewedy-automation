@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+
 const Tap = ({title , openTab , setOpenTab , i})=>{
     return(
         <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
@@ -23,6 +24,7 @@ const Tap = ({title , openTab , setOpenTab , i})=>{
             </li>
     )
 }
+
 const TapContent = ({ title, content, openTab, i, id, image, intro }) => (
   <div className={openTab === i ? "block w-full" : "hidden"} id={id}>
     <div className="content">

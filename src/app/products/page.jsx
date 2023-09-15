@@ -1,4 +1,3 @@
-
 "use client"
 import { useState } from "react";
 import {Tap , TapContent} from "../component/productTaps"
@@ -6,7 +5,7 @@ import { companiesLevelOne } from "../data/productsDetails";
 
 
 export default function Products() {
-  const [openTab, setOpenTab] = useState(0);
+  const [openTab, setOpenTab] = useState(1);
   
   return (
     <>
@@ -26,18 +25,20 @@ export default function Products() {
           <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
             <div className="px-4 py-5 flex-auto">
               <div className="tab-content tab-space">
+
               {companiesLevelOne.map((info, i) => (
               <TapContent
-              key={info.id || `${info.title}-${i}`} // Use id if available, or combine properties
-              content={info.content}
+                key={info.id || `${info.title}-${i}`}
+                content={info.content}
                 openTab={openTab}
                 intro={info.intro}
-                i={i}
+                i={i + 1}
                 id={`link${i}`}
                 title={info.title}
                 image={info.image}
               />
               ))}
+
               </div>
             </div>
           </div>
