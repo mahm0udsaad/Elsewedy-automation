@@ -13,7 +13,7 @@ export default function Products() {
     <div className="w-11/12 mx-auto">
         <div className="w-full">
           <ul
-            className="flex mb-0 list-none sm:flex-wrap pt-3 pb-4 flex-row  overflow-scroll lg:overflow-hidden"
+            className="flex mb-0 list-none pt-3 pb-4 flex-row  overflow-scroll lg:overflow-hidden"
             role="tablist"
           >
             <Tap title={'Rockwell Automation'} openTab={openTab} setOpenTab={setOpenTab} i={1}/>

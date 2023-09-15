@@ -3,10 +3,14 @@
 import Slide from "../component/slide"
 import { Tap } from "../component/productTaps"
 import CourseTaple from "../component/table"
+import { motion, useInView } from "framer-motion"
 import { Table, TableContainer, Th, Td ,Thead, Tr , Tbody} from '@chakra-ui/react';
 import {siemensCourses,electricalPowerCourses,mechanicalCourses,instrumentationControlCourses,softSkillsCourses} from '../data/courses'
-
+import { useRef } from "react"
+import TableRow from "../component/table"
 export default function Training() {
+  const tr = useRef(null)
+  const isTrViwed = useInView(tr)
   return (
     <>
     <main className="flex flex-col min-h-screen">
@@ -18,22 +22,22 @@ export default function Training() {
         <TableContainer className='sm:w-11/12 w-5/6 mx-auto'>
         <Table size={'sm'} variant='striped' colorScheme='teal' className='w-full'>
       <Thead>
-        <Tr className="h-16 bg-red-400 text-white">
-          <Th>code</Th>
+          <motion.tr 
+          ref={tr}
+          initial={{ opacity:0 }}
+          animate={{ opacity:isTrViwed? 1 : 0 }}
+          transition={{ duration:.5 }}
+          className="h-16 bg-red-400 text-white py-3">
+          <Th className="px-5">code</Th>
           <Th >Siemens</Th>
-          <Th>Days</Th>
+          <Th className="px-5">Days</Th>
           <Th>Hours</Th>
-        </Tr>
+          </motion.tr>
       </Thead>
       {siemensCourses.map((course , i)=>(
-      <Tbody key={i}>
-        <Tr className='text-center h-20 border-b-2'>
-          <Td className="sm:w-[10%]">{course.code}</Td>
-          <Td className="w-[25%] text-sm text-start sm:w-1/2">{course.name}</Td>
-          <Td className="sm:w-[7%]">{course.days}</Td>
-          <Td className="sm:w-[7%]">{course.hours}</Td>
-        </Tr>
-      </Tbody>
+       <Tbody>
+       <TableRow course={course} key={i} i={i}/>
+     </Tbody>
       ))}
       </Table>
   </TableContainer>

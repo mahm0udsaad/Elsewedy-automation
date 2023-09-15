@@ -15,9 +15,10 @@ export default function NavBar() {
   const [navigation , setNavigation] = useState(
     [
       { name: 'About US', href: '/about', current: false },
-        { name: 'Products', href: '../products', current: false },
-        { name: 'Solutions & Services', href: '/services', current: false },
-        { name: 'Training', href: '/training', current: false },
+      { name: 'Products', href: '../products', current: false },
+      { name: 'Solutions & Services', href: '/services', current: false },
+      { name: 'Training', href: '/training', current: false },
+      { name: 'Gallery', href: '/gallery', current: false },
         { name: 'Contact Us', href: '/contact', current: false },
     ]
   )

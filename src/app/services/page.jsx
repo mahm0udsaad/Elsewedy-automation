@@ -13,11 +13,11 @@ export default function Services() {
   return (
     <>
     <main className="flex min-h-screen flex-col space-y-8">
-     <div className="relative w-full h-[70vh]">
-        <img src="/images/services/top.jpg" className="h-full w-full" alt="" />
+     <div className="relative w-full h-[60vh]">
+        <img src="/images/services/testalize-me-UvZBczaG6rc-unsplash.jpg" className="h-full w-full" alt="" />
       </div>
     <section className="flex flex-col space-y-10">
-    <div className="flex list-none">
+    <div className="flex list-none w-5/6 mx-auto">
     <Tap title={'Projects'} openTab={openTab} setOpenTab={setOpenTab} i={1}/>
     <Tap title={'Technical Support'} openTab={openTab} setOpenTab={setOpenTab} i={2}/>
     </div>

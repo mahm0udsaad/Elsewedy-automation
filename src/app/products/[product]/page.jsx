@@ -22,8 +22,8 @@ export default async function ProductDetails({params})  {
   return (
     (productData ? (
         <div>
-        <div className="logo">
-        <img src={logo} alt={params.product} />
+        <div className="logo flex w-11/12 mx-auto my-5">
+        <img src={logo} alt={params.product} className='w-[20rem]'/>
       </div>
       <div className="grid gap-8 w-11/12 mx-auto">
         {productData && (

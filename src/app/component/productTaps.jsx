@@ -6,7 +6,7 @@ const Tap = ({title , openTab , setOpenTab , i})=>{
         <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
               <a
                 className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
+                  "sm:text-lg font-bold uppercase px-5 py-5 shadow-lg rounded block leading-normal " +
                   (openTab === i
                     ? "text-white bg-red-600"
                     : "text-red-600 bg-white  hover:opacity-50 ")
@@ -24,7 +24,6 @@ const Tap = ({title , openTab , setOpenTab , i})=>{
             </li>
     )
 }
-
 const TapContent = ({ title, content, openTab, i, id, image, intro }) => (
   <div className={openTab === i ? "block w-full" : "hidden"} id={id}>
     <div className="content">
@@ -51,13 +50,34 @@ const TapContent = ({ title, content, openTab, i, id, image, intro }) => (
     </div>
   </div>
 );
-
-
-  const ServicesTap = ({children , openTab , i }) => (
-    <div className={openTab === i ? "block w-full " : "hidden"} >
-        <div className="content">
-        {children}
-      </div>
+const ServicesTap = ({children , openTab , i }) => (
+  <div className={openTab === i ? "block w-full " : "hidden"} >
+      <div className="content">
+      {children}
     </div>
-  );
-export {TapContent , Tap , ServicesTap} ;
+  </div>
+);
+const GalleryTap = ( {title , openTab , setOpenTab , i})=>{
+  return(
+    <li className="-mb-px mr-2 last:mr-0 flex-auto text-center list-none">
+              <a
+                className={
+                  " uppercase block leading-normal transition duration-300" +
+                  (openTab === i
+                    ? "text-red-600"
+                    : "text-gray-600 hover:text-white hover:bg-red-600 p-5 rounded")
+                }
+                onClick={e => {
+                  e.preventDefault();
+                  setOpenTab(i);
+                }}
+                data-toggle="tab"
+                href="#link2"
+                role="tablist"
+              >
+                 {title}
+              </a>
+            </li>
+  )
+}
+export {TapContent , Tap , ServicesTap , GalleryTap} ;
