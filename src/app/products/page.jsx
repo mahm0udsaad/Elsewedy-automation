@@ -4,10 +4,9 @@ import { useState } from "react";
 import {Tap , TapContent} from "../component/productTaps"
 import { companiesLevelOne } from "../data/productsDetails";
 
-// You can now access each company's information by indexing the 'companies' array.
 
 export default function Products() {
-  const [openTab, setOpenTab] = useState(1);
+  const [openTab, setOpenTab] = useState(0);
   
   return (
     <>
@@ -33,7 +32,7 @@ export default function Products() {
               content={info.content}
                 openTab={openTab}
                 intro={info.intro}
-                i={i }
+                i={i}
                 id={`link${i}`}
                 title={info.title}
                 image={info.image}
