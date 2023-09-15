@@ -2,7 +2,6 @@
 import { ProductsDetails } from '@/app/data/productsDetails';
 
 const Details = ({ Data }) => {
-  
   return (
     <>
       {Data ? (Data.map((item, index) => (
