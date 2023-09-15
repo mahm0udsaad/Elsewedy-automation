@@ -1,25 +1,22 @@
-"use client"
-
 import { ProductsDetails } from '@/app/data/productsDetails';
 import { Details } from '@/app/component/details';
 
+export const dynamicParams = 'false'
 export async function generateStaticParams() {
-  return Object.keys(ProductsDetails).map((product) => ({
-    params: { product },
+  const productKeys = Object.keys(ProductsDetails);
+  const productsArray = productKeys.map((key) => ({
+    product: key,
   }));
-}
 
-async function ProductDetails({ params })  {
-  const productDetails = ProductsDetails[params.product]
-  console.log(params.product);
+  return productsArray;
+}
+export default async function ProductDetails({params})  {
+  const productData = ProductsDetails[params.product]
   return (
     <div>
-      <div className="logo flex my-20 w-[95%] mx-auto">
-        {/* <img src={logo} width={400} height={300} alt="logo" /> */}
-      </div>
       <div className="grid gap-8 w-11/12 mx-auto">
-        {productDetails ? (
-            <Details key={productDetails.length} Data={productDetails} />
+        {productData ? (
+            <Details key={productData.length} Data={productData} />
         ) : (
           <h1 className="text-center text-4xl pt-20">No information provided</h1>
         )}
@@ -27,6 +24,4 @@ async function ProductDetails({ params })  {
     </div>
   );
 };
-
-export default ProductDetails;
 
