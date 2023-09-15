@@ -3,19 +3,15 @@
 import { ProductsDetails } from '@/app/data/productsDetails';
 import { Details } from '@/app/component/details';
 
-export async function getStaticPaths() {
-  const paths = Object.keys(ProductsDetails).map((product) => ({
+export async function generateStaticParams() {
+  return Object.keys(ProductsDetails).map((product) => ({
     params: { product },
   }));
-
-  return {
-    paths,
-    fallback: false,
-  };
 }
 
-const ProductDetails = ({ params }) => {
+async function ProductDetails({ params })  {
   const productDetails = ProductsDetails[params.product]
+  console.log(params.product);
   return (
     <div>
       <div className="logo flex my-20 w-[95%] mx-auto">
