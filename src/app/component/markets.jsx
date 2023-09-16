@@ -1,6 +1,55 @@
-"use client"
+"use ch1ent"
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
+
+const markets = [
+  {
+    name: "Oil & Gas",
+    image: "images/markets/oil.jpg"
+  },
+  {
+    name: "Food & Beverage",
+    image: "images/markets/food.jpg"
+  },
+  {
+    name: "Steel & Sheet",
+    image: "images/markets/steel.jpg"
+  },
+  {
+    name: "Aluminum & Mining",
+    image: "images/markets/aluminum.jpg"
+  },
+  {
+    name: "Chemicals & Cosmetics",
+    image: "images/markets/chemicals.jpg"
+  },
+  {
+    name: "Power & Water & Others",
+    image: "images/markets/power.jpg"
+  },
+];
+
+const MarketCard = ({isInView , imgurl , title}) =>{
+  return(
+   <div className="flex flex-col items-center mt-5">
+    <h1 className="text-xl sm:text-2xl text-center py-5">{title}</h1>
+    <motion.div
+    initial={{opacity:0}}              
+    animate={{opacity:isInView?1:0}}
+    transition={{duration:1}}
+    className="h-[8rem] sm:h-[12rem]"
+  >
+
+    <img
+      loading="lazy"
+      className="h-full rounded-xl "
+      src={imgurl}
+      alt="Walnut"
+     />
+  </motion.div>
+   </div>
+  )
+}
   export default function Markets() {
     const marketsRef = useRef(null)
     const isInView = useInView(marketsRef)
@@ -8,77 +57,13 @@ import { useRef } from "react"
       <div 
       ref={marketsRef}
       className="bg-white">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
-          <div>
-          <ul className="text-4xl space-y-5">
-            <li>Oil & Gas</li>
-            <li>Food & Beverage</li>
-            <li>Steel & Sheet</li>
-            <li>Aluminum & Mining</li>
-            <li>Chemicals & Cosmetics</li>
-            <li >Power & Water & Others</li>
-            </ul>
-          </div>
-          <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
-            <motion.div
-              initial={{x:-50}}              
-              animate={{x:isInView?0:-50}}
-              transition={{duration:.5}}
-            >
-              <img
-                loading="eager"
-                width={350}
-                height={350}
-                className="h-full rounded-xl"
-                src="/images/markets/oil.jpg"
-                alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
-               />
-            </motion.div>
-            <motion.div
-              initial={{y:-50}}              
-              animate={{y:isInView?0:-50}}
-              transition={{duration:.7}}
-            >
-              <img
-                loading="eager"
-                width={350}
-                height={350}
-                className="h-full rounded-xl"
-                src="/images/markets/steel.jpg"
-                alt="Top down view of walnut card tray with embedded magnets and card groove."
-               />
-            </motion.div>
-            <motion.div
-              initial={{y:25}}              
-              animate={{y:isInView?0:25}}
-              transition={{duration:.7}}
-            >
-              <img
-                loading="eager"
-                width={350}
-                height={350}
-                className="h-full rounded-xl"
-                 src="/images/markets/food.jpg"
-                alt="Side of walnut card tray with card groove and recessed card area."
-               />
-            </motion.div>
-            <motion.div
-              initial={{x:25}}              
-              animate={{x:isInView?0:25}}
-              transition={{duration:.7}}
-            >
-              <img
-                loading="eager"
-                width={350}
-                height={350}
-                className="h-full rounded-xl"
-                src="/images/markets/power.jpg"
-                alt="Walnut card tray filled with cards and card angled in dedicated groove."
-               />
-            </motion.div>
+        <div className="mx-auto w-11/12 items-center py-12 ">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 lg:grid-row-2">
+            {markets.map((market , i)=>(
+              <MarketCard key={i} imgurl={market.image} title={market.name} isInView={isInView}/>
+            ))}
           </div>
         </div>
       </div>
     )
   }
-  

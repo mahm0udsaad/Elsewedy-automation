@@ -183,13 +183,29 @@ export function ServicesCard({isInView, feature , to}) {
   );
 }
 function Clients() {
+  // const logosContainer = useRef(null);
+  // const [x, setX] = useState(0);
+
+  // useEffect(() => {
+  //   if (x === 2500) {
+  //     setX(0);
+  //   }
+
+  //   const intervalId = setInterval(() => {
+  //     setX((prevX) => prevX + 1);
+  //     logosContainer.current.scrollLeft = x; 
+  //   }, 20);
+
+  //   return () => clearInterval(intervalId);
+  // }, [x]);
+
   return (
     <div className="bg-white py-10 overflow-x-hidden">
       <div className="mx-auto lg:px-8">
-        <h2 className="text-center text-lg font-semibold text-gray-900">
-          Trusted by the world’s most innovative teams
+        <h2 className="text-center text-4xl font-semibold text-center">
+          Our Clients
         </h2>
-        <div className="overflow-x-auto flex items-center pt-5 ">
+        <div  className="overflow-x-auto flex items-center pt-5 ">
           {clientsLogos.map((logoUrl, index) => (
             <img
               key={index} 
@@ -205,6 +221,7 @@ function Clients() {
     </div>
 )}
 export default function Home() {
+  const [repeat, setRepeat] = useState(false);
   const [start , setStart] = useState(false)
   const [currentSlide, setCurrentSlide] = useState(0);
   const solutionRef = useRef(null);
@@ -213,11 +230,7 @@ export default function Home() {
   const productsisInView = useInView(productsRef,{once:true});
   const isInView = useInView(solutionRef , {once:true});
   const wIsInView = useInView(welcomeRef , {once:true});
-  useEffect(()=>{
-    const introSlide = setTimeout(()=>{
-      setStart(false)
-    },3200)
-  },[])
+
   return (
     <>
     {start ? (
@@ -225,7 +238,7 @@ export default function Home() {
         <h1 className='text-center text-6xl'></h1>
       </div>
     ):(
-      <main className="w-full bg-white overflow-x-hidden">
+      <main className="w-full bg-white overflow-x-hidden pt-20">
       <Carousel
       onChange={(index) => setCurrentSlide(index)}
       infiniteLoop={true}
@@ -242,7 +255,6 @@ export default function Home() {
           />
       ))}
       </Carousel>
-      <Clients />
       <div className="grid grid-cols-2 sm:grid-cols-4 w-11/12 mx-auto">      
         {progressData.map((data, index) => (
           <ProgressBar
@@ -260,7 +272,7 @@ export default function Home() {
        <h1 
         className='text-center text-5xl py-10'>Welcome to Elsewedy Automation</h1>
         <div 
-        className="flex sm:flex-row flex-col w-full justify-between font-semibold text-center leading-10">
+        className="flex sm:flex-row flex-col w-full justify-between text-justify leading-10">
         <div
         ref={welcomeRef} 
         className='sm:w-[45%]'>
@@ -304,7 +316,7 @@ export default function Home() {
           <Markets />
         </div>
         <div className="products">
-          <h1 className="text-4xl font-semibold text-center">products Brands</h1>
+          <h1 className="text-4xl font-semibold text-center">Products Brands</h1>
           <div className="w-11/12 mx-auto grid sm:grid-cols-4 grid-cols-2">
           {productsLogos.map((imageUrl, index) => (
           <motion.div
@@ -326,6 +338,7 @@ export default function Home() {
         ))}
           </div>
         </div>
+      <Clients />
       </section>
       </main>
     )}

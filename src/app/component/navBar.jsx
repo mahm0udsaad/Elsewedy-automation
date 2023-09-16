@@ -14,17 +14,19 @@ function classNames(...classes) {
 export default function NavBar() {
   const [navigation , setNavigation] = useState(
     [
+      { name: 'Home', href: '/', current: false },
       { name: 'About US', href: '/about', current: false },
+      { name: 'Clients', href: '/clients', current: false },
       { name: 'Products', href: '../products', current: false },
       { name: 'Solutions & Services', href: '/services', current: false },
       { name: 'Training', href: '/training', current: false },
       { name: 'Gallery', href: '/gallery', current: false },
-        { name: 'Contact Us', href: '/contact', current: false },
+      { name: 'Contact Us', href: '/contact', current: false },
     ]
   )
   const [showOldLogo , setShowOldLogo] = useState(false)
   useEffect(() => {
-    const intervalDuration = !showOldLogo ? 2000 : 6000; 
+    const intervalDuration = !showOldLogo ? 1000 : 7000; 
     const time = setInterval(() => {
       setShowOldLogo((prevShowOldLogo) => !prevShowOldLogo);
     }, intervalDuration);
@@ -37,7 +39,7 @@ export default function NavBar() {
   return (
     <>
       <div className="min-h-full">
-        <Disclosure as="nav" className="bg-white">
+        <Disclosure as="nav" className="z-20 fixed bg-white w-full">
           {({ open }) => (
             <>
               <div className="mx-auto max-w-7xl px-4  sm:px-6 lg:px-8">
