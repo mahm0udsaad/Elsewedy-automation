@@ -3,13 +3,13 @@
 import { useEffect, useState ,useRef} from 'react';
 import Slide from './component/slide'
 import Link from 'next/link';
-import NavBar from "./component/navBar"
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import CountUp from 'react-countup';
 import { Carousel } from 'react-responsive-carousel';
-import { AnimatePresence, motion, invariant, useAnimation , useInView} from 'framer-motion';
+import { AnimatePresence, motion , useInView} from 'framer-motion';
 import { ChartBarSquareIcon,CogIcon,CubeIcon,PresentationChartBarIcon,UserIcon, BriefcaseIcon, ChartBarIcon, BookOpenIcon } from '@heroicons/react/24/outline'; 
 import Markets from './component/markets';
+import { clientsLogos , productsLogos } from './data/images';
 
 const slidesData = [
   {
@@ -69,14 +69,6 @@ const progressData = [
     widthClass: 'w-1/3',
   },
 ];
-const clientsLogos = [
-  '/images/clients/1-removebg-preview.png',
-  '/images/clients/2-removebg-preview.png',
-  '/images/clients/3-removebg-preview.png',
-  '/images/clients/4-removebg-preview.png',
-  '/images/clients/5-removebg-preview.png',
-  '/images/clients/6-removebg-preview.png',
-];
 const services =[
   {
     name: 'Offering High Standard Industrial Automation Products',
@@ -109,12 +101,7 @@ const services =[
 
   },
 ];
-const productsLogos = [
-  '/images/partners/allen-removebg-preview (1).png',
-  '/images/partners/semins-removebg-preview.png',
-  '/images/partners/ghm-removebg-preview.png',
-  '/images/partners/partner.png',
-];
+
 const ProgressBar = ({ title, number, icon, widthClass }) => {
   const ref = useRef(null);
   const isInView = useInView(ref,{once:true});
@@ -270,7 +257,7 @@ export default function Home() {
        <motion.div 
        className="welcome">
        <h1 
-        className='text-center text-5xl py-10'>Welcome to Elsewedy Automation</h1>
+        className='text-center text-5xl py-10'>Welcome to El Sewedy Automation</h1>
         <div 
         className="flex sm:flex-row flex-col w-full justify-between text-justify leading-10">
         <div

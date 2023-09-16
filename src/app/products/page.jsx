@@ -2,24 +2,29 @@
 import { useState } from "react";
 import {Tap , TapContent} from "../component/productTaps"
 import { companiesLevelOne } from "../data/productsDetails";
-
+const productsLogos = [
+  '/images/partners/partner-tab2.png',
+  '/images/partners/semins-tqp.png',
+  '/images/partners/ghm.png',
+  '/images/partners/partner-tab.png',
+];
 
 export default function Products() {
   const [openTab, setOpenTab] = useState(1);
   
   return (
     <>
-    <main className="flex min-h-screen justify-center">
+    <main className="flex min-h-screen justify-center pt-20">
     <div className="w-11/12 mx-auto">
         <div className="w-full">
           <ul
-            className="flex mb-0 list-none pt-3 pb-4 flex-row  overflow-scroll lg:overflow-hidden"
+            className="w-11/12 flex justify-around items-center mb-0 list-none pt-3 pb-4 flex-row  overflow-scroll lg:overflow-hidden"
             role="tablist"
           >
-            <Tap title={'Rockwell Automation'} openTab={openTab} setOpenTab={setOpenTab} i={1}/>
-            <Tap title={'Siemens Automation'} openTab={openTab} setOpenTab={setOpenTab} i={2}/>
-            <Tap title={'GHM Group'} openTab={openTab} setOpenTab={setOpenTab} i={3}/>
-            <Tap title={'Deutschmann Automation'} openTab={openTab} setOpenTab={setOpenTab} i={4}/>
+            <Tap logo={productsLogos[0]}  openTab={openTab} setOpenTab={setOpenTab} i={1}/>
+            <Tap logo={productsLogos[1]}  openTab={openTab} setOpenTab={setOpenTab} i={2}/>
+            <Tap logo={productsLogos[2]}  openTab={openTab} setOpenTab={setOpenTab} i={3}/>
+            <Tap logo={productsLogos[3]}  openTab={openTab} setOpenTab={setOpenTab} i={4}/>
           </ul>
         </div>
           <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">

@@ -1,15 +1,35 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-const Tap = ({title , openTab , setOpenTab , i})=>{
+
+const Tap = ({title , openTab , setOpenTab , i , logo})=>{
     return(
-        <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+        <li className="-mb-px mr-2 last:mr-0 flex flex-col justify-center h-[5rem]">
+            {logo ? (
+               <a
+               className={
+                 "rounded block h-full flex flex-col items-center" +
+                 (openTab === i
+                   ? "text-white border-b-2 border-[#9c1c27]"
+                   : "text-red-600 bg-white hover:opacity-50")
+               }
+               onClick={e => {
+                 e.preventDefault();
+                 setOpenTab(i);
+               }}
+               data-toggle="tab"
+               href="#link2"
+               role="tablist"
+             >
+                <img src={logo} alt="logo" width={150}/>
+             </a>
+            ):(
               <a
-                className={
-                  "sm:text-lg font-bold uppercase px-5 py-5 shadow-lg rounded block leading-normal " +
-                  (openTab === i
-                    ? "text-white bg-red-600"
-                    : "text-red-600 bg-white  hover:opacity-50 ")
+              className={
+                "sm:text-lg font-bold uppercase px-5 py-5 shadow-lg rounded block leading-normal " +
+                (openTab === i
+                  ? "text-white bg-red-600"
+                  : "text-red-600 bg-white  hover:opacity-50 ")
                 }
                 onClick={e => {
                   e.preventDefault();
@@ -18,9 +38,10 @@ const Tap = ({title , openTab , setOpenTab , i})=>{
                 data-toggle="tab"
                 href="#link2"
                 role="tablist"
-              >
+                >
                  {title}
               </a>
+                )}
             </li>
     )
 }
