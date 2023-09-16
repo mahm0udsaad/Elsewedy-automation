@@ -46,7 +46,7 @@ export const companiesLevelOne = [
                   <li>Drive Technology (Servo Converters)</li>
                 </ul>
               </>,
-      image: ["/images/details/siemens.jpg"],
+      image: ["/images/details/siemens.png"],
     },
     {
       title: "GHM Group",

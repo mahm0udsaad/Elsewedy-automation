@@ -24,10 +24,18 @@
 .k-timeline .k-timeline-flag, .k-timeline-circle {
   background-color: var(--icon-color) !important;
 }
-
+@media (min-width: 768px) and (max-width: 1200px){
+  .css-zipzvv{
+    white-space: initial !important;
+  }
+}
 @media (max-width: 768px) {
   .k-timeline .k-timeline-date{
     display: none;
+  }
+  .css-zipzvv{
+    white-space: initial !important;
+    width: 100% !important;
   }
   .k-timeline-vertical{
     padding-left: 2rem !important;

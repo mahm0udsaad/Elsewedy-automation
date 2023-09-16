@@ -468,4 +468,4 @@ const softSkillsCourses = [
     },
 ];
 
-export {siemensCourses,electricalPowerCourses,mechanicalCourses,instrumentationControlCourses,softSkillsCourses}
+export {allenBradleyCourses ,siemensCourses,electricalPowerCourses,mechanicalCourses,instrumentationControlCourses,softSkillsCourses}
