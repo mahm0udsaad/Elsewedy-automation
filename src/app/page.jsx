@@ -125,7 +125,7 @@ const ProgressBar = ({ title, number, icon, widthClass }) => {
     initial={{ boxShadow: '0px 0px 0px rgba(0, 0, 0, 0)' }}
     animate={{ boxShadow: shadowInview?'0px 5px 10px rgba(255, 0, 0, 0.2)':'0px 0px 0px rgba(0, 0, 0, 0)' }}
     transition={{duration:.5}}
-    className="p-4 rounded-2xl my-5  w-11/12 hover:-translate-y-5 transition duration-300 cursor-pointer">
+    className="p-4 rounded-2xl my-5  w-11/12 sm:hover:-translate-y-5 transition duration-300 cursor-pointer">
     <div className="flex flex-col items-center">
        <svg
         style={{opacity:isInView? '1':'0'}}

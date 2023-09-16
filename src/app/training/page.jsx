@@ -31,6 +31,7 @@ export default function Training() {
           <Th className="px-5">code</Th>
           <Th >Siemens</Th>
           <Th className="px-5">Days</Th>
+            
           <Th>Hours</Th>
           </motion.tr>
       </Thead>

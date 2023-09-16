@@ -34,6 +34,6 @@ const Slide = ({ text, parag, imgSrc , isActive}) => {
       </div>
     );
   };
-  
+
   export default Slide;
   

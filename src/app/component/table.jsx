@@ -12,12 +12,13 @@ export default function TableRow({course , i}) {
        initial={{ opacity:0 }}
        animate={{ opacity:isTrViwed? 1 : 0 }}
        transition={{ duration:.5 }}
-       className={`text-center h-20 border-b-2 ${i % 2 !== 0 ? 'bg-gray-200': 'bg-white'}`}
+       className={`border-b text-center h-20 border-b-2 ${i % 2 !== 0 ? 'bg-gray-200': 'bg-white'}`}
     >
-      <Td className="sm:w-[10%]">{course.code}</Td>
-      <Td className="w-[25%] text-sm text-start sm:w-1/2">{course.name}</Td>
-      <Td className="sm:w-[7%]">{course.days}</Td>
-      <Td className="sm:w-[7%]">{course.hours}</Td>
+      <Td className="whitespace-nowrap px-6 py-4">{course.code}</Td>
+      <Td className="whitespace-nowrap px-6 py-4 w-[25%] text-sm text-start sm:w-1/2">{course.name}</Td>
+      <Td className="whitespace-nowrap px-6 py-4">{course.days}</Td>
+      <Td className="whitespace-nowrap px-6 py-4">{course.hours}</Td>
+      
     </motion.tr>
   );
 }

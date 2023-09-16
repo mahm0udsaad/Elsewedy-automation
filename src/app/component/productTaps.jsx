@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-
+import { motion } from "framer-motion";
 const Tap = ({title , openTab , setOpenTab , i})=>{
     return(
         <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
@@ -59,14 +59,14 @@ const ServicesTap = ({children , openTab , i }) => (
 );
 const GalleryTap = ( {title , openTab , setOpenTab , i})=>{
   return(
-    <li className="-mb-px mr-2 last:mr-0 flex-auto text-center list-none">
+    <motion.li
+    initial={{ opacity:0 , y: 80}}
+    animate={{ opacity:1 , y: 0}}
+    transition={{ duration: 1}}
+    className={`text-sm sm:text-lg mr-2 last:mr-0 text-center list-none ${openTab === i ? 'bg-red-800 text-white rounded' : ''}` }>
               <a
                 className={
-                  " uppercase block leading-normal transition duration-300" +
-                  (openTab === i
-                    ? "text-red-600"
-                    : "text-gray-600 hover:text-white hover:bg-red-600 p-5 rounded")
-                }
+                  " uppercase block leading-normal transition duration-300 p-5 rounded"}
                 onClick={e => {
                   e.preventDefault();
                   setOpenTab(i);
@@ -77,7 +77,14 @@ const GalleryTap = ( {title , openTab , setOpenTab , i})=>{
               >
                  {title}
               </a>
-            </li>
+            </motion.li>
   )
 }
-export {TapContent , Tap , ServicesTap , GalleryTap} ;
+const GalleryContent = ({children , openTab , i})=>{
+  return(
+    <div className={openTab === i ? "block w-full" : "hidden"}>
+     { children }
+  </div>
+  )
+}
+export {TapContent , Tap , ServicesTap , GalleryTap , GalleryContent} ;
