@@ -1,9 +1,8 @@
 export const events = [
 
   {
-    description: "1998 EL-Sewedy Electrical Enterprise Rockwell Automation exclusive agent",
-    date: new Date(1998, 0, 1),
-    title: "EL-Sewedy Electrical Enterprise",
+    color:'#871208',
+    title: "EL-Sewedy Electrical Enterprise Rockwell Automation exclusive agent",
     subtitle: "1998",
     images: [
       {
@@ -13,9 +12,8 @@ export const events = [
     ]
   },
   {
-    description: "2004 First Allen Bradley Authorized training center for SLC and PLC5",
-    date: new Date(2004, 0, 1),
-    title: "First Allen Bradley Training Center",
+    color:'#b80d1a',
+    title: "First Allen Bradley Authorized training center for SLC and PLC5",
     subtitle: "2004",
     images: [
       {
@@ -25,33 +23,20 @@ export const events = [
     ]
   },
   {
-    description: "2009 El-Sewedy Automation has been established as SAE company",
-    date: new Date(2009, 0, 1),
-    title: "El-Sewedy Automation Establishment",
-    subtitle: "2009",
-    images: [
-      {
-        src: "/images/partners/allen-removebg-preview (1).png",
-        alt: "Image 3"
-      }
-    ]
-  },
-  {
-    description: "2009 Rockwell Automation Authorized System Integrator",
-    date: new Date(2009, 0, 1),
-    title: "Rockwell Automation Authorized Integrator",
+    color:'#e88200',
+    title: "El-Sewedy Automation has been established as SAE company",
     subtitle: "2009",
     images: [
       {
         src: "images/timeline/31-removebg-preview.png",
-        alt: "Image 4"
+        alt: "Image 3"
       }
     ]
   },
+  
   {
-    description: "2014 Bilateral business relation in the field of Industrial Control and Automation with ICS Total Solution GmbH to perform support and services in EMEA",
-    date: new Date(2014, 0, 1),
-    title: "Bilateral Business Relation with ICS Total Solution GmbH",
+    color:'#f5ba00',
+    title: "Bilateral business relation in the field of Industrial Control and Automation with ICS Total Solution GmbH to perform support and services in EMEA",
     subtitle: "2014",
     images: [
       {
@@ -61,21 +46,19 @@ export const events = [
     ]
   },
   {
-    description: "2016 New Agency Agreements with Deutschmann Automation GmbH New Distribution Agreement with GHM Messtechnik GmbH",
-    date: new Date(2016, 0, 1),
-    title: "New Agency Agreements and Distribution Agreement",
+    color:'#879c1a',
+    title: 'New Agency Agreements with Deutschmann Automation GmbH and New Distripution Agreement with GHM Messtechnik GmbH',
     subtitle: "2016",
     images: [
       {
-        src: "images/partners/ghm-removebg-preview.png",
+        src: "images/partners/ghm.png",
         alt: "Image 6"
       }
     ]
   },
   {
-    description: "2017 El-Sewedy Automation Rebranding; changed its company brand logo as a part of its business development plans.",
-    date: new Date(2017, 0, 1),
-    title: "El-Sewedy Automation Rebranding",
+    color:'#3b54ab',
+    title: "El-Sewedy Automation Rebranding; changed its company brand logo as a part of its business development plans.",
     subtitle: "2017",
     images: [
       {

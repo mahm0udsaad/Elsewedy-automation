@@ -5,7 +5,7 @@ export default function AccordionCmp({title , content}) {
 
   return (
     <>
-      <Accordion className='w-full' allowMultiple>
+      <Accordion className='w-full' allowMultiple _expanded={{ bg: 'tomato', color: 'white' }}>
       <AccordionItem className='border-b border-gray-200 py-[17px]'>
         <h2>
           <AccordionButton className='flex justify-between'>
@@ -15,7 +15,7 @@ export default function AccordionCmp({title , content}) {
             <AccordionIcon className='text-left !text-navy-900'/>
           </AccordionButton>
         </h2>
-        <AccordionPanel className='text-left text-medium mt-2 !text-navy-900' pb={4}>
+        <AccordionPanel  className='text-left text-medium mt-2 !text-navy-900' pb={4}>
           {content}
         </AccordionPanel>
       </AccordionItem>

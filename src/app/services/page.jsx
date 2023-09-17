@@ -17,7 +17,7 @@ export default function Services() {
         <img src="/images/services/testalize-me-UvZBczaG6rc-unsplash.jpg" className="h-full w-full" alt="" />
       </div>
     <section className="flex flex-col space-y-10">
-    <div className="flex list-none w-5/6 mx-auto">
+    <div className="flex justify-center list-none w-5/6 mx-auto">
     <Tap title={'Projects'} openTab={openTab} setOpenTab={setOpenTab} i={1}/>
     <Tap title={'Technical Support'} openTab={openTab} setOpenTab={setOpenTab} i={2}/>
     </div>

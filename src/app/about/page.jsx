@@ -1,13 +1,13 @@
 "use client"
-import { useRef, useState } from "react";
+import { FaLock, FaUser, FaHandshake, FaFlag, FaHeart, FaCheck, FaBalanceScale } from 'react-icons/fa';
+import {LuBrainCircuit , LuHardHat} from 'react-icons/lu'
 import { Carousel } from "react-responsive-carousel";
 import { motion, useInView } from "framer-motion";
+import TimeLine from "../component/timeline";
+import { useRef, useState } from "react";
+import { ServicesCard } from "../page";
 import Slide from "../component/slide";
 import Link from "next/link";
-import {LuBrainCircuit , LuHardHat} from 'react-icons/lu'
-import { FaLock, FaUser, FaHandshake, FaFlag, FaHeart, FaCheck, FaBalanceScale } from 'react-icons/fa';
-import { ServicesCard } from "../page";
-import TimeLine from "../component/timeline";
 
 const slidesData = [
   {
@@ -40,7 +40,7 @@ const values =[
     icon: LuHardHat, 
   }
 ];
-const coreValues = [
+const coreValuesFirst = [
   {
     title: 'Integrity',
     description: 'Interact with integrity and high ethical standards.',
@@ -56,6 +56,8 @@ const coreValues = [
     description: 'Our primary focus is our team; we are creating an outstanding work model that pushes our team members beyond their limits to ensure their growth and prosperity.',
     icon: FaHandshake 
   },
+]
+const coreValuesSeconed = [
   {
     title: 'Quality',
     description: 'We always strive for improvement and perfect quality; therefore, we challenge ourselves toward a high standard benchmark in providing our services.',
@@ -78,40 +80,34 @@ const coreValues = [
   }
 ];
 
-function ValuesCards({value}){
+function ValuesCards({value }){
   const ref = useRef(null);
   const isInView = useInView(ref,{once:true});
   const shadow = useRef(null);
   const shadowInview = useInView(shadow);
 
   return (
-   <div ref={ref} className="flex w-full justify-center">
-     <motion.div
-    initial={{ boxShadow: '0px 0px 0px rgba(0, 0, 0, 0)' }}
-    animate={{ boxShadow: shadowInview?'0px 5px 15px rgba(0, 0, 0, 0.2)':'0px 0px 0px rgba(0, 0, 0, 0)' }}
-    transition={{duration:.5}}
-    className={`relative  max-w-sm rounded overflow-hidden p-5`}>
-
-    <div className="flex flex-col items-center justify-center">
-       <motion.div
+    <motion.div
+    initial={{y:50}}
+    animate={{y:isInView?0:30}}
+    transition={{duration:.7}}
+    className="relative pl-16">
+      <dt className="text-base font-semibold leading-7 text-gray-900">
+        <motion.div
+        style={{backgroundColor:'#ffe05c'}}
          initial={{ boxShadow: '0px 0px 0px rgba(0, 0, 0, 0)' }}
-         animate={{ boxShadow: isInView?'0px 5px 20px rgba(0, 0, 0, 0.2)':'0px 0px 0px rgba(0, 0, 0, 0)' }}
-         className={`icon  left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-[#DAD4B5]  shadow-2xl`}>
+         animate={{ boxShadow: isInView?'0px 5px 20px rgba(255, 0, 0, 0.2)':'0px 0px 0px rgba(0, 0, 0, 0)' }}
+        className="icon absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-red-800 shadow-2xl">
           {value.icon && (
-            <value.icon className="shadow-2xl h-6 w-6 text-white" aria-hidden="true" />
+            <value.icon  className="shadow-2xl h-6 w-6 text-white" aria-hidden="true" />
           )}
         </motion.div>
-
-        <div className="py-4 text-center">
-          <div ref={shadow} className="font-bold text-xl mb-2">{value.title}</div>
-          <p className="text-gray-700 text-base">
-            {value.description}
-          </p>
-        </div>
-    </div>
-    
+        <h1 className="text-xl font-semibold leading-6 text-gray-900">
+          {value.title}
+        </h1>
+        <p className="text-md  font-light">{value.description}</p>
+      </dt>
     </motion.div>
-   </div>
   )
 }
 export default function About() {
@@ -123,7 +119,7 @@ export default function About() {
 
   return (
     <>
-    <main className="w-full overflow-x-hidden">
+    <main className="w-full pt-20">
       <Carousel
         onChange={(index) => setCurrentSlide(index)}
         infiniteLoop={true}
@@ -145,21 +141,39 @@ export default function About() {
       <motion.div 
        className="welcome">
        <h1 
-        className='text-center text-3xl sm:text-5xl py-10 leading-10'>About <br /> El-Sewedy Automation</h1>
-        <div
+        className='text-center text-3xl sm:text-5xl py-10 leading-10'>About <br /> El Sewedy Automation</h1>
+          <div
         ref={aboutRef} 
         className=''>
-          <motion.p
+          <motion.div
            initial={{opacity:0 , x:-50}}        
            animate={{ opacity: wIsInView ? 1 : 0, x: wIsInView ? 0 : -50 }}
            transition={{duration:.5}}
-          className="text-lg font-semibold leading-9">El Sewedy Automation is a leading Egyptian company in designing, supplying, installing, and commissioning of industrial automation systems for a wide range of industrial markets. The company Founders have over 25 years of proven technical expertise, they established the Legal Form of El Sewedy Automation Company as S.A.E for Industrial Automation Solutions/Services Provider since 2009. 
-          Over the years, “El Sewedy Automation" has gained its Goodwell and Reputation for its quality products & services through its talented team who brings their extensive knowledge in industrial automation technology and practices to provide the company customers with innovative, reliable, and cost-effective automation solutions/services “On-time and within Budget”. 
-          El Sewedy Automaton offers the lowest market price while maintaining the high quality of its
+          className="text-justify text-lg leading-9">El Sewedy Automation is a leading Egyptian Company in designing, supplying, installing, and
+          commissioning of industrial automation systems for a wide range of industrial markets. Company
+          Founders have over 25 years of proven technical expertise, they established the Legal Form of El
+          Sewedy Automation Company as S.A.E for Industrial Automation Solutions/Services Provider since
+          2009.
+          <ul className="pt-8 list-disc flex flex-col space-y-4">
+          <li>
+          Over the years, "El Sewedy Automation" has gained its Goodwell and Reputation for its quality
+          products & services through its talented team who brings their extensive knowledge in industrial
+          automation technology and practices to provide the company customers with innovative, reliable,
+          and cost-effective automation solutions/services "On-time and within Budget".
+          </li>
+          <li>
+           El Sewedy Automation offers the lowest market price while maintaining the high quality of its
           solution/service to help its customers to improve business efficiency and maximize their
-          organization’s profitability.
-          El-Sewedy Automation, one of the top-ranked companies in Egypt for providing outstanding, remarkable, and professional training courses such as (PAC programming, SCADA systems, HMI...etc.) through its training center as well as delivering onsite training services using its own workstations kits with the guidance of company's top talented “PhDs Engineers”. 
-          El-Sewedy Automation policy is highly considering customer retention and loyalty prospects through promoting the best-in-class products/services for its clients. El-Sewedy Automation has been recognized by its clients as "The Best After-Sale Service</motion.p>
+          organization's profitability.
+          </li>
+          <li>
+           El-Sewedy Automation, one of the top ranked companies in Egypt for providing outstanding,
+          remarkable, and professional training courses such as (PLC programming, SCADA systems and
+          HMI...etc.) through its training centre using its own original working stations with the guidance
+          of company's top talented "PhDs Engineers"..
+          </li>
+          </ul>
+          </motion.div>
           </div>
        </motion.div>
       </section>
@@ -167,8 +181,8 @@ export default function About() {
       <div 
       ref={valuesRef} 
       className="py-10 grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-      {values.map((feature, index) => (
-        <ServicesCard isInView={visInView} feature={feature} key={index} to={feature.to} />
+      {values.map((value, index) => (
+        <ServicesCard isInView={visInView} feature={value} key={index} to={value.to} />
         ))}
       </div>
       </section>
@@ -176,15 +190,30 @@ export default function About() {
         <h1 className="text-4xl font-bold text-center">Company Historical Evolution</h1>
        <TimeLine />
       </section>
-      <section className="w-6/5 mx-auto my-5">
-      <div className="core-values grid sm:grid-cols-3 sm:grid-cols-2 gap-5 w-3/4 mx-auto">
-        <h1 className="flex items-center text-5xl font-semibold text-center">
+      <section className=" w-11/12 mx-auto my-5">
+        <h1 className="text-5xl font-semibold text-center">
           Core Values
         </h1>
-      {coreValues.map((value, index) => (
+       <div className="flex justify-around">
+        <div className="flex items-center justify-center w-1/2">
+        <img src="images\about\DrawKit Vector Illustration Team Work (2).png" alt="image" />
+        </div>
+       <div className="py-10 grid w-1/2 grid-cols-1 gap-x-8 gap-y-10">
+      {coreValuesFirst.map((value, index) => (
         <ValuesCards key={index} value={value}  />
       ))}
       </div>
+       </div>
+       <div className="flex justify-around flex-row-reverse">
+        <div className="flex items-center justify-center w-1/2">
+        <img src="images\about\DrawKit Vector Illustration Team Work (4).png" alt="image" />
+        </div>
+       <div className="py-10 grid w-1/2 grid-cols-1 gap-x-8 gap-y-10">
+      {coreValuesSeconed.map((value, index) => (
+        <ValuesCards key={index} value={value}  />
+      ))}
+      </div>
+       </div>
       </section>
     </main>
     </>

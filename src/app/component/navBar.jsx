@@ -1,11 +1,11 @@
 "use client"
-
 import { Fragment, useEffect ,useState} from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
 import { usePathname, useRouter } from 'next/navigation';
+import { IoLogoWhatsapp } from "react-icons/io";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -113,6 +113,9 @@ export default function NavBar() {
             </>
           )}
         </Disclosure>
+          <a title='chat with us' href='https://web.whatsapp.com/send?phone=+201028833734' className='bg-transparent fixed bg-white z-20 bottom-5 left-5 text-5xl text-green-600 hover:text-green-300'>
+            <IoLogoWhatsapp />
+          </a>
       </div>
     </>
   )

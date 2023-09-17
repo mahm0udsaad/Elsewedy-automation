@@ -101,7 +101,6 @@ const services =[
 
   },
 ];
-
 const ProgressBar = ({ title, number, icon, widthClass }) => {
   const ref = useRef(null);
   const isInView = useInView(ref,{once:true});

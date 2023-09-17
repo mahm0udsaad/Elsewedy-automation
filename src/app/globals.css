@@ -5,7 +5,12 @@
 :root{
   --icon-color: #991b1b ;
 }
-
+.redBg{
+  background-color: var(--icon-color);
+}
+.redColor{
+ color: var(--icon-color);
+}
 .red svg{
   color: var(--icon-color);
 }
@@ -24,6 +29,7 @@
 .k-timeline .k-timeline-flag, .k-timeline-circle {
   background-color: var(--icon-color) !important;
 }
+
 @media (min-width: 768px) and (max-width: 1200px){
   .css-zipzvv{
     white-space: initial !important;
