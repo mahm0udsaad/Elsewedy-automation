@@ -316,7 +316,7 @@ export default function Home() {
             <img
               src={imageUrl}
               alt={`Partner ${index + 1}`}
-              className="rounded-lg "
+              className="rounded-lg sm:w-[200px] w-[150px]"
               width={200} 
               height={120} 
             />

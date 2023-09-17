@@ -14,6 +14,29 @@ export default function Training() {
   return (
     <>
     <main className="flex flex-col min-h-screen pt-20">
+    <section className=" w-11/12 mx-auto my-5">
+        <div style={{borderRadius:`0 20px`}} className=" redBg w-1/2 mx-auto my-10">
+        <h1 className="text-5xl font-semibold text-center text-white p-10">
+          Our Courses
+        </h1>
+        </div>
+       <div className="sm:flex justify-around">
+        <div className="flex items-center justify-center sm:w-1/2">
+        <img src="images\training\training1.jpg" alt="image" />
+        </div>
+       <div className="py-10 grid content-center  sm:w-1/2 grid-cols-1 gap-x-8 gap-y-24">
+      <h1>HElo</h1>
+      </div>
+       </div>
+       <div className="sm:flex justify-around flex-row-reverse">
+        <div className="flex items-center justify-center sm:w-1/2">
+        <img src="images\training\training2.webp" alt="image" />
+        </div>
+       <div className="py-10 grid content-center  sm:w-1/2 grid-cols-1 gap-x-8 gap-y-24">
+      <h1>HElo</h1>
+      </div>
+       </div>
+      </section>
       <section>
         <h1 className="text-4xl text-center font-semibold py-8">
         Our Training Courses

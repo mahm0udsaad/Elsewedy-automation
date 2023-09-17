@@ -68,7 +68,7 @@ export default function NavBar() {
                               item.current
                                 ? 'bg-red-800 text-white'
                                 : 'transtion duration-300 hover:bg-red-800 hover:text-white',
-                              'rounded-md px-3 py-2 text-sm font-medium'
+                              'rounded-md lg:px-3 py-2 text-sm font-medium'
                             )}
                             aria-current={item.current ? 'page' : undefined}
                           >
@@ -113,7 +113,7 @@ export default function NavBar() {
             </>
           )}
         </Disclosure>
-          <a title='chat with us' href='https://web.whatsapp.com/send?phone=+201028833734' className='bg-transparent fixed bg-white z-20 bottom-5 left-5 text-5xl text-green-600 hover:text-green-300'>
+          <a title='chat with us' href='https://web.whatsapp.com/send?phone=+201028833734' className='bg-transparent fixed z-20 bottom-5 left-5 text-6xl text-green-600 hover:text-green-300'>
             <IoLogoWhatsapp />
           </a>
       </div>

@@ -194,21 +194,21 @@ export default function About() {
         <h1 className="text-5xl font-semibold text-center">
           Core Values
         </h1>
-       <div className="flex justify-around">
-        <div className="flex items-center justify-center w-1/2">
+       <div className="sm:flex justify-around">
+        <div className="flex items-center justify-center sm:w-1/2">
         <img src="images\about\DrawKit Vector Illustration Team Work (2).png" alt="image" />
         </div>
-       <div className="py-10 grid w-1/2 grid-cols-1 gap-x-8 gap-y-10">
+       <div className="py-10 grid content-center  sm:w-1/2 grid-cols-1 gap-x-8 gap-y-24">
       {coreValuesFirst.map((value, index) => (
         <ValuesCards key={index} value={value}  />
       ))}
       </div>
        </div>
-       <div className="flex justify-around flex-row-reverse">
-        <div className="flex items-center justify-center w-1/2">
+       <div className="sm:flex justify-around flex-row-reverse">
+        <div className="flex items-center justify-center sm:w-1/2">
         <img src="images\about\DrawKit Vector Illustration Team Work (4).png" alt="image" />
         </div>
-       <div className="py-10 grid w-1/2 grid-cols-1 gap-x-8 gap-y-10">
+       <div className="py-10 grid content-center  sm:w-1/2 grid-cols-1 gap-x-8 gap-y-24">
       {coreValuesSeconed.map((value, index) => (
         <ValuesCards key={index} value={value}  />
       ))}

@@ -48,7 +48,7 @@ const CourseTap =({title , openTab , setOpenTap , i , color})=>{
            <a
               style={{backgroundColor:openTab === i ? `${color}` : 'white' ,color:openTab === i ? 'white': `${color}`}}
               className={
-                `sm:text-lg text-semibold  w-[25rem] py-5 shadow-lg rounded block leading-normal text-center hover:opacity-50`}
+                `sm:text-lg text-semibold w-[13rem] sm:w-[25rem] py-5 shadow-lg rounded block leading-normal text-center hover:opacity-50`}
                 onClick={e => {
                   e.preventDefault();
                   setOpenTap(i);
