@@ -1,7 +1,9 @@
 "use client"
+
 import { useState } from "react";
 import {Tap , TapContent} from "../component/productTaps"
 import { companiesLevelOne } from "../data/productsDetails";
+
 const productsLogos = [
   '/images/partners/partner-tab2.png',
   '/images/partners/semins-tqp.png',

@@ -9,10 +9,10 @@ const TimeLine = () => {
          style={{  paddingTop: `${i*5}%`}}
          className='sm:w-[30%]'
          >
-           <time className="block mb-2 text-sm font-normal leading-none text-gray-400 text-start px-4">{li.subtitle}</time>
+           <time style={{color:`${li.color}`}} className="block mb-2 text-xl font-semibold leading-none  text-start px-4">{li.subtitle}</time>
            <li
              style={{ borderColor:`${li.color}`}}
-             className={` sm:h-[27rem] rounded-lg border-t-2 border-l-2 border-l-0 border-${li.color} sm:mx-3 sm:p-4 relative sm:mb-6 sm:mb-0`}
+             className={` sm:h-[27rem] rounded-lg border-t-4 border-l-4 border-l-0 border-${li.color} sm:mx-3 sm:p-4 relative sm:mb-6 sm:mb-0`}
            >
              <div className="flex items-center">
              </div>

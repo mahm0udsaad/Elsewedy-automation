@@ -510,7 +510,6 @@ const data = [
   { name: "Soft Skills Courses", color: "#00b0f0" }
 ];
 
-console.log(data);
 
 
 

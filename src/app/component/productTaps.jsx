@@ -42,7 +42,6 @@ const Tap = ({title , openTab , setOpenTab , i , logo})=>{
     )
 }
 const CourseTap =({title , openTab , setOpenTap , i , color })=>{
-  console.log(title);
   return(
     <li  className={`-mb-px mr-2 last:mr-0 flex flex-col justify-center `}>
            <a

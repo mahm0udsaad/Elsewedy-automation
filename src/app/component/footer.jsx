@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { FaFacebookSquare, FaLinkedin, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa'; // Import icons from the "react-icons/fa" package
+import { FaFacebookSquare, FaLinkedin, FaInstagram, FaYoutube, FaTwitter ,FaMapMarkerAlt, FaPhone, FaFax, FaWhatsapp, FaEnvelope} from 'react-icons/fa'; // Import icons from the "react-icons/fa" package
 
  
 const  Footer =()=>{
@@ -14,36 +14,39 @@ const  Footer =()=>{
                     <p className="font-medium 
                     ">Contact</p>
                     <ul className="mt-6 space-y-4 text-sm">
-                <li className='w-5/6'>
-                    <a href="#" className="hover:text-gray-700 transition opacity-75" >
-                    Address:<br /> Head Quarter: 27 Orabi St., 7th Floor, Office (706), Orabi Street, Al-Azbakia, 11111 - Cairo.
-                    </a>
-                </li>
-                <li>
-                    <a href="#" className="hover:text-gray-700 transition opacity-75">
-                    Phone:<br />
-                    Tel: +20 (2) 2576 3462 <br /> Cell (1): +201028833734 <br />Cell (2): +20100 14 553 56, <br /> Cell (3): +201028833712 <br /> Cell (4): +20105772402
-                    </a>
-                </li>
+                    <li className="w-5/6">
+                      <a href="#" className="hover:text-gray-700 transition opacity-75">
+                        <FaMapMarkerAlt className="inline-block mr-2 text-blue-500" />
+                        Address:<br /> Head Quarter: 27 Orabi St., 7th Floor, Office (706), Orabi Street, Al-Azbakia, 11111 - Cairo.
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="hover:text-gray-700 transition opacity-75">
+                        <FaPhone className="inline-block mr-2 text-gray-500" />
+                        Phone:<br />
+                        Tel: +20 (2) 2576 3462 <br /> Cell (1): +201028833734 <br />Cell (2): +20100 14 553 56, <br /> Cell (3): +201028833712 <br /> Cell (4): +20105772402
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="hover:text-gray-700 transition opacity-75">
+                        <FaFax className="inline-block mr-2 text-black" />
+                        Fax: +20 (2) 2576 3463
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="hover:text-gray-700 transition opacity-75">
+                        <FaWhatsapp className="inline-block mr-2 text-green-600" />
+                        WhatsApp: +201028833734
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="hover:text-gray-700 transition opacity-75">
+                        <FaEnvelope className="inline-block mr-2 text-red-700" />
+                        E-mail: info@elsewedy-automation.com
+                      </a>
+                    </li>
+                  </ul>
 
-                <li>
-                    <a href="#" className="hover:text-gray-700 transition opacity-75">
-                    Fax: +20 (2) 2576 3463
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#" className="hover:text-gray-700 transition opacity-75">
-                    WhatsApp: +201028833734
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#" className="hover:text-gray-700 transition opacity-75">
-                    E-mail: info@elsewedy-automation.com
-                    </a>
-                </li>
-                </ul>
                 </div>
                   <div className='sm:w-[50%]'>
                       <p className="font-medium 

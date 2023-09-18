@@ -213,6 +213,7 @@ export default function Home() {
   const isInView = useInView(solutionRef , {once:true});
   const wIsInView = useInView(welcomeRef , {once:true});
 
+
   return (
     <>
     {start ? (
