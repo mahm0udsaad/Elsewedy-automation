@@ -19,7 +19,7 @@ const ProjectCard = ({project , i}) =>{
             showThumbs={false} 
             autoPlay={true}> 
             {project.projectImages && project.projectImages.map((img)=>(
-                <img src={img} alt="image" className="lg:w-[11rem] lg:h-[20rem]"/>
+                <img src={img} alt="image" className="w-[11rem] h-[20rem]"/>
             ))}
         </Carousel>
          </div>

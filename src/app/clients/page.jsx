@@ -14,9 +14,9 @@ export default function ClientsPage(){
                 </div>
                 <Clients />
                 <section>
-                    <div className="grid lg:grid-cols-2 gap-8 w-11/12 mx-auto">
+                    <div className="grid sm:grid-cols-2 gap-8 w-11/12 mx-auto">
                        {projectsData.map((project , i)=>(
-                        <ProjectCard key={i}  project={project} i={i}/>
+                        <ProjectCard key={i / projectsData.length}  project={project} i={i}/>
                        ))}
                     </div>
                 </section>

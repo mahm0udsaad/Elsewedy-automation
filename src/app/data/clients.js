@@ -194,7 +194,6 @@ const projectsData = [
         '/images/clients/aluminum/298.jpg',
         '/images/clients/aluminum/299.jpg',
       ],
-
     },
     {
       image:'images/clients/oil/badr.png',
@@ -242,7 +241,7 @@ const projectsData = [
       projectImages:[
         '/images/clients/oil/308.jpg',
         '/images/clients/oil/307.jpg',
-        '/images/clients/oil/306.jpg,'
+        '/images/clients/oil/306.jpg',
       ]
     },
   ];
