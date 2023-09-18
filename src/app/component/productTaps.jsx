@@ -26,7 +26,7 @@ const Tap = ({title , openTab , setOpenTab , i , logo})=>{
             ):(
               <a
               className={
-                `sm:text-lg font-bold py-5 shadow-lg rounded block leading-normal text-center px-20  ${logo ? '':'px-20'} ${openTab === i ? "text-white bg-red-600": "text-red-600 bg-white  hover:opacity-50 "}`}
+                `sm:text-lg font-bold py-5 shadow-lg rounded block leading-normal text-center px-20  ${logo ? '':'px-20'} ${openTab === i ? "text-white redBg": "text-red-600 bg-white  hover:opacity-50 "}`}
                 onClick={e => {
                   e.preventDefault();
                   setOpenTab(i);
@@ -41,7 +41,7 @@ const Tap = ({title , openTab , setOpenTab , i , logo})=>{
             </li>
     )
 }
-const CourseTap =({title , openTab , setOpenTap , i , color})=>{
+const CourseTap =({title , openTab , setOpenTap , i , color })=>{
   console.log(title);
   return(
     <li  className={`-mb-px mr-2 last:mr-0 flex flex-col justify-center `}>
@@ -62,7 +62,7 @@ const CourseTap =({title , openTab , setOpenTap , i , color})=>{
   </li>
   )
 }
-const TapContent = ({ title, content, openTab, i, id, image, intro }) => (
+const TapContent = ({ title, content, openTab, i, id, image, intro ,link}) => (
   <div className={openTab === i ? "block w-full" : "hidden"} id={id}>
     <div className="content">
       <div className="header text-2xl sm:text-4xl font-semibold py-5">{intro}</div>
@@ -80,7 +80,7 @@ const TapContent = ({ title, content, openTab, i, id, image, intro }) => (
             )}
           </div>
           <div className="content-p pt-10">{content}</div>
-          <Link href={`products/${encodeURIComponent(title.split(" ")[0]) || title}`} className="text-blue-500">
+          <Link  href={link ? link : `products/${encodeURIComponent(title.split(" ")[0]) || title}`} className="text-blue-500">
             More information...
           </Link>
         </div>

@@ -2,7 +2,7 @@ const Details = ({ Data }) => {
     return (
       <>
         {Data ? (Data.map((item, index) => (
-          <div key={index} className='lg:flex space-y-8 my-5'>
+          <div id={item.link} key={index} className='lg:flex space-y-8 my-5 pt-10'>
             <div className="flex flex-col lg:w-1/2">
             <h2 className='text-2xl sm:text-4xl pb-5'>{item.title}</h2>
             <p className='lg:w-5/6 text-lg'>{item.content}</p>

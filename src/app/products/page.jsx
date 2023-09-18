@@ -39,11 +39,11 @@ export default function Products() {
                 intro={info.intro}
                 i={i + 1}
                 id={`link${i}`}
+                link={info.link}
                 title={info.title}
                 image={info.image}
               />
               ))}
-
               </div>
             </div>
           </div>

@@ -39,7 +39,7 @@ export default function NavBar() {
   return (
     <>
       <div className="min-h-full">
-        <Disclosure as="nav" className="z-20 fixed bg-white w-full">
+        <Disclosure as="nav" className="z-20 fixed bg-white w-full top-0">
           {({ open }) => (
             <>
               <div className="mx-auto max-w-7xl px-4  sm:px-6 lg:px-8">

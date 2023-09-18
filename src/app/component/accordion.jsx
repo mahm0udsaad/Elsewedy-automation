@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon } from '@chakra-ui/react'
 
-export default function AccordionCmp({title , content}) {
+export default function AccordionCmp({title , content , toggle}) {
 
   return (
     <>
-      <Accordion className='w-full' allowMultiple _expanded={{ bg: 'tomato', color: 'white' }}>
+      <Accordion className='w-full' allowMultiple >
       <AccordionItem className='border-b border-gray-200 py-[17px]'>
         <h2>
           <AccordionButton className='flex justify-between'>

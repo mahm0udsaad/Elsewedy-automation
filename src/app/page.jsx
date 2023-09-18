@@ -168,38 +168,34 @@ export function ServicesCard({isInView, feature , to}) {
     </motion.div>
   );
 }
-function Clients() {
-  // const logosContainer = useRef(null);
-  // const [x, setX] = useState(0);
+export function Clients() {
+  const logosContainer = useRef(null);
+  const [stop , setStop ] = useState(false)
+  const [x, setX] = useState(0);
 
-  // useEffect(() => {
-  //   if (x === 2500) {
-  //     setX(0);
-  //   }
+  useEffect(() => {
+    if (x === 7000) {
+      setX(0);
+    }
 
-  //   const intervalId = setInterval(() => {
-  //     setX((prevX) => prevX + 1);
-  //     logosContainer.current.scrollLeft = x; 
-  //   }, 20);
+    const intervalId = setInterval(() => {
+      stop ? setX(x) :setX((prevX) => prevX + 1);
+      logosContainer.current.scrollLeft = x; 
+    }, 20);
 
-  //   return () => clearInterval(intervalId);
-  // }, [x]);
+    return () => clearInterval(intervalId);
+  }, [x]);
 
   return (
     <div className="bg-white py-10 overflow-x-hidden">
       <div className="mx-auto lg:px-8">
-        <h2 className="text-center text-4xl font-semibold text-center">
-          Our Clients
-        </h2>
-        <div  className="overflow-x-auto flex items-center pt-5 ">
+        <div ref={logosContainer} className="overflow-x-hidden flex items-center pt-5 ">
           {clientsLogos.map((logoUrl, index) => (
             <img
               key={index} 
-              className="h-32 col-span-2 w-full object-contain "
+              className="h-32 col-span-2 w-full object-contain mx-4 lg:w-28"
               src={logoUrl}
               alt={`Client Logo ${index + 1}`}
-              width={170}
-              height={60}
             />
           ))}
         </div>
@@ -324,6 +320,9 @@ export default function Home() {
         ))}
           </div>
         </div>
+      <h2 className="text-center text-4xl font-semibold text-center">
+        Our Clients
+      </h2>
       <Clients />
       </section>
       </main>

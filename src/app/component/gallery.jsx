@@ -12,7 +12,7 @@ function GalleryGrid({ arr , center}){
                 <motion.img
                 initial={{scale : 0}}                
                 animate={{scale : 1}}
-                transition={{ duration:1}}
+                transition={{ duration:.5}}
                 alt="gallery"
                 className="block h-full w-full rounded-lg object-cover object-center hover:scale-105 transtion duration-300"
                 src={arr[0]} />

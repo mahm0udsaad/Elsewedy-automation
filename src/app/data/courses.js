@@ -6,7 +6,7 @@ const coursesCategory =[
   `Soft Skills / Managerial Courses` , 
 ]
 const allenBradleyCourses = {
-  color:'blue' , 
+  color:'black' , 
   data:[
     {
       code: 'AB-1' , 
@@ -158,7 +158,7 @@ const condensedTrainingPackages ={
     ]
 }
 const allenBradleyLegacyCourses = {
-  color:'gray' , 
+  color:'black' , 
   data:[
     {
       code: 'AB-L1' , 
@@ -193,7 +193,7 @@ const allenBradleyLegacyCourses = {
 ]
 }
 const siemensCourses = {
-  color:'yellow' , 
+  color:'#3e959c' , 
   data:[
     {
       code: 'SS-1' , 
@@ -270,7 +270,7 @@ const siemensCourses = {
 ]
 }
 const electricalPowerCourses = {
-  color:'green' , 
+  color:'#e6af00' , 
   data:[
     {
       code: 'E-1' , 
@@ -329,7 +329,7 @@ const electricalPowerCourses = {
 ]
 }
 const mechanicalCourses ={
-  color:'black' , 
+  color:'#404040' , 
   data: [
     {
       code: 'M-1' , 
@@ -364,7 +364,7 @@ const mechanicalCourses ={
 ]
 }
 const instrumentationControlCourses = {
-  color:'blue' , 
+  color:'#632b8d' , 
   data:[
     {
       code: 'IC-1' , 
@@ -399,7 +399,7 @@ const instrumentationControlCourses = {
 ]
 }
 const softSkillsCourses = {
-  color:'red' , 
+  color:'#00b0f0' , 
   data:[
    {
      code: 'SK-1' , 
@@ -500,14 +500,14 @@ const softSkillsCourses = {
   ]
 }
 const data = [
-  { name: "Allen Bradly - Courses", color: "blue" },
+  { name: "Allen Bradly - Courses", color: "black" },
   { name: "Allen Bradly(Condensed Training Packages)", color: "purple" },
-  { name: "Allen Bradley (Legacy Product) Courses", color: "gray" },
-  { name: "Siemens - Courses", color: "yellow" },
-  { name: "Electric Power Courses", color: "green" },
-  { name: "Mechanical Courses", color: "black" },
-  { name: "Instrumentation /Control Courses", color: "blue" },
-  { name: "Soft Skills Courses", color: "red" }
+  { name: "Allen Bradley (Legacy Product) Courses", color: "black" },
+  { name: "Siemens - Courses", color: "#3e959c" },
+  { name: "Electric Power Courses", color: "#e6af00" },
+  { name: "Mechanical Courses", color: "#404040" },
+  { name: "Instrumentation /Control Courses", color: "#632b8d" },
+  { name: "Soft Skills Courses", color: "#00b0f0" }
 ];
 
 console.log(data);
