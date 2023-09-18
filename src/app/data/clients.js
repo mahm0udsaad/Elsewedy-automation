@@ -136,7 +136,7 @@ const projectsData = [
       title: "Industry Type: Food & Beverage",
       clientName: "Client Name: FRONERI / NESTLE",
       description: "Work Description: El Sewedy Automation succeeded in upgrading one of the most important production lines of FRONERI / NESTLE company named “Vita-1” through...",
-      projectImges:[
+      projectImages:[
         'images/clients/food/288.jpg',
         'images/clients/food/289.jpg',
         'images/clients/food/290.jpg',
@@ -242,7 +242,7 @@ const projectsData = [
       projectImages:[
         '/images/clients/oil/308.jpg',
         '/images/clients/oil/307.jpg',
-        '/images/clients/oil/306.,'
+        '/images/clients/oil/306.jpg,'
       ]
     },
   ];

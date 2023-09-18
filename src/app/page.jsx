@@ -181,7 +181,7 @@ export function Clients() {
     const intervalId = setInterval(() => {
       stop ? setX(x) :setX((prevX) => prevX + 1);
       logosContainer.current.scrollLeft = x; 
-    }, 20);
+    }, 15);
 
     return () => clearInterval(intervalId);
   }, [x]);
@@ -193,7 +193,7 @@ export function Clients() {
           {clientsLogos.map((logoUrl, index) => (
             <img
               key={index} 
-              className="h-32 col-span-2 w-full object-contain mx-4 lg:w-28"
+              className="h-32 col-span-2 w-full object-contain mx-4 w-28"
               src={logoUrl}
               alt={`Client Logo ${index + 1}`}
             />

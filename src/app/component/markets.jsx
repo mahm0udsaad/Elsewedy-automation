@@ -37,7 +37,7 @@ const MarketCard = ({isInView , imgurl , title}) =>{
     initial={{opacity:0}}              
     animate={{opacity:isInView?1:0}}
     transition={{duration:1}}
-    className="h-[8rem] sm:h-[12rem]"
+    className="h-[7rem] sm:h-[12rem]"
   >
 
     <img
