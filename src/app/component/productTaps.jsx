@@ -67,7 +67,7 @@ const TapContent = ({ title, content, openTab, i, id, image, intro ,link}) => (
       <div className="header text-2xl sm:text-4xl font-semibold py-5">{intro}</div>
       <div>
         <div className="justify-center py-8 w-full">
-          <div className="wrapper flex justify-center">
+          <div className="wrapper flex justify-justify">
             {Array.isArray(image) && image.length > 0 ? (
               image.map((e, index) => (
                 <div className="inner-wrapper" key={index}>
@@ -78,7 +78,7 @@ const TapContent = ({ title, content, openTab, i, id, image, intro ,link}) => (
               null
             )}
           </div>
-          <div className="content-p pt-10">{content}</div>
+          <div className="content-p pt-10 text-justify">{content}</div>
           <Link  href={link ? link : `products/${encodeURIComponent(title.split(" ")[0]) || title}`} className="text-blue-500">
             More information...
           </Link>
