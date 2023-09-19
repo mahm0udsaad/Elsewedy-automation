@@ -1,6 +1,6 @@
 const projectsData = [
     {
-      image:'images/clients/oil/Chevron_Logo.svg.png',
+      image:'/images/clients/oil/Chevron_Logo.svg.png',
       title: "Industry Type: Oil & Gas",
       clientName: "Client Name: Chevron",
       description: "Work Description: During our maintenance contract with Chevron Company, many projects and services had been developed...",
@@ -46,7 +46,7 @@ const projectsData = [
       ]
     },
     {
-      image:'images/clients/food/download__2_-removebg-preview.png',
+      image:'/images/clients/food/download__2_-removebg-preview.png',
       title: "Industry Type: Food & Beverage",
       clientName: "Client Name: Kamara – Happy Sweet",
       description: "Work Description: El Sewedy Automation gained “Kamara – Happy Sweet” trust through its experts who implement many required projects and services...",
@@ -76,7 +76,7 @@ const projectsData = [
     ]
     },
     {
-      image:'images/clients/food/19_2018-636786537208154854-815-removebg-preview.png',
+      image:'/images/clients/food/19_2018-636786537208154854-815-removebg-preview.png',
       title: "Industry Type: Food & Beverage",
       clientName: "Client Name: Middle and West Delta Flour Mills",
       description: "Work Description: El Sewedy Automation developed a large project for Middle and West Delta Flour Mills, the project consists of programming PLC01 (Intake) & PLC02 (Cleaning) and developing a new SCADA system including commissioning and start up for intake and wheat cleaning processes...",
@@ -109,7 +109,7 @@ const projectsData = [
       ]
     },
     {
-      image:'images/clients/power/download__4_-removebg-preview (1).png',
+      image:'/images/clients/power/download__4_-removebg-preview (1).png',
       title: "Industry Type: Water & Wastewater",
       clientName: "Client Name: Sheikh Zayed City Authority",
       description: "Work Description: El Sewedy Automation upgraded the old three filtering systems (S7-200 Siemens PLCs) through...",
@@ -132,7 +132,7 @@ const projectsData = [
       ]
     },
     {
-      image:'images/clients/food/Nestle-Logo-2015.png',
+      image:'/images/clients/food/Nestle-Logo-2015.png',
       title: "Industry Type: Food & Beverage",
       clientName: "Client Name: FRONERI / NESTLE",
       description: "Work Description: El Sewedy Automation succeeded in upgrading one of the most important production lines of FRONERI / NESTLE company named “Vita-1” through...",
@@ -196,7 +196,7 @@ const projectsData = [
       ],
     },
     {
-      image:'images/clients/oil/badr.png',
+      image:'/images/clients/oil/badr.png',
       title: "Industry Type: Oil & Gas",
       clientName: "Client Name: Bader Eldeen Petroleum Company",
       description: "Work Description: El Sewedy Automation provided its solution and services for BAPETCO (Project Name; Aseal and Karam Project “PLC, Triconex , DCS and ModBus Communication”)...",
@@ -221,7 +221,7 @@ const projectsData = [
       ],
     },
     {
-      image:'images/clients/oil/enppi-english-logo-BC7CF09D0F-seeklogo.com.png',
+      image:'/images/clients/oil/enppi-english-logo-BC7CF09D0F-seeklogo.com.png',
       title: "Industry Type: Oil & Gas",
       clientName: "Client Name: ENPPI & Toyo Engineering Corporation",
       description: "Work Description: El Sewedy Automation provided its solution and services for ENPPI & Toyo joint venture (Project Name; ETHYDCO ENPPI/Toyo Joint Venture Ethylene Project)...",

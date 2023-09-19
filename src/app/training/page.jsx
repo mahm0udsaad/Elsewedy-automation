@@ -69,27 +69,23 @@ export default function Training() {
         </ul>
 
         <ServicesTap i={1} openTab={openTab}>
-        <CourseTable courseData={allenBradleyCourses} title={"Allen Bradley"}/>
+        <CourseTable isRockWell={true} courseData={allenBradleyCourses} title={"Allen Bradley"}/>
+        <CourseTable isRockWell={true} name='Rockwell' courseData={allenBradleyLegacyCourses} title={"Allen Bradley"}/>
+        <CondensedCourseTable isRockWell={true} name='Rockwell' courseData={condensedTrainingPackages} title={"Allen Bradley"}/>
         </ServicesTap>
         <ServicesTap i={2} openTab={openTab}>
-        <CondensedCourseTable name='Rockwell' courseData={condensedTrainingPackages} title={"Allen Bradley"}/>
-        </ServicesTap>
-        <ServicesTap i={3} openTab={openTab}>
-        <CourseTable name='Rockwell' courseData={allenBradleyLegacyCourses} title={"Allen Bradley"}/>
-        </ServicesTap>
-        <ServicesTap i={4} openTab={openTab}>
         <CourseTable courseData={siemensCourses} title={"siemens"}/>
         </ServicesTap>
-        <ServicesTap i={5} openTab={openTab}>
+        <ServicesTap i={3} openTab={openTab}>
         <CourseTable courseData={electricalPowerCourses} title={"Electrical Power"}/>
         </ServicesTap>
-        <ServicesTap i={6} openTab={openTab}>
+        <ServicesTap i={4} openTab={openTab}>
         <CourseTable courseData={mechanicalCourses} title={"Mechanical"}/>
         </ServicesTap>
-        <ServicesTap i={7} openTab={openTab}>
+        <ServicesTap i={5} openTab={openTab}>
         <CourseTable courseData={instrumentationControlCourses} title={"Instrumentaion Control"}/>
         </ServicesTap>
-        <ServicesTap i={8} openTab={openTab}>
+        <ServicesTap i={6} openTab={openTab}>
         <CourseTable courseData={softSkillsCourses} title={'Soft Skills'} />
         </ServicesTap>
       </section>

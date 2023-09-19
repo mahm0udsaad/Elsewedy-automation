@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
        <head>
-        <link rel="icon" href="\LOGO-fa.png" />
+        <link rel="icon" href="/" />
       </head>
       <body suppressHydrationWarning={true} className={inter.className}>
         <NavBar />

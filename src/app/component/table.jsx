@@ -21,7 +21,7 @@ export  function TableRow({course , i}) {
     </motion.tr>
   );
 }
-export function CourseTable({ courseData , title }){
+export function CourseTable({ courseData , title , isRockWell}){
   const tr = useRef(null)
   const isTrViwed = useInView(tr)
   return(
@@ -37,13 +37,13 @@ export function CourseTable({ courseData , title }){
           className="h-16 text-white py-3">
           <Th className="sm:px-5">code</Th>
           <Th >{title}</Th>
-          <Th className="sm:px-5">Days</Th>
-          <Th>Hours</Th>
+          <Th className={`sm:px-5 ${isRockWell ? 'redBg':''}`}>Days</Th>
+          <Th className={`${isRockWell ? 'redBg':'' }`}>Hours</Th>
           </motion.tr>
       </Thead>
       {courseData.data.map((course , i)=>(
         <Tbody>
-        <TableRow course={course} key={i} i={i}/>
+        <TableRow course={course} key={generateUniqueKey()} i={i}/>
         </Tbody>
       ))}
         </Table>
@@ -62,13 +62,19 @@ export  function CondensedTableRow({course , i}) {
        className={`border-b text-center sm:h-20 border-b-2 ${i % 2 !== 0 ? 'bg-gray-200': 'bg-white'}`}
     >
       <Td className="lg:whitespace-nowrap sm:px-6 py-4">{course.code}</Td>
-      <Td className='flex items-center justify-between'>
-        <h1 className='w-1/2 text-start'>
-      {course.title}
+      <Td className='flex flex-col sm:flex-row items-center sm:justify-between w-11/12'>
+        <h1 className='sm:w-1/2 w-full text-start'>
+      {course.title.split(" ").map((word, i) => (
+      <span key={i}>
+        {i > 0 && i % 5 === 0 ? <br /> : null}
+        {word}{' '}
+        :
+      </span>
+    ))}
         </h1> 
-      <ul className='w-1/2 text-start'>
+     <ul className='sm:w-1/2 w-full text-start'>
       {course.content.map((el , i)=>(
-        <li key={course.code} className='border border-gray py-4'>{el}</li>
+        <li key={generateUniqueKey()} className='border border-gray py-4'>{el}</li>
         ))}
       </ul>
         </Td>
@@ -77,6 +83,9 @@ export  function CondensedTableRow({course , i}) {
       
     </motion.tr>
   );
+}
+export function generateUniqueKey() {
+  return Date.now().toString(36) + Math.random().toString(36).substring(2);
 }
 export function CondensedCourseTable({ courseData , title}){
   const tr = useRef(null)
@@ -93,15 +102,15 @@ export function CondensedCourseTable({ courseData , title}){
           className="h-16 bg-red-400 text-white py-3"
           style={{backgroundColor:`${courseData.color}`}}
           >
-          <Th className="sm:px-5">code</Th>
+          <Th className="">code</Th>
           <Th >{title}</Th>
-          <Th className="sm:px-5">Days</Th>
-          <Th>Hours</Th>
+          <Th className="redBg">Days</Th>
+          <Th className='redBg'>Hours</Th>
           </motion.tr>
       </Thead>
       {courseData.data.map((course , i)=>(
        <Tbody>
-       <CondensedTableRow key={`${course.code}-${title}`} course={course} i={i}/>
+       <CondensedTableRow key={generateUniqueKey()} course={course} i={i}/>
        </Tbody>
       ))}
        </Table>

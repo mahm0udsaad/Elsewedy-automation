@@ -52,7 +52,7 @@ export default function NavBar() {
                         initial={{opacity: 0}}
                         animate={{opacity: 1}}
                         exit={{ opacity: 0 }}
-                        className="sm:h-20 sm:w-48 w-40 h-16 transtion duration-600"
+                        className="sm:h-20 sm:w-56 w-40 h-16 transtion duration-600"
                         src={!showOldLogo ? "/images/oldLogo.png":"/images/LOGO-0.png"}
                         alt="Company's logo"
                       /></Link>

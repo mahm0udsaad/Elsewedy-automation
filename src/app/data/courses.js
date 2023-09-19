@@ -101,7 +101,7 @@ const allenBradleyCourses = {
 ]
 }
 const condensedTrainingPackages ={
-  color:'purple' , 
+  color:'black' , 
   data: [
  
     {
@@ -501,8 +501,6 @@ const softSkillsCourses = {
 }
 const data = [
   { name: "Allen Bradly - Courses", color: "black" },
-  { name: "Allen Bradly(Condensed Training Packages)", color: "purple" },
-  { name: "Allen Bradley (Legacy Product) Courses", color: "black" },
   { name: "Siemens - Courses", color: "#3e959c" },
   { name: "Electric Power Courses", color: "#e6af00" },
   { name: "Mechanical Courses", color: "#404040" },
