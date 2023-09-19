@@ -137,9 +137,9 @@ const projectsData = [
       clientName: "Client Name: FRONERI / NESTLE",
       description: "Work Description: El Sewedy Automation succeeded in upgrading one of the most important production lines of FRONERI / NESTLE company named “Vita-1” through...",
       projectImages:[
-        'images/clients/food/288.jpg',
-        'images/clients/food/289.jpg',
-        'images/clients/food/290.jpg',
+        '/images/clients/food/288.jpg',
+        '/images/clients/food/289.jpg',
+        '/images/clients/food/290.jpg',
       ],
       project:[
         {
@@ -185,7 +185,7 @@ const projectsData = [
       ],
     },
     {
-      image: 'images/clients/oil/296.jpg',
+      image: '/images/clients/oil/296.jpg',
       title: "Industry Type: Aluminium",
       clientName: "Client Name: ALBA Company - Bahrain",
       description: "Work Description: El Sewedy Automation delivered its solution and services in Bahrain...",

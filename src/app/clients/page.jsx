@@ -1,8 +1,9 @@
 "use client"
+
 import ProjectCard from "../component/projectsCard"
 import { projectsData } from "../data/clients"
 import { Clients } from "../page"
-import { useState } from "react"
+
 export default function ClientsPage(){
     return(
         <main className="pt-20">

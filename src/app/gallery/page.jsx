@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import {GalleryGrid} from "../component/gallery";
 import { GalleryTap, GalleryContent } from "../component/productTaps";
 import { events, projects, services, training, All, Products } from '../data/gallery'
-
+import { generateUniqueKey } from "../component/table";
 export default  function Gallery()  {
     const [openTab , setOpenTab] = useState(1)
     const orderedProducts = {
@@ -38,13 +38,13 @@ export default  function Gallery()  {
         <div className="gallery overflow-y-scroll h-screen">
         <GalleryContent openTab={openTab} i={0}>
         { events.map((coll , i)=>(
-        <GalleryGrid center={true} key={i+'events'} arr={coll} />
+        <GalleryGrid center={true} key={generateUniqueKey()+i+'events'} arr={coll} />
        ))}
        
         </GalleryContent>
         <GalleryContent openTab={openTab} i={1}>
         { projects.map((coll , i)=>(
-        <GalleryGrid key={i+'projects'} arr={coll} />
+        <GalleryGrid key={generateUniqueKey()+i+'projects'} arr={coll} />
        ))}
         </GalleryContent>
 
@@ -52,24 +52,24 @@ export default  function Gallery()  {
         { Products.map((grid , i)=>(
         <>
         <h1 className="text-center pt-10 text-4xl font-semibold">{productsTitles[i]}</h1>
-        <GalleryGrid key={i+'products'} arr={grid} />
+        <GalleryGrid key={generateUniqueKey()+i+'products'} arr={grid} />
         </>
        ))}
         </GalleryContent>
 
         <GalleryContent openTab={openTab} i={3}>
         { services.map((coll , i)=>(
-        <GalleryGrid key={i+'services'} arr={coll} />
+        <GalleryGrid key={generateUniqueKey()+i+'services'} arr={coll} />
        ))}
         </GalleryContent>
         <GalleryContent openTab={openTab} i={4}>
         { training.map((coll , i)=>(
-        <GalleryGrid key={i+'training'} arr={coll} />
+        <GalleryGrid key={generateUniqueKey()+i+'training'} arr={coll} />
        ))}
         </GalleryContent>
         <GalleryContent openTab={openTab} i={5}>
         { All.map((coll , i)=>(
-        <GalleryGrid key={i+'all'} arr={coll} />
+        <GalleryGrid key={generateUniqueKey()+i+'all'} arr={coll} />
        ))}
         </GalleryContent>
         </div>

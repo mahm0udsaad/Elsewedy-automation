@@ -65,7 +65,7 @@ export const clientsLogos = [
 
   export const productsLogos = [
     '/images/partners/partner1.png',
-    '/images/partners/semins-removebg-preview.png',
+    '/images/partners/semins-tqp.png',
     '/images/partners/ghm.png',
     '/images/partners/partner.png',
   ];

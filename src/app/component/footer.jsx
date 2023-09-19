@@ -102,7 +102,7 @@ const  Footer =()=>{
                     <FaTwitter />
                   </a>
                 </li>
-                  </ul>
+                  </ul> 
                   </div>
                   </div>
 

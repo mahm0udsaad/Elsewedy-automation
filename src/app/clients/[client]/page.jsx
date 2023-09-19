@@ -1,7 +1,6 @@
 import { projectsData} from '../../data/clients'
 
 export const dynamicParams = 'false'
-
 export async function generateStaticParams() {
     const projectKeys = []
     for (let i = 0 ; i < projectsData.length ; i ++){
@@ -29,7 +28,7 @@ export default async function projectDetails({params})  {
             </div>
              ))}
             </div>
-            <div className="grid grid-cols-2 gap-y-8 w-11/12 h-auto justify-center content-center items-center ">
+            <div className="grid grid-cols-2 gap-y-8 w-11/12 h-auto justify-center content-center items-center lg:pt-24">
             {project.projectImages && project.projectImages.map((img , i)=>(
               i < 4 ?  <img src={img} alt="image" className="rounded-lg w-11/12  mx-auto h-[15rem]"/> : null
             ))}

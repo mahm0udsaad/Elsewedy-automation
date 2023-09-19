@@ -2,7 +2,7 @@
 
 import Slide from "../component/slide"
 import { CourseTap , ServicesTap} from "../component/productTaps"
-import CourseTaple, { CondensedCourseTable } from "../component/table"
+import CourseTaple, { CondensedCourseTable, generateUniqueKey } from "../component/table"
 import { motion, useInView } from "framer-motion"
 import { Table, TableContainer, Th, Td ,Thead, Tr , Tbody} from '@chakra-ui/react';
 import {data ,allenBradleyLegacyCourses,allenBradleyCourses,siemensCourses,electricalPowerCourses,mechanicalCourses,instrumentationControlCourses,softSkillsCourses, condensedTrainingPackages, coursesCategory} from '../data/courses'
@@ -15,9 +15,9 @@ export default function Training() {
     <>
     <main className="flex flex-col min-h-screen pt-20">
     <section className=" w-11/12 mx-auto my-5">
-        <div style={{borderRadius:`0 20px`}} className=" redBg sm:w-1/2 mx-auto my-10">
+        <div style={{borderRadius:`0 20px`}} className=" redBg lg:w-1/2 mx-auto my-10">
         <h1 className="text-5xl font-semibold text-center text-white p-10">
-          Our Courses
+          Our Training Center
         </h1>
         </div>
         <div className="intro sm:text-justify">
@@ -57,21 +57,21 @@ export default function Training() {
       </section>
       <section>
         <h1 className="text-4xl text-center font-semibold py-8">
-        Our Training Courses
+        Our Courses
         </h1>
         <ul
             className="w-11/12 flex mx-auto items-center mb-0 list-none pt-3 pb-4 flex-row  overflow-x-scroll"
             role="tablist"
           >
         {data.map((title,i)=>(
-            <CourseTap key={i} title={title.name} color={title.color}  openTab={openTab} setOpenTap={setOpenTap} i={i + 1} />
+            <CourseTap key={i + generateUniqueKey()} title={title.name} color={title.color}  openTab={openTab} setOpenTap={setOpenTap} i={i + 1} />
         ))}
         </ul>
 
         <ServicesTap i={1} openTab={openTab}>
         <CourseTable isRockWell={true} courseData={allenBradleyCourses} title={"Allen Bradley"}/>
-        <CourseTable isRockWell={true} name='Rockwell' courseData={allenBradleyLegacyCourses} title={"Allen Bradley"}/>
-        <CondensedCourseTable isRockWell={true} name='Rockwell' courseData={condensedTrainingPackages} title={"Allen Bradley"}/>
+        <CourseTable isRockWell={true} name='Rockwell' courseData={allenBradleyLegacyCourses} title={"Allen Bradley (Legacy Courses)"}/>
+        <CondensedCourseTable isRockWell={true} name='Rockwell' courseData={condensedTrainingPackages} title={"Allen Bradley (Condensed Training Packages)"}/>
         </ServicesTap>
         <ServicesTap i={2} openTab={openTab}>
         <CourseTable courseData={siemensCourses} title={"siemens"}/>

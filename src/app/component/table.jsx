@@ -68,13 +68,13 @@ export  function CondensedTableRow({course , i}) {
       <span key={i}>
         {i > 0 && i % 5 === 0 ? <br /> : null}
         {word}{' '}
-        :
       </span>
     ))}
+        :
         </h1> 
      <ul className='sm:w-1/2 w-full text-start'>
       {course.content.map((el , i)=>(
-        <li key={generateUniqueKey()} className='border border-gray py-4'>{el}</li>
+        <li key={generateUniqueKey() + i} className='border border-gray py-4'>{el}</li>
         ))}
       </ul>
         </Td>
@@ -110,7 +110,7 @@ export function CondensedCourseTable({ courseData , title}){
       </Thead>
       {courseData.data.map((course , i)=>(
        <Tbody>
-       <CondensedTableRow key={generateUniqueKey()} course={course} i={i}/>
+       <CondensedTableRow key={generateUniqueKey() + i + course.code} course={course} i={i}/>
        </Tbody>
       ))}
        </Table>
