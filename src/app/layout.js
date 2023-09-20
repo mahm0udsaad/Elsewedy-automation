@@ -11,7 +11,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const inView = isFooterInview 
+  let inView = isFooterInview 
   function handelWhatsPing(isFooterInview){
      inView = isFooterInview 
   }
