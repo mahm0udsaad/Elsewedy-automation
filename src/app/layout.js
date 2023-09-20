@@ -3,8 +3,6 @@ import NavBar from './component/navBar'
 import Footer from './component/footer'
 import './globals.css'
 import { Inter } from 'next/font/google'
-import { useRef, useState } from 'react';
-import { inView, useInView } from 'framer-motion';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -13,10 +11,11 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const [inView , setInview] = useState(null)
+  const inView = isFooterInview 
   function handelWhatsPing(isFooterInview){
-    setInview(isFooterInview)
+     inView = isFooterInview 
   }
+
   return (
     <html lang="en">
        <head>
