@@ -1,18 +1,20 @@
 "use client"
-import { Fragment, useEffect ,useState} from 'react'
+import { Fragment, useContext, useEffect ,useState} from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
 import { usePathname, useRouter } from 'next/navigation';
 import { IoLogoWhatsapp } from "react-icons/io";
+import { MyContext } from '../context';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function NavBar({ isFooterInview }) {
-
+export default function NavBar() {
+  const {isFooterInview} = useContext(MyContext)
+  
   const [navigation , setNavigation] = useState(
     [
       { name: 'Home', href: '/', current: false },

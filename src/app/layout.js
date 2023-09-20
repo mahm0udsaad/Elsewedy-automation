@@ -1,8 +1,8 @@
-"use client"
 import NavBar from './component/navBar'
 import Footer from './component/footer'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import CounterProvider from './context'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -11,21 +11,18 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  let inView = isFooterInview 
-  function handelWhatsPing(isFooterInview){
-     inView = isFooterInview 
-  }
-
   return (
     <html lang="en">
        <head>
         <link rel="icon" href="/" />
       </head>
+      <CounterProvider>
       <body suppressHydrationWarning={true} className={inter.className}>
-        <NavBar isFooterInview={inView} />
+        <NavBar />
          {children}
-      <Footer handelWhatsPing={handelWhatsPing}/>
-        </body>
+        <Footer /> 
+      </body>
+      </CounterProvider>
     </html>
   )
 }

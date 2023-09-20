@@ -1,15 +1,15 @@
 "use client"
 import { useInView } from 'framer-motion';
-import React, { useRef, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import { FaFacebookSquare, FaLinkedin, FaInstagram, FaYoutube, FaTwitter ,FaMapMarkerAlt, FaPhone, FaFax, FaWhatsapp, FaEnvelope} from 'react-icons/fa'; // Import icons from the "react-icons/fa" package
+import { MyContext } from '../context';
 
  
-const  Footer =({handelWhatsPing})=>{
+const  Footer =()=>{
   const ref = useRef(null)
   const isFooterInview = useInView(ref)
-
-  handelWhatsPing(isFooterInview)
-
+  const { setIsFooterInview} = useContext(MyContext)
+  setIsFooterInview(isFooterInview)
     return (
             <footer 
              ref={ref}
