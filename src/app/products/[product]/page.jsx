@@ -14,7 +14,7 @@ export default async function ProductDetails({params})  {
   let logo = '';
 
   if (params.product === 'Siemens') {
-    logo = '/images/partners/semins-removebg-preview.png';
+    logo = '/images/partners/semins-tqp.png';
   } else {
     logo = '/images/partners/allen-removebg-preview (1).png';
   }

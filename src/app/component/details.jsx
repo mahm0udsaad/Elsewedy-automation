@@ -8,7 +8,7 @@ const Details = ({ Data }) => {
             <p className='lg:w-5/6 text-lg'>{item.content}</p>
             </div>
               {item.imageUrl.length !== 0 ? (
-                <div className={`grid ${item.imageUrl.length == 4 ? "grid-cols-2 grid-rows-2 w-1/2":"grid-cols-2"} gap-4 sm:gap-6 lg:gap-8`}>
+                <div className={`grid ${item.imageUrl.length == 4 ? "grid-cols-2 grid-rows-2 sm:w-1/2":"grid-cols-2"} gap-4 sm:gap-6 lg:gap-8`}>
                 {Array.isArray(item.imageUrl) ? (
                   item.imageUrl.map((e, index) => 
                  <div className="inner-wrapper h-[13rem]">

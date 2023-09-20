@@ -14,7 +14,7 @@ export default async function projectDetails({params})  {
     
   return (
     <main className="pt-24">
-     <div className="flex">
+     <div className="sm:flex">
      <div className="rounded-xl text-black flex flex-col space-y-8 mx-4 p-10 text-justify w-11/12">
             <img src={project.image && project.image} alt="logo" width={150}/>
             <h1 className='text-3xl'>{project.clientName}</h1>
@@ -28,7 +28,7 @@ export default async function projectDetails({params})  {
             </div>
              ))}
             </div>
-            <div className="grid grid-cols-2 gap-y-8 w-11/12 h-auto justify-center content-center items-center lg:pt-24">
+            <div className="grid grid-cols-2 gap-y-8 mx-auto w-11/12 h-auto justify-center content-center items-center lg:pt-24">
             {project.projectImages && project.projectImages.map((img , i)=>(
               i < 4 ?  <img src={img} alt="image" className="rounded-lg w-11/12  mx-auto h-[15rem]"/> : null
             ))}

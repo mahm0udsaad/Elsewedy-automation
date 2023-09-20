@@ -1,7 +1,10 @@
+"use client"
 import NavBar from './component/navBar'
+import Footer from './component/footer'
 import './globals.css'
 import { Inter } from 'next/font/google'
-import Footer from './component/footer';
+import { useRef, useState } from 'react';
+import { inView, useInView } from 'framer-motion';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -10,15 +13,19 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const [inView , setInview] = useState(null)
+  function handelWhatsPing(isFooterInview){
+    setInview(isFooterInview)
+  }
   return (
     <html lang="en">
        <head>
         <link rel="icon" href="/" />
       </head>
       <body suppressHydrationWarning={true} className={inter.className}>
-        <NavBar />
+        <NavBar isFooterInview={inView} />
          {children}
-      <Footer />
+      <Footer handelWhatsPing={handelWhatsPing}/>
         </body>
     </html>
   )
