@@ -17,7 +17,7 @@ export default function ClientsPage(){
                 <div>
                     {categoriesClients.map((category , i) =>(
                         <div key={generateUniqueKey() + i} className="">
-                            <h1 className="text-4xl py-12 text-center">{category.title}</h1>
+                            <h1 className="text-4xl font-semibold py-12 text-center">{category.title}</h1>
                             <ul className={`overflow-hidden w-11/12 mx-auto grid grid-cols-10`}>
                                 {category.imagesUrl.map((url , i)=>(
                                     <img

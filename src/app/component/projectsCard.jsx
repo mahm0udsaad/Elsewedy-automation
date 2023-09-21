@@ -8,7 +8,7 @@ const ProjectCard = ({project , i}) =>{
 
     return(
         <Link href={`/clients/${i}`}>
-         {project && <div className="rounded-xl sm:flex justify-between space-y-8 mx-4 p-10 text-justify">
+         {project && <div className="shadow-lg rounded-xl sm:flex justify-between space-y-8 mx-4 p-10 text-justify">
             <div className="sm:w-[40%]">
             <img src={project.image} alt="logo" width={150}/>
             <h1 className="py-8">{project.clientName}</h1>

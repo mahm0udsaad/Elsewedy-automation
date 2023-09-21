@@ -141,7 +141,7 @@ export default function About() {
       <motion.div 
        className="welcome">
        <h1 
-        className='text-center text-3xl sm:text-5xl py-10 leading-10'>About <br /> El Sewedy Automation</h1>
+        className='text-center text-4xl font-semibold redColor sm:text-5xl py-10 leading-10'>About <br /> El Sewedy Automation</h1>
           <div
         ref={aboutRef} 
         className=''>
@@ -187,11 +187,11 @@ export default function About() {
       </div>
       </section>
       <section className="timeline pt-12">
-        <h1 className="text-4xl font-bold text-center">Company Historical Evolution</h1>
+        <h1 className="text-4xl font-semibold redColor text-center">Company Historical Evolution</h1>
        <TimeLine />
       </section>
       <section className=" w-11/12 mx-auto my-5">
-        <h1 className="text-5xl font-semibold text-center">
+        <h1 className="text-4xl font-semibold redColor font-semibold text-center">
           Core Values
         </h1>
        <div className="sm:flex justify-around">
