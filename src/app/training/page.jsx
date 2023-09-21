@@ -27,11 +27,11 @@ export default function Training() {
             </div>
           <div className="py-10 px-4 grid content-center  lg:w-1/2 grid-cols-1 gap-x-8 gap-y-24">
           <div>
-          <h1 className="text-4xl font-semibold text-start lg:text-justify  pb-3">Who Are Your Instructors? </h1>
+          <h1 className="text-2xl font-semibold text-start  pb-3">Who Are Your Instructors? </h1>
             <p>El-Sewedy Automation has a team of professionals “Group of Ph.D. Engineers” in Allen Bradly, SIMATIC, SCADA, HMI, and Drives. The training team is using training kits dedicated to training courses to let trainees test and check their automation exercises practically.</p>
           </div>
           <div>
-            <h1 className="text-4xl font-semibold text-start lg:text-justify  pb-3">Where Training Courses Can Be Conducted?</h1>
+            <h1 className="text-2xl font-semibold text-start  pb-3">Where Training Courses Can Be Conducted?</h1>
             <p>El-Sewedy Automation has its own training class in the company location. Also, El-Sewedy Automation offers onsite training for its customers' convenience or even in any suitable training places (Hotels, Other Training Centers... etc.).</p>
           </div>
           </div>
@@ -43,11 +43,11 @@ export default function Training() {
           <div className="py-10 grid content-center  lg:w-1/2 grid-cols-1 gap-x-8 gap-y-24">
           <div className=" px-4 my-8">
           <div className="">
-            <h1 className=" text-start lg:text-justify text-4xl font-semibold py-4">Why Should You Join El-Sewedy Automation Training Courses? </h1>
+            <h1 className=" text-start text-2xl font-semibold py-4">Why Should You Join El-Sewedy Automation Training Courses? </h1>
             <p>If you would like to benefit from long working experience and talented experts and to learn how to operate and solve sophisticated automation control problems in a short time with minimal effort, you have to register with El-Sewedy Automation since it owns worldwide experts in Programming of PLC, SCADA, Drives...etc.</p>
           </div>
           <div className="">
-            <h1 className=" text-start lg:text-justify text-4xl font-semibold py-4"> Who Can Join ? </h1>
+            <h1 className=" text-start text-2xl font-semibold py-4"> Who Can Join ? </h1>
             <p>Maintenance Engineers, Programmers, and there are special training programs for students.</p>
           </div>
           </div>
@@ -60,18 +60,18 @@ export default function Training() {
         Our Courses
         </h1>
         <ul
-            className="w-11/12 flex mx-auto items-center mb-0 list-none pt-3 pb-4 flex-row  overflow-x-scroll"
+            className="w-11/12 flex justify-around mx-auto items-center mb-0 list-none pt-3 pb-4"
             role="tablist"
           >
         {data.map((title,i)=>(
-            <CourseTap key={i + generateUniqueKey()} title={title.name} color={title.color}  openTab={openTab} setOpenTap={setOpenTap} i={i + 1} />
+            <CourseTap key={i + generateUniqueKey()} logo={title.imgUrl} color={title.color}  openTab={openTab} setOpenTap={setOpenTap} i={i + 1} />
         ))}
         </ul>
 
         <ServicesTap i={1} openTab={openTab}>
         <CourseTable isRockWell={true} courseData={allenBradleyCourses} title={"Allen Bradley"}/>
-        <CourseTable isRockWell={true} name='Rockwell' courseData={allenBradleyLegacyCourses} title={"Allen Bradley (Legacy Courses)"}/>
         <CondensedCourseTable isRockWell={true} name='Rockwell' courseData={condensedTrainingPackages} title={"Allen Bradley (Condensed Training Packages)"}/>
+        <CourseTable isRockWell={true} name='Rockwell' courseData={allenBradleyLegacyCourses} title={"Allen Bradley (Legacy Courses)"}/>
         </ServicesTap>
         <ServicesTap i={2} openTab={openTab}>
         <CourseTable courseData={siemensCourses} title={"siemens"}/>
@@ -92,7 +92,7 @@ export default function Training() {
       <section>
       <div style={{borderRadius:`0 20px`}} className=" redBg sm:w-1/2 mx-auto my-10">
         <h1 className="text-5xl font-semibold text-center text-white p-10">
-        Training Service Level Agreement
+        Service Agreement
         </h1>
         </div>
         <div className="bg-gray-100 p-6 rounded-lg shadow-md">

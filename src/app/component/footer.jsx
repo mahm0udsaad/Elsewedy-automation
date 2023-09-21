@@ -15,9 +15,10 @@ const  Footer =()=>{
              ref={ref}
              className="
               border-t-[1px] border-red-800">
-            <div className="sm:px-10 px-4 lg:flex pt-10 sm:w-[70%] mx-auto">
-               <div
-               className="flex space-y-5">
+            <div className="sm:px-10 px-4 lg:flex pt-10">
+              <div className="flex sm:w-[70%] ml-20">
+              <div
+               className="flex">
                <div>
                     <p className="font-medium 
                     ">Contact</p>
@@ -53,8 +54,8 @@ const  Footer =()=>{
                   <div className='sm:w-[50%]'>
                       <p className="font-medium 
                        text-center ">Follow Us</p>
-                      <ul className="mt-2 space-y-5 text-2xl text-4xl mx-auto sm:w-[20%]">
-                <li>
+                      <ul className="mt-2 text-2xl text-4xl mx-auto sm:w-[20%]">
+                <li className="pt-3">
                   <a
                     href="https://www.facebook.com/ElsewedyAutomationS.A.E?mibextid=LQQJ4d"
                     target="_blank"
@@ -64,7 +65,7 @@ const  Footer =()=>{
                     <FaFacebookSquare />
                   </a>
                 </li>
-                <li>
+                <li className="pt-3">
                   <a
                     href="https://www.linkedin.com/company/el-sewedy-automation/"
                     target="_blank"
@@ -74,7 +75,7 @@ const  Footer =()=>{
                     <FaLinkedin />
                   </a>
                 </li>
-                <li>
+                <li className="pt-3">
                   <a
                     href="https://www.instagram.com/elsewedy_automation/"
                     target="_blank"
@@ -84,9 +85,9 @@ const  Footer =()=>{
                     <FaInstagram />
                   </a>
                 </li>
-                <li>
+                <li className="pt-3">
                   <a
-                    href="https://www.youtube.com/@El-sewedyAutomation"
+                    href="https://www.youtube.com/channel/UCjp_qxpE3fIujkZpd4U7UzA"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-gray-700 flex justify-center transition text-red-700"
@@ -94,7 +95,7 @@ const  Footer =()=>{
                     <FaYoutube />
                   </a>
                 </li>
-                <li>
+                <li className="pt-3">
                   <a
                     href="https://twitter.com/ElsewedyAuto"
                     target="_blank"
@@ -107,9 +108,9 @@ const  Footer =()=>{
                   </ul> 
                   </div>
                   </div>
-
-               <div 
-               className="map flex overflow-x-hidden mt-4 lg:mt-0 lg:w-[40%] w-11/12 lg:px-4 lg:px-6 lg:px-8">
+              </div>
+              <div 
+               className="map flex overflow-x-hidden mt-4 lg:mt-0 sm:w-11/12">
                 <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d863.3339266235723!2d31.243343456749805!3d30.055910320440727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840947cf2b563%3A0x3b2239915d3275e!2sEl%20Sewedy%20Automation!5e0!3m2!1sar!2seg!4v1693912396972!5m2!1sar!2seg" 
                 style={{border:"0"}} 
@@ -117,8 +118,9 @@ const  Footer =()=>{
                 loading="lazy" 
                 className='mx-auto sm:w-full sm:h-[100%]'
                 ></iframe>
-                  </div>
+             </div>
             </div>
+
                  <div className="text-center mt-4 py-4 bg-gray-200 border-t border-gray-100 ">
             <p className="text-xs 
             ">

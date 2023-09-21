@@ -12,12 +12,12 @@ export  function TableRow({course , i}) {
        initial={{ opacity:0 }}
        animate={{ opacity:isTrViwed? 1 : 0 }}
        transition={{ duration:.5 }}
-       className={`border-b text-center sm:h-20 border-b-2 ${i % 2 !== 0 ? 'bg-gray-200': 'bg-white'}`}
+       className={`border-b text-center border-b-2 ${i % 2 !== 0 ? 'bg-gray-200': 'bg-white'}`}
     >
-      <Td className="lg:whitespace-nowrap sm:px-6 py-4">{course.code}</Td>
-      <Td className="lg:whitespace-nowrap sm:px-6 py-4 w-[60%] sm:w-[50%] text-lg text-start">{course.title}</Td>
-      <Td className="lg:whitespace-nowrap sm:px-6 py-4">{course.days}</Td>
-      <Td className="lg:whitespace-nowrap sm:px-6 py-4">{course.hours}</Td>
+      <Td className="lg:whitespace-nowrap sm:px-6 ">{course.code}</Td>
+      <Td className="lg:whitespace-nowrap sm:px-6  w-[60%] sm:w-[50%] text-lg text-start">{course.title}</Td>
+      <Td className="lg:whitespace-nowrap sm:px-6 ">{course.days}</Td>
+      <Td className="lg:whitespace-nowrap sm:px-6 ">{course.hours}</Td>
     </motion.tr>
   );
 }
@@ -59,9 +59,9 @@ export  function CondensedTableRow({course , i}) {
        initial={{ opacity:0 }}
        animate={{ opacity:isTrViwed? 1 : 0 }}
        transition={{ duration:.5 }}
-       className={`border-b text-center sm:h-20 border-b-2 ${i % 2 !== 0 ? 'bg-gray-200': 'bg-white'}`}
+       className={`border-b text-center border-b-2 ${i % 2 !== 0 ? 'bg-gray-200': 'bg-white'}`}
     >
-      <Td className="lg:whitespace-nowrap sm:px-6 py-4">{course.code}</Td>
+      <Td className="lg:whitespace-nowrap sm:px-6">{course.code}</Td>
       <Td className='flex flex-col sm:flex-row items-center sm:justify-between w-11/12'>
         <h1 className='sm:w-1/2 w-full text-start'>
       {course.title.split(" ").map((word, i) => (
@@ -74,12 +74,12 @@ export  function CondensedTableRow({course , i}) {
         </h1> 
      <ul className='sm:w-1/2 w-full text-start'>
       {course.content.map((el , i)=>(
-        <li key={generateUniqueKey() + i} className='border border-gray py-4'>{el}</li>
+        <li key={generateUniqueKey() + i} className='border-b-[1px] border-black py-2'>{el}</li>
         ))}
       </ul>
         </Td>
-      <Td className="lg:whitespace-nowrap sm:px-6 py-4">{course.days}</Td>
-      <Td className="whitespace-nowrap sm:px-6 py-4">{course.hours}</Td>
+      <Td className="lg:whitespace-nowrap sm:px-6 ">{course.days}</Td>
+      <Td className="whitespace-nowrap sm:px-6 ">{course.hours}</Td>
       
     </motion.tr>
   );

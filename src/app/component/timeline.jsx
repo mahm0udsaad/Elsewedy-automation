@@ -3,7 +3,7 @@ import { events } from '../data/events';
 
 const TimeLine = () => {
    return (
-     <ol className="items-start flex sm:flex-row flex-col items-center justify-center sm:justify-around mx-4 w-11/12">
+     <ol className="items-start flex sm:flex-row flex-col pt-20 justify-center sm:justify-around mx-4 w-11/12">
        {events.map((li, i) => (
          <div key={i}
          style={{  paddingTop: `${i*5}%`}}

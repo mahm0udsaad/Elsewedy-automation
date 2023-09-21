@@ -2,13 +2,13 @@ import { ChartBarSquareIcon,CogIcon,CubeIcon,PresentationChartBarIcon,UserIcon, 
 
 const slidesData = [
     {
-      imgSrc: '/images/hardware.jpg',
+      imgSrc: '/images/machine.jpg',
       text: 'El Sewedy Automation for Industrial Automation Services',
       parag:
         'El Sewedy Automation Founders have over 25 years of proven technical expertise, they established the Legal Form of El Sewedy Automation Company as S.A.E for Industrial Automation Solutions/Services Provider since 2009',
     },
     {
-      imgSrc: '/images/machine.jpg',
+      imgSrc: '/images/hardware.jpg',
       text: 'Provide Sustainability and Innovation Engineering and Services Technology.',
       
     }, {

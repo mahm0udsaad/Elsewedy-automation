@@ -499,16 +499,14 @@ const softSkillsCourses = {
    } , 
   ]
 }
+
 const data = [
-  { name: "Allen Bradly - Courses", color: "black" },
-  { name: "Siemens - Courses", color: "#3e959c" },
-  { name: "Electric Power Courses", color: "#e6af00" },
-  { name: "Mechanical Courses", color: "#404040" },
-  { name: "Instrumentation /Control Courses", color: "#632b8d" },
-  { name: "Soft Skills Courses", color: "#00b0f0" }
+  { imgUrl: "/images/partners/partner-tab2.png", color: "black" },
+  { imgUrl: "/images/partners/semins-tqp.png", color: "#3e959c" },
+  { imgUrl: "/images/training/image-024.png", color: "#e6af00" },
+  { imgUrl: "/images/training/image-039.png", color: "#404040" },
+  { imgUrl: "/images/training/image-032.png", color: "#632b8d" },
+  { imgUrl: "/images/training/image-045.png", color: "#00b0f0" }
 ];
-
-
-
 
 export {data  ,  coursesCategory , allenBradleyCourses  , allenBradleyLegacyCourses , condensedTrainingPackages  , siemensCourses , electricalPowerCourses , mechanicalCourses , instrumentationControlCourses , softSkillsCourses}

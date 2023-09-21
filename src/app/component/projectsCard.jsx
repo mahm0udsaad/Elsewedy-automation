@@ -8,7 +8,7 @@ const ProjectCard = ({project , i}) =>{
 
     return(
         <Link href={`/clients/${i}`}>
-         {project && <div className="redBg rounded-xl text-white sm:flex justify-between space-y-8 mx-4 p-10 text-justify">
+         {project && <div className="rounded-xl sm:flex justify-between space-y-8 mx-4 p-10 text-justify">
             <div className="sm:w-[40%]">
             <img src={project.image} alt="logo" width={150}/>
             <h1 className="py-8">{project.clientName}</h1>
@@ -22,9 +22,9 @@ const ProjectCard = ({project , i}) =>{
             showThumbs={false} 
             autoPlay={true}> 
             {project.projectImages && project.projectImages.map((img)=>(
-                img && <img src={img} alt="image" className="sm:w-[11rem] h-[20rem]"/>
+                img && <img src={img} alt="image" className="sm:w-[11rem] h-[26rem]"/>
             ))}
-        </Carousel>
+            </Carousel>
          </div>}
         </Link>
     )

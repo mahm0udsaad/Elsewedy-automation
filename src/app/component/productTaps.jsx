@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const Tap = ({title , openTab , setOpenTab , i , logo})=>{
+const Tap = ({logo , openTab , setOpenTab , i })=>{
     return(
         <li className={`-mb-px mr-2 last:mr-0 flex flex-col justify-center h-[5rem]`}>
             {logo ? (
@@ -41,23 +41,23 @@ const Tap = ({title , openTab , setOpenTab , i , logo})=>{
             </li>
     )
 }
-const CourseTap =({title , openTab , setOpenTap , i , color })=>{
+const CourseTap =({logo, openTab , setOpenTap , i , color })=>{
   return(
     <li  className={`-mb-px mr-2 last:mr-0 flex flex-col justify-center `}>
            <a
-              style={{backgroundColor:openTab === i ? `${color}` : 'white' ,color:openTab === i ? 'white': `${color}`}}
-              className={
-                `sm:text-lg text-semibold w-[13rem] sm:w-[25rem] py-5 shadow-lg rounded block leading-normal text-center hover:opacity-50`}
-                onClick={e => {
-                  e.preventDefault();
-                  setOpenTap(i);
-                }}
-                data-toggle="tab"
-                href="#link2"
-                role="tablist"
-                >
-                 {title}
-              </a>
+            style={{borderColor :openTab === i ? `${color}` : 'white' ,color:openTab === i ? 'white': `${color}`}}
+            className={
+              `border sm:text-lg text-semibold w-[10rem] h-full py-5 rounded block leading-normal hover:opacity-50`}
+              onClick={e => {
+                e.preventDefault();
+                setOpenTap(i);
+              }}
+              data-toggle="tab"
+              href="#link2"
+              role="tablist"
+              >
+                <img className="w-24 mx-auto" src={logo} alt="" />
+            </a>
   </li>
   )
 }

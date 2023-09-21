@@ -164,7 +164,7 @@ export default function Home() {
        <motion.div 
        className="welcome">
        <h1 
-        className='text-center text-5xl py-10'>Welcome to El Sewedy Automation</h1>
+        className='text-center text-4xl font-semibold redColor py-10'>Welcome to El Sewedy Automation</h1>
         <div 
         className="flex sm:flex-row flex-col w-full justify-between text-justify leading-10">
         <div
@@ -190,7 +190,7 @@ export default function Home() {
           initial={{opacity:0}}
           animate={{opacity:isInView? 1:0}}
           className="solution-section w-11/12 mx-auto pt-10">
-            <h1  className="text-5xl font-semibo text-center">
+            <h1  className="text-4xl font-semibold redColor text-center">
               Solution & Services
             </h1>
             <div 
@@ -204,13 +204,13 @@ export default function Home() {
       </section>
       <section>
         <div className="markets pt-10">
-          <h1 className="text-4xl font-semibold text-center">
+          <h1 className="text-4xl font-semibold redColor text-center">
             Industrial Markets
           </h1>
           <Markets />
         </div>
         <div className="products">
-          <h1 className="text-4xl font-semibold text-center">Products Brands</h1>
+          <h1 className="text-4xl font-semibold redColor text-center">Products</h1>
           <div className="w-11/12 mx-auto grid sm:grid-cols-4 grid-cols-2">
           {productsLogos.map((imageUrl, index) => (
           <motion.div
@@ -232,7 +232,7 @@ export default function Home() {
         ))}
           </div>
         </div>
-      <h2 className="text-center text-4xl font-semibold text-center">
+      <h2 className="text-center text-4xl font-semibold redColor text-center">
         Our Clients
       </h2>
       <Clients />

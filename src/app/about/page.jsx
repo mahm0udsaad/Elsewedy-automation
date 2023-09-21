@@ -186,7 +186,7 @@ export default function About() {
         ))}
       </div>
       </section>
-      <section className="timeline my-20">
+      <section className="timeline pt-12">
         <h1 className="text-4xl font-bold text-center">Company Historical Evolution</h1>
        <TimeLine />
       </section>
@@ -196,9 +196,9 @@ export default function About() {
         </h1>
        <div className="sm:flex justify-around">
         <div className="flex items-center justify-center sm:w-1/2">
-        <img src="images\about\DrawKit Vector Illustration Team Work (2).png" alt="image" />
+        <img src="images\about\carol-jeng.jpg" alt="image" />
         </div>
-       <div className="py-10 grid content-center  sm:w-1/2 grid-cols-1 gap-x-8 gap-y-24">
+       <div className="py-10 pl-12 grid content-center  sm:w-1/2 grid-cols-1 gap-x-8 gap-y-24">
       {coreValuesFirst.map((value, index) => (
         <ValuesCards key={index} value={value}  />
       ))}
@@ -206,9 +206,9 @@ export default function About() {
        </div>
        <div className="sm:flex justify-around flex-row-reverse">
         <div className="flex items-center justify-center sm:w-1/2">
-        <img src="images\about\DrawKit Vector Illustration Team Work (4).png" alt="image" />
+        <img src="images\about\headway.jpg" alt="image" />
         </div>
-       <div className="py-10 grid content-center  sm:w-1/2 grid-cols-1 gap-x-8 gap-y-24">
+       <div className="py-10 grid content-center  sm:w-1/2 grid-cols-1 gap-x-8 gap-y-12">
       {coreValuesSeconed.map((value, index) => (
         <ValuesCards key={index} value={value}  />
       ))}

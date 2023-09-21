@@ -4,7 +4,7 @@ const Details = ({ Data }) => {
         {Data ? (Data.map((item, index) => (
           <div id={item.link} key={index} className='lg:flex space-y-8 my-5 pt-10 text-justify sm:justify-between'>
             <div className="flex flex-col justify-center lg:w-[40%]">
-            <h2 className='text-2xl sm:text-4xl pb-5 w-[80%]'>{item.title}</h2>
+            <h2 className='text-start text-2xl sm:text-4xl pb-5 w-[80%]'>{item.title}</h2>
             <p className='lg:w-5/6 text-lg'>{item.content}</p>
             </div>
               {item.imageUrl.length !== 0 ? (

@@ -1,4 +1,5 @@
 "use client"
+
 import { Fragment, useContext, useEffect ,useState} from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -11,18 +12,16 @@ import { MyContext } from '../context';
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
-
 export default function NavBar() {
   const {isFooterInview} = useContext(MyContext)
-  
   const [navigation , setNavigation] = useState(
     [
       { name: 'Home', href: '/', current: false },
       { name: 'About US', href: '/about', current: false },
-      { name: 'Clients', href: '/clients', current: false },
       { name: 'Products', href: '../products', current: false },
       { name: 'Solutions & Services', href: '/services', current: false },
       { name: 'Training', href: '/training', current: false },
+      { name: 'Clients', href: '/clients', current: false },
       { name: 'Gallery', href: '/gallery', current: false },
       { name: 'Contact Us', href: '/contact', current: false },
     ]
@@ -41,14 +40,14 @@ export default function NavBar() {
   return (
     <>
       <div className="min-h-full">
-        <Disclosure as="nav" className="z-20 fixed bg-white w-full top-0">
+        <Disclosure as="nav" className="z-20 fixed redBg text-white w-full top-0">
           {({ open }) => (
             <>
               <div className="mx-auto max-w-7xl px-4  sm:px-6 lg:px-8">
                 <div className="flex h-18 items-center justify-between">
                   <div className="flex items-center">
-                    <div className="flex-shrink-0">
-                      <Link href={'/'}>
+                    <div className="flex-shrink-0 bg-white">
+                      <Link href={'/'} className=''>
                       <motion.img
                         key={!showOldLogo ? "oldLogo" : "newLogo"}
                         initial={{opacity: 0}}
@@ -68,8 +67,8 @@ export default function NavBar() {
                             href={item.href}
                             className={classNames(
                               item.current
-                                ? 'bg-red-800 text-white'
-                                : 'transtion duration-300 hover:bg-red-800 hover:text-white',
+                                ? 'bg-white text-white'
+                                : 'transtion duration-300 hover:bg-white hover:text-black',
                               'rounded-md lg:px-3 py-2 text-sm font-medium'
                             )}
                             aria-current={item.current ? 'page' : undefined}
