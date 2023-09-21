@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const Tap = ({logo , openTab , setOpenTab , i })=>{
+const Tap = ({title,logo , openTab , setOpenTab , i })=>{
     return(
         <li className={`-mb-px mr-2 last:mr-0 flex flex-col justify-center h-[5rem]`}>
             {logo ? (
