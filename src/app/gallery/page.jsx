@@ -28,7 +28,7 @@ export default  function Gallery()  {
         </div>
          </motion.h1>
         <div className="relative gallery overflow-y-scroll h-[80vh] mx-auto">
-        <div className="sticky top-0 bg-white taps sm:h-[5rem] flex justify-center container py-2">
+        <div className="sticky overflow-x-scroll w-full sm:w-full top-0 bg-white taps sm:h-[5rem] flex sm:justify-center container py-2">
             <GalleryTap i={0} title={'events'} openTab={openTab} setOpenTab={setOpenTab}/>
             <GalleryTap i={1} title={'projects'} openTab={openTab} setOpenTab={setOpenTab}/>
             <GalleryTap i={2} title={'Products '} openTab={openTab} setOpenTab={setOpenTab}/>
