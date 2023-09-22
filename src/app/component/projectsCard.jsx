@@ -8,7 +8,7 @@ const ProjectCard = ({project , i}) =>{
 
     return(
         <div className="shadow-lg rounded-xl p-10"> 
-         {project && <div className="flex justify-between mx-4 text-justify">
+         {project && <div className="sm:flex justify-between mx-4 text-justify">
             <div className="sm:w-[40%]">
             <img src={project.image} alt="logo" width={150}/>
             <h1 className="py-8">{project.clientName}</h1>
