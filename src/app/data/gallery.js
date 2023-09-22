@@ -1,14 +1,14 @@
 export const events = [
-    ["\\images\\gallery\\events\\events-3.JPG",
-    "\\images\\gallery\\events\\events-2.JPG",
-    "\\images\\gallery\\events\\events-1.JPG"]
+    ["/images/gallery/events/events-3.JPG",
+    "/images/gallery/events/events-2.JPG",
+    "/images/gallery/events/events-1.JPG"]
 ];
 export const projects = [
 ["images/gallery/projects/1 (1).jpg",
-"images/gallery/projects/1.jpg",
 "images/gallery/projects/2 (1).jpg",
 "images/gallery/projects/2.jpg",
 "images/gallery/projects/3.jpg",
+"images/gallery/projects/WhatsApp Image 2023-05-22 at 17.40.42.jpg",
 "images/gallery/projects/946066_215834418589532_2024033013_n.jpg"],
 ["images/gallery/projects/11008531_419741831532122_2697988970361602785_o.png",
 "images/gallery/projects/11054873_419741274865511_8516888731655087032_n.jpg",
@@ -21,7 +21,8 @@ export const projects = [
 "images/gallery/projects/IMG-20230513-WA0036.jpg",
 "images/gallery/projects/IMG-20230513-WA0037.jpg",
 "images/gallery/projects/IMG-20230513-WA0038.jpg",
-"images/gallery/projects/IMG-20230513-WA0082.jpg"],
+"images/gallery/projects/WhatsApp Image 2023-05-22 at 17.40.41.jpg",
+],
 ["images/gallery/projects/IMG-20230513-WA0083.jpg",
 "images/gallery/projects/IMG-20230518-WA0077.jpg",
 "images/gallery/projects/IMG-20230518-WA0078.jpg",
@@ -43,17 +44,14 @@ export const projects = [
 ["images/gallery/projects/project1.jpg",
 "images/gallery/projects/project2 (1).jpg",
 "images/gallery/projects/WhatsApp Image 2023-05-18 at 13.42.12.jpg",
-"images/gallery/projects/WhatsApp Image 2023-05-18 at 13.44.02.jpg",
 "images/gallery/projects/WhatsApp Image 2023-05-20 at 15.35.37.jpg",
-"images/gallery/projects/WhatsApp Image 2023-05-20 at 15.36.07.jpg"],
+"images/gallery/projects/WhatsApp Image 2023-05-20 at 15.36.07.jpg",
+"images/gallery/projects/WhatsApp Image 2023-05-22 at 19.24.05.jpg",
+],
 ["images/gallery/projects/WhatsApp Image 2023-05-20 at 18.56.12.jpg",
 "images/gallery/projects/WhatsApp Image 2023-05-20 at 18.56.12(1).jpg",
 "images/gallery/projects/WhatsApp Image 2023-05-20 at 18.56.13.jpg",
-"images/gallery/projects/WhatsApp Image 2023-05-20 at 18.56.14.jpg",
-"images/gallery/projects/WhatsApp Image 2023-05-22 at 17.40.41.jpg",
-"images/gallery/projects/WhatsApp Image 2023-05-22 at 17.40.42.jpg"],
-["images/gallery/projects/WhatsApp Image 2023-05-22 at 19.24.05.jpg",
-"images/gallery/projects/WhatsApp Image 2023-06-09 at 16.26.38.jpg"]
+"images/gallery/projects/WhatsApp Image 2023-05-20 at 18.56.14.jpg",],
 ];
 export const services = [
 ["images/gallery/services/IMG_5753.JPG",
@@ -71,11 +69,10 @@ export const services = [
 ["images/gallery/services/IMG-20230512-WA0084.jpg",
 "images/gallery/services/IMG-20230512-WA0085.jpg",
 "images/gallery/services/IMG-20230518-WA0077.jpg",
-"images/gallery/services/IMG-20230518-WA0078.jpg",
 "images/gallery/services/IMG-20230518-WA0079.jpg",
+"images/gallery/services/IMG-20230518-WA0078.jpg",
 "images/gallery/services/IMG-20230518-WA0082.jpg"],
-["images/gallery/services/IMG-20230518-WA0084.jpg",
-"images/gallery/services/NQKE7218.JPG"]
+["images/gallery/services/IMG-20230518-WA0084.jpg"]
 ];
 export const training = [
     [
@@ -132,26 +129,24 @@ export const training = [
       "images/gallery/training/IMG_5892.JPG",
       "images/gallery/training/IMG-20230513-WA0012.jpg",
       "images/gallery/training/IMG-20230513-WA0014.jpg",
-      "images/gallery/training/IMG-20230513-WA0023.jpg"
+      "images/gallery/training/IMG-20230513-WA0025.jpg",
     ],
     [
-      "images/gallery/training/IMG-20230513-WA0025.jpg",
-      "images/gallery/training/IMG-20230513-WA0029.jpg",
       "images/gallery/training/IMG-20230513-WA0031.jpg",
       "images/gallery/training/IMG-20230513-WA0039.jpg",
       "images/gallery/training/IMG-20230513-WA0040.jpg",
+      "images/gallery/training/IMG-20230513-WA0042.jpg",
       "images/gallery/training/IMG-20230513-WA0041.jpg"
     ],
     [
-      "images/gallery/training/IMG-20230513-WA0042.jpg",
       "images/gallery/training/IMG-20230513-WA0043.jpg",
       "images/gallery/training/IMG-20230513-WA0044.jpg",
       "images/gallery/training/IMG-20230513-WA0045.jpg",
       "images/gallery/training/IMG-20230519-WA0019.jpg",
+      "images/gallery/training/IMG-20230519-WA0027.jpg",
       "images/gallery/training/IMG-20230519-WA0023.jpg"
     ],
     [
-      "images/gallery/training/IMG-20230519-WA0027.jpg",
       "images/gallery/training/IMG-20230519-WA0028.jpg",
       "images/gallery/training/IMG-20230519-WA0029.jpg",
       "images/gallery/training/IMG-20230519-WA0031.jpg",

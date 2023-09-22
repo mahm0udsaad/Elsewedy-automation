@@ -30,13 +30,10 @@ export default function Services() {
   return (
     <>
     <main className="flex min-h-screen flex-col space-y-8 pt-20">
-     <div className="relative w-full h-[60vh]">
-        <img src="/images/services/173.jpg" className="h-full w-full" alt="" />
-      </div>
-    <section className="flex flex-col space-y-10">
+    <section className="flex flex-col space-y-10 pt-8">
     <div className="flex justify-center list-none w-5/6 mx-auto">
-    <Tap title={'Projects'} openTab={openTab} setOpenTab={setOpenTab} i={1}/>
-    <Tap title={'Technical Support'} openTab={openTab} setOpenTab={setOpenTab} i={2}/>
+    <Tap bg={'#991b1b'} color={'white'} title={'Projects'} openTab={openTab} setOpenTab={setOpenTab} i={1}/>
+    <Tap bg={"black"} color={"#991b1b"} title={'Technical Support'} openTab={openTab} setOpenTab={setOpenTab} i={2}/>
     </div>
     <div className="content w-11/12 mx-auto">
     <ServicesTap openTab={openTab} i={1}>

@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const Tap = ({title,logo , openTab , setOpenTab , i })=>{
+const Tap = ({title,logo , openTab , setOpenTab , i , bg , color})=>{
     return(
         <li className={`-mb-px mr-2 last:mr-0 flex flex-col justify-center h-[5rem]`}>
             {logo ? (
@@ -25,8 +25,12 @@ const Tap = ({title,logo , openTab , setOpenTab , i })=>{
              </a>
             ):(
               <a
+              style={{
+                background: openTab === i ? (bg ? bg : 'red') : 'initial',
+                color:openTab === i ? (color ? color : '#ff0000') : '#991b1b',
+              }}
               className={
-                `sm:text-lg font-bold py-5 shadow-lg rounded block leading-normal text-center px-20  ${logo ? '':'px-20'} ${openTab === i ? "text-white redBg": "text-red-600 bg-white  hover:opacity-50 "}`}
+                `sm:text-lg font-bold py-5 shadow-lg rounded block leading-normal text-center px-12 sm:px-20 hover:opacity-50`}
                 onClick={e => {
                   e.preventDefault();
                   setOpenTab(i);
@@ -103,7 +107,7 @@ const GalleryTap = ( {title , openTab , setOpenTab , i})=>{
     className={`text-sm sm:text-lg mr-2 last:mr-0 text-center list-none ${openTab === i ? 'bg-red-800 text-white rounded' : ''}` }>
               <a
                 className={
-                  " uppercase block leading-normal transition duration-300 p-5 rounded"}
+                  " uppercase block leading-normal transition duration-300 p-2 sm:p-5 rounded"}
                 onClick={e => {
                   e.preventDefault();
                   setOpenTab(i);

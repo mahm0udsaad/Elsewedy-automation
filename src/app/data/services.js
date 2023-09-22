@@ -5,7 +5,8 @@ export const Projects = [
       content: 
         <>
         <p>El-Sewedy Automation provides integrated solutions for a wide range of industrial applications. As an independent automation solutions provider, El-Sewedy Automation offers its expertise in various third-party hardware to find a fit-for-purpose solution for any process and business needs. The scope covers all project activities from the design phase to the commissioning and start-up phase including the following activities:</p>
-        <ul className="list-disc mt-5 px-5">
+         <div className="sm:flex justify-between pt-8">
+         <ul className="list-disc mt-5 px-5">
           <li>Design concept and control logic algorithm development.</li>
           <li>Configuration and procurement of system components.</li>
           <li>Panel building for automation and MCC boards.</li>
@@ -17,6 +18,10 @@ export const Projects = [
           <li>On job training for customer staff.</li>
           <li>After sales technical support approaches.</li>
         </ul>
+        <div className="flex items-center lg:pt-0 pt-4 w-[90%] lg:mx-0 sm:mx-auto md:w-[60%] lg:w-[30%]">
+        <img className="h-full w-full" src="images/gallery/projects/IMG-20230513-WA0037.jpg" alt="system" />
+        </div>
+         </div>
         </>
       ,
     },
@@ -25,6 +30,7 @@ export const Projects = [
       content: 
         <>
         <p>With accumulated experience in process control in many industries, El-Sewedy Automation built the capability of delivering complete turnkey plants by working closely with its customers to provide a complete solution that meets their functional requirements through the following activities:</p>
+        <div className="sm:flex justify-between">
         <ul className="list-disc mt-5 mx-5">
           <li>Design concept and plant layouts.</li>
           <li>Piping and instrumentation (P&I) diagrams.</li>
@@ -35,7 +41,33 @@ export const Projects = [
           <li>Commissioning and training.</li>
           <li>System validation.</li>
         </ul>
+        <div className="flex items-center lg:pt-0 pt-4 w-[90%]  lg:mx-0 sm:mx-auto md:w-[60%] lg:w-[30%] lg:h-[50%] lg:mt-8">
+        <img className="h-full w-full" src="/images/gallery/projects/WhatsApp Image 2023-09-22 at 12.20.289.jpg" alt="system" />
+        </div>
+        </div>
         </>
+      ,
+    },
+    {
+      title: "Panel Building Activity",
+      content: 
+      <>
+        <p>After procuring all required components and material, El-Sewedy Automation team with highly skilled engineers and technicians carry out the panel building in company’s workshop. Adequate materials, standard practices and strict quality plans enable us to provide an outstanding level of quality and elegance for our cabinets. Manufacturing Process of El-Sewedy Automation Panels include:</p>
+        <div className="sm:flex justify-between">
+        <ul className="list-disc mt-5 mx-5">
+          <li>Prepare design documents and wiring diagrams.</li>
+          <li>Procurement of all required components.</li>
+          <li>Components assembly wiring and terminations.</li>
+          <li>Preparation of systems and mounting of equipment.</li>
+          <li>Marking and tagging.</li>
+          <li>Power distribution and Motor Control Centre (MCC).</li>
+          <li>Conducting panel tests.</li>
+        </ul>
+        <div className="flex items-center lg:pt-0 pt-8 w-[70%] lg:mx-0 sm:mx-auto md:w-[60%] lg:w-[30%] lg:h-[25rem]">
+        <img className="h-full w-full" src="/images/gallery/projects/WhatsApp Image 2023-09-22 at 12.20.28.jpg" alt="system" />
+        </div>
+        </div>
+      </>
       ,
     },
     {
@@ -43,6 +75,7 @@ export const Projects = [
       content: 
         <>
         <p>El-Sewedy Automation helps its client to unlock himself from his current vendor and protect him from getting biased advice over other better solution options. El-Sewedy Automation is considered an independent automation solutions provider who deals with more than one industrial automation brand. Accordingly, El-Sewedy Automation can help finding the best solution option with minimal customer operations risk using upfront planning, technology selection, systems integration, and ongoing support and finally develop plans and cost estimates to help customers in obtaining required funds.</p>
+        <div className="sm:flex justify-between pt-8" >
         <ul className="list-disc mt-5 mx-5">
           <li>Define process and system limitations.</li>
           <li>Investigate and collect data Optimize I/O points.</li>
@@ -51,6 +84,10 @@ export const Projects = [
           <li>Provide long-term remote assistant on 24/7 basis.</li>
           <li>Provide preemptive maintenance and training services.</li>
         </ul>
+        <div className="flex items-center lg:pt-0 pt-4 w-[70%] lg:mx-0 sm:mx-auto md:w-[60%] lg:w-[30%] lg:h-[25rem] ">
+        <img className="h-full w-full" src="/images/gallery/projects/IMG-20230626-WA0007.jpg" alt="system" />
+        </div>
+        </div>
         </>
       ,
     },
@@ -59,12 +96,17 @@ export const Projects = [
       content: 
         <>
         <p>For HMI Immigration and Upgrade, El-Sewedy Automation professionally succeeded to upgrade and replace old, obsoleted HMIs with new product HMI (Allen Bradly & SIEMENS) including all system parameters and data with professional flexibility and user-friendly methods. El-Sewedy Automation also helps the client to improve workplace safety and operator effectiveness for the new human-machine interface system while maintaining a convenient and effective interface for the operation team. El-Sewedy Automation experts collaborate with client experienced operators to identify opportunities for optimization through reviewing piping and instrumentation diagrams (P&IDs), then laying out a new graphics structure and plan to eliminate unnecessary graphics and simplifying others, this gives operational team an easier way to improve operational productivity and safety. The design procedures include:</p>
+        <div className="sm:flex justify-between">
         <ul className="list-disc mt-5 mx-5">
           <li>Decide which HMI system to be used.</li>
           <li>Ensure operator engagement for easy transition environment.</li>
           <li>Provide operation guidelines and simple user manual and for troubleshooting.</li>
           <li>Redesign graphics for multi-screen environments.</li>
         </ul>
+        <div className="flex items-center lg:pt-8 pt-4  w-[70%]  lg:mx-0 sm:mx-auto md:w-[60%] lg:w-[30%] h-1/2 ">
+        <img className="h-full w-full" src="images/gallery/projects/13692547_585390788300558_7231199091215631566_n.jpg" alt="SCADA" />
+        </div>
+        </div>
         </>
       ,
     },
@@ -87,23 +129,6 @@ export const Projects = [
       ,
     },
     {
-      title: "Panel Building Activity",
-      content: 
-      <>
-        <p>After procuring all required components and material, El-Sewedy Automation team with highly skilled engineers and technicians carry out the panel building in company’s workshop. Adequate materials, standard practices and strict quality plans enable us to provide an outstanding level of quality and elegance for our cabinets. Manufacturing Process of El-Sewedy Automation Panels include:</p>
-        <ul className="list-disc mt-5 mx-5">
-          <li>Prepare design documents and wiring diagrams.</li>
-          <li>Procurement of all required components.</li>
-          <li>Components assembly wiring and terminations.</li>
-          <li>Preparation of systems and mounting of equipment.</li>
-          <li>Marking and tagging.</li>
-          <li>Power distribution and Motor Control Centre (MCC).</li>
-          <li>Conducting panel tests.</li>
-        </ul>
-      </>
-      ,
-    },
-    {
       title: "Project Management",
       content: 
         <p>Following the best practices of project management is the key factor for successful implementation of automation projects. El-Sewedy Automation applies a set of structured procedures (initiation, planning, execution, monitoring & control, closure) to ensure that the designed process automation systems not only perform to functional and technical specifications, but also are properly documented and tested.</p>
@@ -115,12 +140,17 @@ export const technicalSuport = [
     title: "Maintenance Contracts",
     content: <>
       <p>El-Sewedy Automation provides a flexible contracting scheme for maintenance and support services since preventive factory maintenance will significantly reduce operation shutdown time, avoid the product waste and the decrease of firm profitability. El-Sewedy Automation’s support team are always ready for constructive responses to match customer expectations through the following procedures:</p>
-      <ul className="list-disc p-5">
+       <div className="sm:flex justify-between">
+       <ul className="list-disc p-5">
         <li>Develop proactive maintenance plans and expected spare parts need.</li>
         <li>Provide remote diagnostics and fast recovery needs.</li>
         <li>Plan for outages and corresponding corrective actions.</li>
         <li>Develop technical training programs and documentation.</li>
       </ul>
+      <div className="flex items-center lg:pt-0 pt-4 w-[90%] lg:mx-0 sm:mx-auto md:w-[60%] lg:w-[30%] h-1/2">
+        <img className="h-full w-full" src="images/gallery/services/IMG_5769.JPG" alt="system" />
+        </div>
+       </div>
     </>
     ,
   },

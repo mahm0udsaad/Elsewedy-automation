@@ -8,10 +8,10 @@ import { generateUniqueKey } from "../component/table";
 export default  function Gallery()  {
     const [openTab , setOpenTab] = useState(1)
     const orderedProducts = {
-      siemens: Products.siemens,
-      rockwell: Products.rockwell,
+      Siemens: Products.Siemens,
+      Rockwell: Products.Rockwell,
       GHM: Products.GHM,
-      deutschmann: Products.deutschmann
+      Deutschmann: Products.Deutschmann
     };
     const productsTitles = Object.keys(orderedProducts)
     return (
@@ -20,14 +20,15 @@ export default  function Gallery()  {
          initial={{opacity: 0}}
          animate={{opacity: 1}}
          transition={{ duration : .8}}
-         className="text-center font-semibold text-5xl text-gray-800 py-20 italic">
+         className="text-center font-semibold text-5xl text-gray-800 italic pt-16">
            <div style={{borderRadius:`0 20px`}} className=" redBg sm:w-1/2 mx-auto my-10">
-        <h1 className="text-5xl font-semibold text-center text-white p-10">
+        <h1 className="text-5xl font-semibold text-center text-white p-4">
           Our Gallery
         </h1>
         </div>
          </motion.h1>
-        <div className="taps w-11/12  sm:h-[5rem] h-[5rem] overflow-x-scroll sm:overflow-hidden flex container mx-auto px-5 py-2 lg:px-32 ">
+        <div className="relative gallery overflow-y-scroll h-[80vh] mx-auto">
+        <div className="sticky top-0 bg-white taps sm:h-[5rem] flex justify-center container py-2">
             <GalleryTap i={0} title={'events'} openTab={openTab} setOpenTab={setOpenTab}/>
             <GalleryTap i={1} title={'projects'} openTab={openTab} setOpenTab={setOpenTab}/>
             <GalleryTap i={2} title={'Products '} openTab={openTab} setOpenTab={setOpenTab}/>
@@ -35,7 +36,6 @@ export default  function Gallery()  {
             <GalleryTap i={4} title={'training'} openTab={openTab} setOpenTab={setOpenTab}/>
             <GalleryTap i={5} title={'All'} openTab={openTab} setOpenTab={setOpenTab}/>
         </div>
-        <div className="gallery overflow-y-scroll h-screen">
         <GalleryContent openTab={openTab} i={0}>
         { events.map((coll , i)=>(
         <GalleryGrid center={true} key={generateUniqueKey()+i+'events'} arr={coll} />
@@ -51,7 +51,7 @@ export default  function Gallery()  {
         <GalleryContent openTab={openTab} i={2}>
         { Products.map((grid , i)=>(
         <>
-        <h1 className="text-center pt-10 text-4xl font-semibold">{productsTitles[i]}</h1>
+        <h1 className="text-center py-10 text-4xl font-semibold">{productsTitles[i]}</h1>
         <GalleryGrid key={generateUniqueKey()+i+'products'} arr={grid} />
         </>
        ))}

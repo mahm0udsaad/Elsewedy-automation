@@ -60,7 +60,7 @@ export default function Training() {
         Our Courses
         </h1>
         <ul
-            className="w-11/12 flex justify-between sm:justify-around mx-auto items-center mb-0 list-none pt-3 pb-4"
+            className="w-11/12 flex justify-between sm:justify-around sm:mx-auto items-center mb-0 list-none pt-3 pb-4"
             role="tablist"
           >
         {data.map((title,i)=>(
