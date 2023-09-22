@@ -37,7 +37,7 @@ export default function ClientsPage(){
                     References
                     </h1>
                     </div>
-                    <div className="grid sm:grid-cols-1 gap-8 w-11/12 mx-auto my-12">
+                    <div className="grid refrences grid-cols-1 gap-8 w-11/12 mx-auto my-12">
                        {projectsData.map((project , i)=>(
                         <ProjectCard key={i / projectsData.length}  project={project} i={i}/>
                        ))}

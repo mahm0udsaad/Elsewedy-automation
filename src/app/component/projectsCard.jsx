@@ -26,7 +26,9 @@ const ProjectCard = ({project , i}) =>{
             ))}
             </Carousel>
             </div>}
+            <div className="pt-8 pl-4">
           <Link href={`/clients/${i}`} className="hover:opacity-75 rounded redBg text-white p-5">Read More</Link>
+            </div>
             </div>
             )
         }

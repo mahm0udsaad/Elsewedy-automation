@@ -1,80 +1,80 @@
 const projectsData = [
-    {
-      image:'/images/clients/oil/Chevron_Logo.svg.png',
-      title: "Industry Type: Oil & Gas",
-      clientName: "Client Name: Chevron",
-      description: "Work Description: During our maintenance contract with Chevron Company, many projects and services had been developed...",
-      projectImages:[
-        '/images/clients/oil/267.jpg',
-        '/images/clients/oil/266.jpg',
-        '/images/clients/oil/265.jpg',
-        '/images/clients/oil/264.jpg',
-        '/images/clients/oil/263.jpg',],
-      project:[
-      
-        {
-          title: "HMI Immigration and Upgrade",
-          list: [
-            "El-Sewedy Automation succeeded to upgrade and replace obsolete HMIs with a brand-new Allen Bradly HMIs product including all system parameters with professional flexibility and user-friendly methods while:",
-            "Ensuring operator engagement for easy transition environment.",
-            "Redesigning graphics for multi-screen environments.",
-            "Providing operation guidelines and simple user manual and for troubleshooting.",
-          ],
-        },
-        {
-          title: "PLC System Upgrade",
-          list: [
-            "El-Sewedy Automation helped Chevron to replace old PLC system from different brand with a brand-new Allen Bradly PLC through:",
-            "Observing the process and system limitations.",
-            "Identifying and Optimize I/O points.",
-            "Keep the system operating efficiently during and after the migration.",
-          ],
-        },
-        {
-          title: "Frequency Drives Upgrade and Installation",
-          list: [
-            "El-Sewedy Automation succeeded in replacing some old Frequency Drives with a new Allen Bradly product (Various Power Rating).",
-            "Installing and Programing of various mode of operations and control methods to serve operating needs.",
-          ],
-        },
-        {
-          title: "Modifying All PLC Programs",
-          list: [
-            "El-Sewedy Automation had modified the ongoing programs for all existing Allen Bradley PLCs to cope with operating needs.",
-          ],
-        },
-      ]
-    },
-    {
-      image:'/images/clients/food/download__2_-removebg-preview.png',
-      title: "Industry Type: Food & Beverage",
-      clientName: "Client Name: Kamara – Happy Sweet",
-      description: "Work Description: El Sewedy Automation gained “Kamara – Happy Sweet” trust through its experts who implement many required projects and services...",
-      projectImages:[
-        '/images/clients/food/275.jpg',
-        '/images/clients/food/274.jpg',
-        '/images/clients/food/273.jpg',
-        '/images/clients/food/272.jpg',
-        '/images/clients/food/271.jpg',
-        '/images/clients/food/270.jpg',
-        '/images/clients/food/269.jpg',
-      ],
-      project:[
-        {
+  {
+    image:'/images/clients/food/download__2_-removebg-preview.png',
+    title: "Industry Type: Food & Beverage",
+    clientName: "Client Name: Kamara – Happy Sweet",
+    description: "Work Description: El Sewedy Automation gained “Kamara – Happy Sweet” trust through its experts who implement many required projects and services...",
+    projectImages:[
+      '/images/clients/food/275.jpg',
+      '/images/clients/food/274.jpg',
+      '/images/clients/food/273.jpg',
+      '/images/clients/food/272.jpg',
+      '/images/clients/food/271.jpg',
+      '/images/clients/food/270.jpg',
+      '/images/clients/food/269.jpg',
+    ],
+    project:[
+      {
         title: "Frequency Drives Upgrade and Installation",
         list: [
           "El-Sewedy Automation experts perfectly changed the previous “malfunctional” kinetic motion system to Allen Bradly drives motion (PowerFlex).",
         ]
-    },
-    {
+      },
+      {
         title: "System Improvement",
         list: [
           "El-Sewedy Automation experts were reprogrammed the existing Siemens PLC software including reconfiguration of all related communication and I/O modules to add new production process step based on customer’s requirements which will be integrated with the existing system.",
         ]
-    }
-    
+      }
+      
     ]
-    },
+  },
+  {
+    image:'/images/clients/oil/Chevron_Logo.svg.png',
+    title: "Industry Type: Oil & Gas",
+    clientName: "Client Name: Chevron",
+    description: "Work Description: During our maintenance contract with Chevron Company, many projects and services had been developed...",
+    projectImages:[
+      '/images/clients/oil/267.jpg',
+      '/images/clients/oil/266.jpg',
+      '/images/clients/oil/265.jpg',
+      '/images/clients/oil/264.jpg',
+      '/images/clients/oil/263.jpg',],
+    project:[
+    
+      {
+        title: "HMI Immigration and Upgrade",
+        list: [
+          "El-Sewedy Automation succeeded to upgrade and replace obsolete HMIs with a brand-new Allen Bradly HMIs product including all system parameters with professional flexibility and user-friendly methods while:",
+          "Ensuring operator engagement for easy transition environment.",
+          "Redesigning graphics for multi-screen environments.",
+          "Providing operation guidelines and simple user manual and for troubleshooting.",
+        ],
+      },
+      {
+        title: "PLC System Upgrade",
+        list: [
+          "El-Sewedy Automation helped Chevron to replace old PLC system from different brand with a brand-new Allen Bradly PLC through:",
+          "Observing the process and system limitations.",
+          "Identifying and Optimize I/O points.",
+          "Keep the system operating efficiently during and after the migration.",
+        ],
+      },
+      {
+        title: "Frequency Drives Upgrade and Installation",
+        list: [
+          "El-Sewedy Automation succeeded in replacing some old Frequency Drives with a new Allen Bradly product (Various Power Rating).",
+          "Installing and Programing of various mode of operations and control methods to serve operating needs.",
+        ],
+      },
+      {
+        title: "Modifying All PLC Programs",
+        list: [
+          "El-Sewedy Automation had modified the ongoing programs for all existing Allen Bradley PLCs to cope with operating needs.",
+        ],
+      },
+    ]
+  },
     {
       image:'/images/clients/food/19_2018-636786537208154854-815-removebg-preview.png',
       title: "Industry Type: Food & Beverage",

@@ -5,6 +5,7 @@
 :root{
   --icon-color: #991b1b ;
 }
+
 .slide-item{
   position: relative;
 }
@@ -42,11 +43,16 @@
 .k-timeline .k-timeline-flag, .k-timeline-circle {
   background-color: var(--icon-color) !important;
 }
-
+@media (min-width: 1400px) {
+  .refrences{
+    grid-template-columns: repeat(2, minmax(0, 2fr)) !important;
+  }
+}
 @media (min-width: 768px) and (max-width: 1200px){
   .css-zipzvv{
     white-space: initial !important;
   }
+
 }
 @media (max-width: 768px) {
   .k-timeline .k-timeline-date{
@@ -69,4 +75,5 @@
   .k-card-image{
     padding: 0rem;
   }
+
 }
