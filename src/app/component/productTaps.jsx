@@ -43,11 +43,11 @@ const Tap = ({title,logo , openTab , setOpenTab , i })=>{
 }
 const CourseTap =({logo, openTab , setOpenTap , i , color })=>{
   return(
-    <li  className={`-mb-px mr-2 last:mr-0 flex flex-col justify-center `}>
+    <li  className={``}>
            <a
             style={{borderColor :openTab === i ? `${color}` : 'white' ,color:openTab === i ? 'white': `${color}`}}
             className={
-              `border sm:text-lg text-semibold w-[10rem] h-full py-5 rounded block leading-normal hover:opacity-50`}
+              `border lg:w-[10rem] h-full py-5 px-2 rounded block leading-normal hover:opacity-50`}
               onClick={e => {
                 e.preventDefault();
                 setOpenTap(i);
@@ -56,7 +56,7 @@ const CourseTap =({logo, openTab , setOpenTap , i , color })=>{
               href="#link2"
               role="tablist"
               >
-                <img className="w-24 mx-auto" src={logo} alt="" />
+                <img className="w-11/12 lg:w-24 sm:mx-auto" src={logo} alt="" />
             </a>
   </li>
   )

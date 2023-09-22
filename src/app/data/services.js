@@ -1,3 +1,4 @@
+
 export const Projects = [
     {
       title: "Integrated Automation System",
@@ -108,62 +109,62 @@ export const Projects = [
         <p>Following the best practices of project management is the key factor for successful implementation of automation projects. El-Sewedy Automation applies a set of structured procedures (initiation, planning, execution, monitoring & control, closure) to ensure that the designed process automation systems not only perform to functional and technical specifications, but also are properly documented and tested.</p>
       ,
     },
-  ];
-  export const technicalSuport = [
-    {
-      title: "Maintenance Contracts",
-      content: <>
-        <p>El-Sewedy Automation provides a flexible contracting scheme for maintenance and support services since preventive factory maintenance will significantly reduce operation shutdown time, avoid the product waste and the decrease of firm profitability. El-Sewedy Automation’s support team are always ready for constructive responses to match customer expectations through the following procedures:</p>
-        <ul className="list-disc p-5">
-          <li>Develop proactive maintenance plans and expected spare parts need.</li>
-          <li>Provide remote diagnostics and fast recovery needs.</li>
-          <li>Plan for outages and corresponding corrective actions.</li>
-          <li>Develop technical training programs and documentation.</li>
-        </ul>
-      </>
-      ,
-    },
-    {
-      title: "Remote Assistant Services (24/7)",
-      content: <>
-      <p>El-Sewedy Automation’s professional team has an advanced technical expertise in leading the best practices of providing 24/7 remote support for control system monitoring and emergency assistance. Whenever on-site operational problems arise, El-Sewedy Automation’s team acts quickly to identify the solution needed “Remotely” based on the mutual service level agreement.</p>
-      </>
-      ,
-    },
-    {
-      title: "Automation System Inspections",
-      content: <>
-      <p>El-Sewedy Automation professionals have an accumulated experience for PLC, HMI, and Frequency Drives systems’ inspections especially for all Allen Bradly/Siemens products.</p>
-      </>
-      ,
-    },
-    {
-      title: "PLC & HMI& Frequency Drives Backup",
-      content: <>
-      <p>El-Sewedy Automation offers PLC & HMI& Frequency Drives System backups to secure the original system code from any hardware or software failure and retrieve safely the uploaded backups. El-Sewedy Automation offers a copy for its customer and a copy in its own database.</p>
-      </>
-      ,
-    },
-    {
-      title: "Providing Obsolete or Difficult to Find Products",
-      content: <>
-      <p>El-Sewedy Automation provides a special service for its customers to find any Obsolete or Difficult to Find Products from its own resources to ensure non-stop customer’s system operations.</p>
-      </>
-      ,
-    },
-    {
-      title: "Repair Services",
-      content: <>
-      <p>El-Sewedy Automation provides fast repair service for its client’s industrial electronic boards in cost-effective manner (within 5-10 days).</p>
-      </>
-      ,
-    },
-    {
-      title: "Other Support Services",
-      content: <>
-      <p>El-Sewedy Automation offers other services such as Redundant systems, Integration to third-party systems, and Multiprotocol communication facilities.</p>
-      </>
-      ,
-    },
-  ];
+];
+export const technicalSuport = [
+  {
+    title: "Maintenance Contracts",
+    content: <>
+      <p>El-Sewedy Automation provides a flexible contracting scheme for maintenance and support services since preventive factory maintenance will significantly reduce operation shutdown time, avoid the product waste and the decrease of firm profitability. El-Sewedy Automation’s support team are always ready for constructive responses to match customer expectations through the following procedures:</p>
+      <ul className="list-disc p-5">
+        <li>Develop proactive maintenance plans and expected spare parts need.</li>
+        <li>Provide remote diagnostics and fast recovery needs.</li>
+        <li>Plan for outages and corresponding corrective actions.</li>
+        <li>Develop technical training programs and documentation.</li>
+      </ul>
+    </>
+    ,
+  },
+  {
+    title: "Remote Assistant Services (24/7)",
+    content: <>
+    <p>El-Sewedy Automation’s professional team has an advanced technical expertise in leading the best practices of providing 24/7 remote support for control system monitoring and emergency assistance. Whenever on-site operational problems arise, El-Sewedy Automation’s team acts quickly to identify the solution needed “Remotely” based on the mutual service level agreement.</p>
+    </>
+    ,
+  },
+  {
+    title: "Automation System Inspections",
+    content: <>
+    <p>El-Sewedy Automation professionals have an accumulated experience for PLC, HMI, and Frequency Drives systems’ inspections especially for all Allen Bradly/Siemens products.</p>
+    </>
+    ,
+  },
+  {
+    title: "PLC & HMI& Frequency Drives Backup",
+    content: <>
+    <p>El-Sewedy Automation offers PLC & HMI& Frequency Drives System backups to secure the original system code from any hardware or software failure and retrieve safely the uploaded backups. El-Sewedy Automation offers a copy for its customer and a copy in its own database.</p>
+    </>
+    ,
+  },
+  {
+    title: "Providing Obsolete or Difficult to Find Products",
+    content: <>
+    <p>El-Sewedy Automation provides a special service for its customers to find any Obsolete or Difficult to Find Products from its own resources to ensure non-stop customer’s system operations.</p>
+    </>
+    ,
+  },
+  {
+    title: "Repair Services",
+    content: <>
+    <p>El-Sewedy Automation provides fast repair service for its client’s industrial electronic boards in cost-effective manner (within 5-10 days).</p>
+    </>
+    ,
+  },
+  {
+    title: "Other Support Services",
+    content: <>
+    <p>El-Sewedy Automation offers other services such as Redundant systems, Integration to third-party systems, and Multiprotocol communication facilities.</p>
+    </>
+    ,
+  },
+];
   

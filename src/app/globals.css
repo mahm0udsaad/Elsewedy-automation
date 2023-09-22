@@ -5,6 +5,19 @@
 :root{
   --icon-color: #991b1b ;
 }
+.slide-item{
+  position: relative;
+}
+.slide-item::before{
+  content: ""; /* Required for pseudo-elements */
+  position: absolute; /* Position the overlay absolutely within the container */
+  top: 0;
+  left: 0;
+  width: 100%; /* Cover the entire container width */
+  height: 100%; /* Cover the entire container height */
+  background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+  pointer-events: none;
+}
 .redBg{
   background-color: var(--icon-color);
 }

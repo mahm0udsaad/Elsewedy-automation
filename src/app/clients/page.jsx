@@ -11,7 +11,7 @@ export default function ClientsPage(){
         <main className="pt-20">
               <div style={{borderRadius:`0 20px`}} className=" redBg w-11/12 sm:w-1/2 mx-auto my-10">
                 <h1 className="text-5xl font-semibold text-center text-white p-10">
-                preferences
+                Our Clients
                 </h1>
                 </div>
                 <div>
@@ -32,6 +32,11 @@ export default function ClientsPage(){
                     ))}
                 </div>
                 <section>
+                    <div style={{borderRadius:`0 20px`}} className=" redBg w-11/12 sm:w-1/2 mx-auto my-10">
+                    <h1 className="text-5xl font-semibold text-center text-white p-10">
+                    preferences
+                    </h1>
+                    </div>
                     <div className="grid sm:grid-cols-1 gap-8 w-11/12 mx-auto my-12">
                        {projectsData.map((project , i)=>(
                         <ProjectCard key={i / projectsData.length}  project={project} i={i}/>

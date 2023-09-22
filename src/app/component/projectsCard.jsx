@@ -7,8 +7,8 @@ const ProjectCard = ({project , i}) =>{
   const [currentSlide, setCurrentSlide] = useState(0);
 
     return(
-        <Link href={`/clients/${i}`}>
-         {project && <div className="shadow-lg rounded-xl sm:flex justify-between space-y-8 mx-4 p-10 text-justify">
+        <div className="shadow-lg rounded-xl p-10"> 
+         {project && <div className="flex justify-between mx-4 text-justify">
             <div className="sm:w-[40%]">
             <img src={project.image} alt="logo" width={150}/>
             <h1 className="py-8">{project.clientName}</h1>
@@ -25,9 +25,10 @@ const ProjectCard = ({project , i}) =>{
                 img && <img src={img} alt="image" className="sm:w-[11rem] h-[26rem]"/>
             ))}
             </Carousel>
-         </div>}
-        </Link>
-    )
-}
+            </div>}
+          <Link href={`/clients/${i}`} className="hover:opacity-75 rounded redBg text-white p-5">Read More</Link>
+            </div>
+            )
+        }
 
 export default ProjectCard ;

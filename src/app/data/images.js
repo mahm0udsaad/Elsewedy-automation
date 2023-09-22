@@ -72,19 +72,6 @@ export const clientsLogos = [
 
   export const categoriesClients =[
     {
-      title:"Food & Beverage",
-      imagesUrl:[
-          '/images/clients/food/26670047495_bc69b4ee5a_b-removebg-preview (1).png',
-          '/images/clients/food/download__2_-removebg-preview (1).png',
-          '/images/clients/food/download__2_-removebg-preview.png',
-          '/images/clients/food/juhayna-logo-99B474DE68-seeklogo.com (1).png',
-          '/images/clients/food/Nestle-Logo-2015.png',
-          '/images/clients/food/57b251136581947_Y3JvcCwyNDg5LDE5NDcsNTExLDI2NA_removebg_preview.png',
-          '/images/clients/food/50_505199_graphic_free_download_history_of_cadbury_birmingham_cadbury.png',
-          '/images/clients/food/19_2018-636786537208154854-815-removebg-preview.png',
-      ]
-    },
-    {
       title:"Oil & Gas",
       imagesUrl:[
         '/images/clients/oil/14-removebg-preview.png',
@@ -116,6 +103,19 @@ export const clientsLogos = [
         '/images/clients/oil/zeitco-logo-removebg-preview.png',
         '/images/clients/oil/قارون-removebg-preview.png',
         '/images/clients/oil/وظائف_خالية_فى_شركة_جنوب_الضبعة_للبترول_دابتكو_للبترول_removebg.png',
+      ]
+    },
+    {
+      title:"Food & Beverage",
+      imagesUrl:[
+          '/images/clients/food/26670047495_bc69b4ee5a_b-removebg-preview (1).png',
+          '/images/clients/food/download__2_-removebg-preview (1).png',
+          '/images/clients/food/download__2_-removebg-preview.png',
+          '/images/clients/food/juhayna-logo-99B474DE68-seeklogo.com (1).png',
+          '/images/clients/food/Nestle-Logo-2015.png',
+          '/images/clients/food/57b251136581947_Y3JvcCwyNDg5LDE5NDcsNTExLDI2NA_removebg_preview.png',
+          '/images/clients/food/50_505199_graphic_free_download_history_of_cadbury_birmingham_cadbury.png',
+          '/images/clients/food/19_2018-636786537208154854-815-removebg-preview.png',
       ]
     },
     {

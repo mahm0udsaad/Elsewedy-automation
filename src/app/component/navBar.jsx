@@ -101,7 +101,7 @@ export default function NavBar() {
                       as="a"
                       href={item.href}
                       className={classNames(
-                        item.current ? 'bg-gray-900 text-white' : 'text-black hover:bg-red-700 hover:text-white',
+                        item.current ? 'bg-gray-900 text-white' : 'hover:bg-red-700 hover:text-white',
                         'transition duration-300 block rounded-md px-3 py-2 text-base font-medium'
                       )}
                       aria-current={item.current ? 'page' : undefined}

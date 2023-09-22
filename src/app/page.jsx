@@ -132,7 +132,7 @@ export default function Home() {
         <h1 className='text-center text-6xl'></h1>
       </div>
     ):(
-      <main className="w-full bg-white overflow-x-hidden pt-20">
+      <main className="w-full bg-white overflow-x-hidden pt-16 sm:pt-20">
       <Carousel
       onChange={(index) => setCurrentSlide(index)}
       infiniteLoop={true}
