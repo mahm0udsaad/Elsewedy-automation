@@ -368,7 +368,10 @@ imageUrl: [
 link:'Operator',
 title: "Operator Interfaces (HMI)",
 content: "Human-Machine Interface is a device or software that allows its user to communicate with machineries and production plants. Visualization and HMI solutions help you address your productivity, innovation, and globalization needs. Our portfolio provides a consistent look and feel for electronic operator interface terminals, distributed client/server HMI, and information software. Programming tools and advanced software applications include remote access and data analysis to accelerate development and improve efficiency.",
-imageUrl: "https://example.com/random_image15.jpg"
+imageUrl: [
+  "/images/details/hmi.png",
+  "/images/details/hmi-2.png"
+]
 },
 {
 link:'Push',
