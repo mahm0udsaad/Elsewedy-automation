@@ -276,7 +276,11 @@ imageUrl: [
 link:'Rockwell',
 title: "Rockwell Software (SCADA)",
 content: "Our FactoryTalk software solutions can supercharge your industrial environment. Unleash innovation with cutting-edge design, maximize operational efficiencies, and harness the unlimited potential of predictive and augmented maintenance. From process to batch to discrete applications, our combination of award-winning software, hardware, and service solutions solve your most complex challenges.",
-imageUrl: "https://example.com/random_image9.jpg"
+imageUrl: [
+  "/images/details/Rockwel-software-1.jpg",
+  "/images/details/Rockwel-software-2.jpg",
+  "/images/details/Rockwel-software.jpg"
+]
 },
 {
 link:'Motion',
@@ -472,14 +476,9 @@ imageUrl: [
 link:'Automation',
 title: "Automation & SCADA Software",
 content: "Supervisory Control and Data Acquisition (SCADA) software is a managerial tool that allows for remote data aggregation and monitoring of multiple industrial systems. The data volume in modern industrial plants is growing continuously. That brings new challenges for SCADA solutions: enormous data volumes must be managed and archived for the long term. At the same time, production processes must be monitored and controlled as reliable, efficient, and productive as possible and they must be constantly optimized. SIMATIC SCADA offers a solution that is ready for the challenges of today and tomorrow.",
-imageUrl: "https://example.com/random_image9.jpg"
-},
-{
-link:'Automation',
-title: "Automation & SCADA Software",
-content: "Supervisory Control and Data Acquisition (SCADA) software is a managerial tool that allows for remote data aggregation and monitoring of multiple industrial systems. The data volume in modern industrial plants is growing continuously. That brings new challenges for SCADA solutions: enormous data volumes must be managed and archived for the long term. At the same time, production processes must be monitored and controlled as reliable, efficient, and productive as possible and they must be constantly optimized. SIMATIC SCADA offers a solution that is ready for the challenges of today and tomorrow.",
 imageUrl: [
-
+"/images/details/siemens_scada.jpg",
+"/images/details/siemens_scada-1.jpg"
 ]
 },
 {
