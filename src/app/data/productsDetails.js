@@ -349,13 +349,20 @@ imageUrl: [
 link:'Lighting',
 title: "Lighting Control",
 content: "Lighting control products include multi-pole, feeder disconnect, and combination lighting contactors. Multi-pole lighting contactors are available up to 12-poles, with contacts rated at 20 A for branch circuits. Feeder disconnect lighting contactors turn large blocks of lights on and off. Our contactors are available in sizes up to 2250 A. You can use them to control full-bus and split-bus lighting. Lighting Control is Easy set up and control of scenes for different moods and occasions, presence simulation, Integration of Philips HUE.",
-imageUrl: "https://example.com/random_image13.jpg"
+imageUrl: [
+  ' /images/details/lightning-control-1.png',
+  '/images/details/lightning-control-2.png',
+]
 },
 {
 link:'Sensors',
 title: "Sensors & switches",
 content: "A sensor can be thought of as an automatic switch. In a factory, a sensor can be used to detect a problem on the production line and stop the process automatically. We provide reliable, flexible, high- performance sensors and switches. We offer one of the broadest lines in the industry including proximity and photoelectric sensors, limit switches and safety switches, and RFID and operator safety devices. Our knowledgeable team is ready to tackle your toughest application challenges.",
-imageUrl: "https://example.com/random_image14.jpg"
+imageUrl: [
+'/images/details/sensors-3.png',
+'/images/details/sensors-2.png',
+'/images/details/sensors-1.png',
+]
 },
 {
 link:'Operator',
@@ -367,25 +374,40 @@ imageUrl: "https://example.com/random_image15.jpg"
 link:'Push',
 title: "Push Buttons & Signaling Devices",
 content: "Push buttons and signaling devices include a broad spectrum of operators. We offer push buttons, toggle switches, pendant stations, indicator lights, assembled operator stations, and operator station enclosures. Our audible and visual signaling devices include horns, loudspeakers, beacons, strobes, panel light bars and tower stack lights. They help to reduce downtime by signaling breakdowns and material shortages as well as alert operators of hazards.",
-imageUrl: "https://example.com/random_image16.jpg"
+imageUrl: [
+  "/images/details/push-buttons-1.png",
+  "/images/details/push-buttons-2.png",
+  "/images/details/push-buttons-3.png",
+]
 },
 {
 link:'Relays',
 title: "Relays & Timers",
 content: "We offer a broad range of relays and timers worldwide. They are designed, manufactured, and tested to meet the most demanding worldwide standards and ratings. Relays have been the traditional building blocks of control since the 1950s. Still in wide use for simple control or power conversion, styles include electro-mechanical general or special purpose relays such as high power or hazardous location styles, as well as solid-state relays.",
-imageUrl: "https://example.com/random_image17.jpg"
+imageUrl: [
+  "/images/details/relays-1.png",
+  "/images/details/relays-2.png",
+  "/images/details/relays-3.png",
+]
 },
 {
 link:'Safety',
 title: "Safety products",
 content: "Our innovative safety products and solutions improve the functional operation of your machinery while helping to increase personnel safety, efficiency, and productivity. We offer one of the broadest safety portfolios in the industry to help you achieve both safety and productivity goals in process and discrete manufacturing applications. The best safety device is one that offers the maximum protection with minimum impact on machine operations at the lowest possible cost. Our comprehensive line of safety components is engineered to meet your most demanding functional safety needs while preserving your productivity and ensuring your people are safe.",
-imageUrl: "https://example.com/random_image18.jpg"
+imageUrl: [
+ "/images/details/safety-1.png",
+ "/images/details/safety.png",
+]
 },
 {
 link:'Energy',
 title: "Energy Monitoring",
 content: "Our Energy Monitoring products keep you well-informed of how much power you use, what your major loads are, when you use electric power the most, how much you pay for it, and the quality of the power you use. Use these Energy Monitoring hardware and software products to improve your equipment productivity and life, reduce your power use and its costs, and increase your company's profits.",
-imageUrl: "https://example.com/random_image19.jpg"
+imageUrl: [
+  "/images/details/energy-1.png",
+  "/images/details/energy-2.png",
+  "/images/details/energy.png",
+]
 }
 ],
 Siemens: [
