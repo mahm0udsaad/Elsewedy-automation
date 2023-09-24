@@ -3,6 +3,7 @@ import ProjectCard from "../component/projectsCard"
 import { generateUniqueKey } from "../component/table"
 import { projectsData } from "../data/clients"
 import { categoriesClients } from "../data/images"
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 
 export default function ClientsPage(){
 
@@ -36,7 +37,7 @@ export default function ClientsPage(){
                     References
                     </h1>
                     </div>
-                    <div className="grid refrences grid-cols-1 gap-8 w-11/12 mx-auto my-12">
+                    <div className="grid refrences grid-cols-1 sm:gap-8 sm:w-11/12 mx-auto sm:my-12">
                        {projectsData.map((project , i)=>(
                         <ProjectCard key={project.clientName.split(" ")[2]}  project={project} i={i}/>
                        ))}
