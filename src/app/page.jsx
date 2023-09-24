@@ -1,6 +1,5 @@
 "use client"
-
-import { useEffect, useState ,useRef} from 'react';
+import { useEffect, useState ,useRef, useContext} from 'react';
 import Slide from './component/slide'
 import Link from 'next/link';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
@@ -10,6 +9,7 @@ import {motion , useInView} from 'framer-motion';
 import Markets from './component/markets';
 import { clientsLogos , productsLogos } from './data/images';
 import {services , progressData , slidesData} from './data/home'
+import { MyContext } from './context';
 
 const ProgressBar = ({ title, number, icon, widthClass }) => {
   const ref = useRef(null);
@@ -82,20 +82,16 @@ export function Clients() {
   const logosContainer = useRef(null);
   const [stop , setStop ] = useState(false)
   const [x, setX] = useState(0);
-
   useEffect(() => {
     if (x === 7000) {
       setX(0);
     }
-
     const intervalId = setInterval(() => {
       stop ? setX(x) :setX((prevX) => prevX + 1);
      logosContainer.current.scrollLeft = x || null; 
     }, 15);
-
     return () => clearInterval(intervalId);
   }, [x]);
-
   return (
       <div className="bg-white py-10 overflow-x-hidden">
       <div className="mx-auto lg:px-8">
@@ -123,7 +119,7 @@ export default function Home() {
   const productsisInView = useInView(productsRef,{once:true});
   const isInView = useInView(solutionRef , {once:true});
   const wIsInView = useInView(welcomeRef , {once:true});
-
+  const { setOpenTab } = useContext(MyContext)
 
   return (
     <>
@@ -132,7 +128,7 @@ export default function Home() {
         <h1 className='text-center text-6xl'></h1>
       </div>
     ):(
-      <main className="w-full bg-white overflow-x-hidden pt-16 sm:pt-20">
+      <main className="w-full bg-white overflow-x-hidden">
       <Carousel
       onChange={(index) => setCurrentSlide(index)}
       infiniteLoop={true}
@@ -213,22 +209,26 @@ export default function Home() {
           <h1 className="text-4xl font-semibold redColor text-center">Products</h1>
           <div className="w-11/12 mx-auto grid sm:grid-cols-4 grid-cols-2">
           {productsLogos.map((imageUrl, index) => (
-          <motion.div
-            ref={productsRef}
-            key={index}
-            initial={{ y:-20,opacity: 0}}
-            animate={{y:productsisInView?-20:0, opacity:productsisInView? 1:0}}
-            transition={{duration:.7}}
-            className='h-52 flex items-center justify-center'
-          >
+            <Link href={imageUrl.link} onClick={e => {
+              setOpenTab(index + 1);
+            }}>
+            <motion.div
+              ref={productsRef}
+              key={index}
+              initial={{ y:-20,opacity: 0}}
+              animate={{y:productsisInView?-20:0, opacity:productsisInView? 1:0}}
+              transition={{duration:.7}}
+              className='h-52 flex items-center justify-center'
+            >
             <img
-              src={imageUrl}
+              src={imageUrl.imgUrl}
               alt={`Partner ${index + 1}`}
               className="rounded-lg sm:w-[200px] w-[150px]"
               width={200} 
               height={120} 
             />
           </motion.div>
+            </Link>
         ))}
           </div>
         </div>

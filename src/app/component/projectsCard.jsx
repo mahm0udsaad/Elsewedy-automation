@@ -7,27 +7,27 @@ const ProjectCard = ({project , i}) =>{
   const [currentSlide, setCurrentSlide] = useState(0);
 
     return(
-        <div className="shadow-lg rounded-xl p-10"> 
-         {project && <div className="sm:flex justify-between mx-4 text-justify">
-            <div className="sm:w-[40%]">
+        <div className="lg:h-[45vh] shadow-lg rounded-xl flex flex-col justify-around p-4"> 
+         {project && <div className="sm:flex justify-between text-justify">
+            <div className="sm:w-1/2 h-full">
             <img src={project.image} alt="logo" width={150}/>
             <h1 className="py-8">{project.clientName}</h1>
             <p>{project.description}</p>
             </div>
-            <Carousel
+            {/* <Carousel
             onChange={(index) => setCurrentSlide(index)}
-            className="sm:w-1/2"
             infiniteLoop={true}
             showArrows={false} 
             showThumbs={false} 
+            className="w-1/2"
             autoPlay={true}> 
             {project.projectImages && project.projectImages.map((img)=>(
                 img && <img src={img} alt="image" className="sm:w-[11rem] h-[26rem]"/>
             ))}
-            </Carousel>
+            </Carousel> */}
             </div>}
-            <div className="pt-8 pl-4">
-          <Link href={`/clients/${i}`} className="hover:opacity-75 rounded redBg text-white p-5">Read More</Link>
+            <div className="flex mx-4 ">
+          <Link href={`/clients/${i}`} className="flex justify-center items-center px-3 h-12 w-36 hover:opacity-75 rounded redBg text-white ">Read More</Link>
             </div>
             </div>
             )

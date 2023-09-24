@@ -1,12 +1,19 @@
 import * as React from 'react';
 import { events } from '../data/events';
+import { motion, useInView } from 'framer-motion';
 
 const TimeLine = () => {
+  const ref = React.useRef(null)
+  const isInview = useInView(ref)
    return (
-     <ol className="items-start flex sm:flex-row flex-col pt-20 justify-center sm:justify-around mx-4 w-11/12">
+     <ol ref={ref} className="items-start flex sm:flex-row flex-col justify-center sm:justify-around mx-auto w-11/12">
        {events.map((li, i) => (
-         <div key={i}
-         style={{  paddingTop: `${i*5}%`}}
+         <motion.div
+         initial={{ y:100 }}
+         animate={{ y:isInview ? 0 : 20 }}
+         transition={{ duration: i / 5}}
+         key={i}
+         style={{  paddingTop: `${i*3}%`}}
          className='sm:w-[30%]'
          >
            <time style={{color:`${li.color}`}} className="block mb-2 text-xl font-semibold leading-none  text-start px-4">{li.subtitle}</time>
@@ -16,14 +23,14 @@ const TimeLine = () => {
            >
              <div className="flex items-center">
              </div>
-             <div className="mt-3 pt-4 text-start grid gap-3 sm:gap-5 lg:grid-cols-1">
+             <div className="mt-3  text-start grid gap-3 sm:gap-5 lg:grid-cols-1">
                <div className="flex justify-start items-center w-full sm:h-10">
                  <img src={li.images[0].src} alt={li.images[1]} width={100} className={`w-[80px] ${i > 4 ? "lg:w-[150px] w-[100px] lg:h-[70px]" : ''}`} />
                </div>
-               <h3 className="flex items-center text-sm lg:text-lg text-gray-900 pt-8">{li.title}</h3>
+               <h3 className="flex items-center text-sm text-gray-900">{li.title}</h3>
              </div>
            </li>
-         </div>
+         </motion.div>
        ))}
      </ol>
    );

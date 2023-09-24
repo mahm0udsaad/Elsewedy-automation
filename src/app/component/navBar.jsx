@@ -1,6 +1,6 @@
 "use client"
 
-import { Fragment, useContext, useEffect ,useState} from 'react'
+import { Fragment, useContext, useEffect ,useRef,useState} from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link';
@@ -26,7 +26,10 @@ export default function NavBar() {
       { name: 'Contact Us', href: '/contact', current: false },
     ]
   )
+  const [bg  , setBg] = useState('transparent')
+  const [color  , setColor] = useState('white')
   const [showOldLogo , setShowOldLogo] = useState(false)
+  
   useEffect(() => {
     const intervalDuration = !showOldLogo ? 1000 : 7000; 
     const time = setInterval(() => {
@@ -37,10 +40,27 @@ export default function NavBar() {
       clearInterval(time);
     };
   }, [showOldLogo]);
+  useEffect(() => {
+    const handleScroll = () => {
+      const newY = window.scrollY;
+      if (newY > 450) {
+        setBg('white');
+        setColor('black');
+      } else {
+        setBg('transparent');
+        setColor('white');
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); 
+
   return (
     <>
       <div className="min-h-full">
-        <Disclosure as="nav" className="z-20 fixed redBg text-white w-full top-0">
+        <Disclosure style={{backgroundColor:bg , color: color}} as="nav" className="z-20 fixed w-full top-0">
           {({ open }) => (
             <>
               <div className="mx-auto max-w-7xl px-4  sm:px-6 lg:px-8">

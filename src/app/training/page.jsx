@@ -6,8 +6,10 @@ import CourseTaple, { CondensedCourseTable, generateUniqueKey } from "../compone
 import { motion, useInView } from "framer-motion"
 import { Table, TableContainer, Th, Td ,Thead, Tr , Tbody} from '@chakra-ui/react';
 import {data ,allenBradleyLegacyCourses,allenBradleyCourses,siemensCourses,electricalPowerCourses,mechanicalCourses,instrumentationControlCourses,softSkillsCourses, condensedTrainingPackages, coursesCategory} from '../data/courses'
-import { useRef, useState } from "react"
+import { useContext, useEffect, useRef, useState } from "react"
 import { CourseTable} from "../component/table"
+import { MyContext } from "../context"
+import { usePathname } from "next/navigation"
 
 export default function Training() {
   const [openTab, setOpenTap] = useState(1);
@@ -15,40 +17,35 @@ export default function Training() {
     <>
     <main className="flex flex-col min-h-screen pt-20">
     <section className=" w-11/12 mx-auto my-5">
-        <div style={{borderRadius:`0 20px`}} className=" redBg lg:w-1/2 mx-auto my-10">
-        <h1 className="text-5xl font-semibold text-center text-white p-10">
-          Our Training Center
-        </h1>
-        </div>
         <div className="intro sm:text-justify">
-          <div className="lg:flex justify-around">
-            <div className="flex items-center justify-center lg:w-1/2">
-            <img src="images\training\training1.jpg" alt="image" />
+          <div className="lg:flex justify-around py-4">
+            <div className="flex lg:w-[60%]">
+            <img className="w-5/6" src="images\training\training1.jpg" alt="image" />
             </div>
-          <div className="py-10 px-4 grid content-center  lg:w-1/2 grid-cols-1 gap-x-8 gap-y-24">
+          <div className= "grid lg:w-1/2 grid-cols-1">
           <div>
-          <h1 className="text-2xl font-semibold text-start  pb-3">Who Are Your Instructors? </h1>
-            <p>El-Sewedy Automation has a team of professionals “Group of Ph.D. Engineers” in Allen Bradly, SIMATIC, SCADA, HMI, and Drives. The training team is using training kits dedicated to training courses to let trainees test and check their automation exercises practically.</p>
+          <h1 className="text-xl font-semibold text-star">Who Are Your Instructors? </h1>
+            <p className="text-sm">El-Sewedy Automation has a team of professionals “Group of Ph.D. Engineers” in Allen Bradly, SIMATIC, SCADA, HMI, and Drives. The training team is using training kits dedicated to training courses to let trainees test and check their automation exercises practically.</p>
           </div>
           <div>
-            <h1 className="text-2xl font-semibold text-start  pb-3">Where Training Courses Can Be Conducted?</h1>
-            <p>El-Sewedy Automation has its own training class in the company location. Also, El-Sewedy Automation offers onsite training for its customers' convenience or even in any suitable training places (Hotels, Other Training Centers... etc.).</p>
+            <h1 className="text-xl font-semibold text-start">Where Training Courses Can Be Conducted?</h1>
+            <p className="text-sm">El-Sewedy Automation has its own training class in the company location. Also, El-Sewedy Automation offers onsite training for its customers' convenience or even in any suitable training places (Hotels, Other Training Centers... etc.).</p>
           </div>
           </div>
           </div>
           <div className="lg:flex justify-around flex-row-reverse">
-            <div className="flex items-center justify-center lg:w-1/2">
-            <img src="images\training\training2.jpg" alt="image" />
+            <div className="flex justify-end lg:w-[60%]">
+            <img className="w-5/6" src="images\training\training2.jpg" alt="image" />
             </div>
-          <div className="py-10 grid content-center  lg:w-1/2 grid-cols-1 gap-x-8 gap-y-24">
-          <div className=" px-4 my-8">
+          <div className="grid lg:w-1/2 grid-cols-1 gap-x-8 gap-y-24">
           <div className="">
-            <h1 className=" text-start text-2xl font-semibold py-4">Why Should You Join El-Sewedy Automation Training Courses? </h1>
-            <p>If you would like to benefit from long working experience and talented experts and to learn how to operate and solve sophisticated automation control problems in a short time with minimal effort, you have to register with El-Sewedy Automation since it owns worldwide experts in Programming of PLC, SCADA, Drives...etc.</p>
+          <div className="">
+            <h1 className=" text-start text-xl font-semibold">Why Should You Join El-Sewedy Automation Training Courses? </h1>
+            <p className="text-sm">If you would like to benefit from long working experience and talented experts and to learn how to operate and solve sophisticated automation control problems in a short time with minimal effort, you have to register with El-Sewedy Automation since it owns worldwide experts in Programming of PLC, SCADA, Drives...etc.</p>
           </div>
           <div className="">
-            <h1 className=" text-start text-2xl font-semibold py-4"> Who Can Join ? </h1>
-            <p>Maintenance Engineers, Programmers, and there are special training programs for students.</p>
+            <h1 className=" text-start text-xl font-semibold"> Who Can Join ? </h1>
+            <p className="text-sm">Maintenance Engineers, Programmers, and there are special training programs for students.</p>
           </div>
           </div>
           </div>

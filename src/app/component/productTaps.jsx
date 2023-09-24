@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 
 const Tap = ({title,logo , openTab , setOpenTab , i , bg , color})=>{
     return(
-        <li className={`-mb-px mr-2 last:mr-0 flex flex-col justify-center h-[5rem]`}>
+        <li className={`-mb-px mr-2 last:mr-0 flex items-center flex-col justify-center h-[5rem] ${openTab === i ? '' : 'shadow-lg'}`}>
             {logo ? (
                <a
                className={
-                 `rounded block h-full flex flex-col items-center ` +
+                 `p-4 rounded block h-full flex flex-col justify-center` +
                  (openTab === i
-                   ? "text-white border-b-2 border-[#9c1c27]"
+                   ? "text-white border border-[#9c1c27]"
                    : "text-red-600 bg-white hover:opacity-50")
                }
                onClick={e => {
@@ -30,7 +30,7 @@ const Tap = ({title,logo , openTab , setOpenTab , i , bg , color})=>{
                 color:openTab === i ? (color ? color : '#ff0000') : '#991b1b',
               }}
               className={
-                `sm:text-lg font-bold py-5 shadow-lg rounded block leading-normal text-center px-12 sm:px-20 hover:opacity-50`}
+                `sm:text-lg font-bold py-5 rounded block leading-normal text-center px-12 sm:px-20 hover:opacity-50`}
                 onClick={e => {
                   e.preventDefault();
                   setOpenTab(i);
@@ -47,20 +47,21 @@ const Tap = ({title,logo , openTab , setOpenTab , i , bg , color})=>{
 }
 const CourseTap =({logo, openTab , setOpenTap , i , color })=>{
   return(
-    <li  className={``}>
+          <li 
+          style={{borderColor :openTab === i ? `${color}` : 'white' ,color:openTab === i ? 'white': `${color}`}}
+          className={`${openTab === i ? '':'shadow-lg'} w-36 hover:opacity-50 border rounded h-32 lg:w-[10rem] flex items-center justify-center cursor-pointer`}
+          onClick={e => {
+            setOpenTap(i);
+          }}
+          >
            <a
-            style={{borderColor :openTab === i ? `${color}` : 'white' ,color:openTab === i ? 'white': `${color}`}}
             className={
-              `border lg:w-[10rem] h-full py-5 px-2 rounded block leading-normal hover:opacity-50`}
-              onClick={e => {
-                e.preventDefault();
-                setOpenTap(i);
-              }}
+              ` h-fit block leading-normal`}
               data-toggle="tab"
               href="#link2"
               role="tablist"
               >
-                <img className="w-11/12 lg:w-24 sm:mx-auto" src={logo} alt="" />
+                <img className={`${i > 2 ? "h-20":"w-11/12"}`} src={logo} alt="" />
             </a>
   </li>
   )

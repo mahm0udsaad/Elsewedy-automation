@@ -4,10 +4,11 @@ import {LuBrainCircuit , LuHardHat} from 'react-icons/lu'
 import { Carousel } from "react-responsive-carousel";
 import { motion, useInView } from "framer-motion";
 import TimeLine from "../component/timeline";
-import { useRef, useState } from "react";
+import { useContext, useRef, useState , useEffect } from "react";
 import { ServicesCard } from "../page";
 import Slide from "../component/slide";
-import Link from "next/link";
+import { MyContext } from '../context';
+import { usePathname } from 'next/navigation';
 
 const slidesData = [
   {
@@ -72,13 +73,9 @@ const coreValuesSeconed = [
     title: 'Commitment',
     description: 'We embrace our personal duty to fulfill our obligations and promises for our clients, colleagues, partners, and the communities in which we operate while accepting the consequences of our actions.',
     icon: FaCheck 
-  },
-  {
-    title: 'Compliance',
-    description: 'Comply with all Internal/External Rules and Regulations through strict company policy and responsible business practices. Ensure confidential information protection and privacy while avoiding any potential conflict of interest.',
-    icon: FaBalanceScale
   }
 ];
+const valuesInfo = [...coreValuesFirst   , ...coreValuesSeconed]
 
 function ValuesCards({value }){
   const ref = useRef(null);
@@ -91,8 +88,8 @@ function ValuesCards({value }){
     initial={{y:50}}
     animate={{y:isInView?0:30}}
     transition={{duration:.7}}
-    className="relative pl-16">
-      <dt className="text-base font-semibold leading-7 text-gray-900">
+    className="relative pl-16 pb-3">
+      <dt className="text-base font-semibold text-white">
         <motion.div
         style={{backgroundColor:'#ffe05c'}}
          initial={{ boxShadow: '0px 0px 0px rgba(0, 0, 0, 0)' }}
@@ -102,24 +99,28 @@ function ValuesCards({value }){
             <value.icon  className="shadow-2xl h-6 w-6 text-white" aria-hidden="true" />
           )}
         </motion.div>
-        <h1 className="text-xl font-semibold leading-6 text-gray-900">
+        <h1 className="text-lg font-semibold leading-6 text-white">
           {value.title}
         </h1>
-        <p className="text-md  font-light">{value.description}</p>
+        <p className="text-sm  font-light">{value.description}</p>
       </dt>
     </motion.div>
   )
 }
 export default function About() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const path = usePathname()
   const aboutRef = useRef(null)
   const valuesRef = useRef(null)
   const wIsInView = useInView(aboutRef , {once:true})
   const visInView = useInView(valuesRef , {once:true})
+  const lastRef = useRef(null)
+  const isValuesInview = useInView(lastRef )
+
 
   return (
     <>
-    <main className="w-full pt-20">
+    <main className="w-full">
       <Carousel
         onChange={(index) => setCurrentSlide(index)}
         infiniteLoop={true}
@@ -141,20 +142,21 @@ export default function About() {
       <motion.div 
        className="welcome">
        <h1 
-        className='text-center text-4xl font-semibold redColor sm:text-5xl py-10 leading-10'>About <br /> El Sewedy Automation</h1>
+        className='text-center text-xl font-semibold redColor sm:text-5xl py-10 leading-10'>About us</h1>
           <div
         ref={aboutRef} 
         className=''>
+          <div className="flex mx-8">
           <motion.div
-           initial={{opacity:0 , x:-50}}        
-           animate={{ opacity: wIsInView ? 1 : 0, x: wIsInView ? 0 : -50 }}
+           initial={{x:-50}}        
+           animate={{  x: wIsInView ? 0 : -50 }}
            transition={{duration:.5}}
-          className="text-justify text-lg leading-9">El Sewedy Automation is a leading Egyptian Company in designing, supplying, installing, and
+          className="w-1/2 text-justify text-sm redBg p-5 text-white">El Sewedy Automation is a leading Egyptian Company in designing, supplying, installing, and
           commissioning of industrial automation systems for a wide range of industrial markets. Company
           Founders have over 25 years of proven technical expertise, they established the Legal Form of El
           Sewedy Automation Company as S.A.E for Industrial Automation Solutions/Services Provider since
           2009.
-          <ul className="pt-8 list-disc flex flex-col space-y-4">
+          <ul className="pt-8 list-disc flex flex-col">
           <li>
           Over the years, "El Sewedy Automation" has gained its Goodwell and Reputation for its quality
           products & services through its talented team who brings their extensive knowledge in industrial
@@ -174,6 +176,14 @@ export default function About() {
           </li>
           </ul>
           </motion.div>
+          <div className="flex items-center justify-center sm:w-1/2">
+            <motion.img 
+            initial={{x : 50}}
+            animate={{x:wIsInView ? 0 : 50}}
+           transition={{duration:.5}}
+            src="images\about\headway.jpg" alt="image" />
+          </div>
+          </div>
           </div>
        </motion.div>
       </section>
@@ -190,21 +200,29 @@ export default function About() {
         <h1 className="text-4xl font-semibold redColor text-center">Company Historical Evolution</h1>
        <TimeLine />
       </section>
-      <section className=" w-11/12 mx-auto my-5">
-        <h1 className="text-4xl font-semibold redColor font-semibold text-center">
+      <section className=" w-11/12 mx-auto my-5 h-screen">
+        <h1 className="text-4xl py-8 font-semibold redColor font-semibold text-center">
           Core Values
         </h1>
-       <div className="sm:flex justify-around">
-        <div className="flex items-center justify-center sm:w-1/2">
-        <img src="images\about\carol-jeng.jpg" alt="image" />
-        </div>
-       <div className="py-10 pl-12 grid content-center  sm:w-1/2 grid-cols-1 gap-x-8 gap-y-24">
-      {coreValuesFirst.map((value, index) => (
+       <div ref={lastRef} className="sm:flex justify-around h-[75%]">
+       <motion.div 
+       initial={{ x:-40 }}
+       animate={{ x:isValuesInview ?  0 : -40 }}
+       transition={{duration:.2}}
+       className="sm:w-1/2 redBg h-full pl-4">
+      {valuesInfo.map((value, index) => (
         <ValuesCards key={index} value={value}  />
       ))}
-      </div>
+      </motion.div>
+      <div className="flex items-center justify-center sm:w-1/2">
+        <motion.img 
+        initial={{x : 40}}
+        animate={{x:isValuesInview ? 0 : 40}}
+        transition={{duration:.2}}
+        src="images\about\headway.jpg" alt="image" />
+        </div>
        </div>
-       <div className="sm:flex justify-around flex-row-reverse">
+       {/* <div className="lg:pt-8 sm:flex justify-around flex-row-reverse">
         <div className="flex items-center justify-center sm:w-1/2">
         <img src="images\about\headway.jpg" alt="image" />
         </div>
@@ -213,7 +231,7 @@ export default function About() {
         <ValuesCards key={index} value={value}  />
       ))}
       </div>
-       </div>
+       </div> */}
       </section>
     </main>
     </>
