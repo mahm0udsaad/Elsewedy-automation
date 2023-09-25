@@ -1,7 +1,7 @@
 "use client"
 
 import { AnimatePresence ,motion} from "framer-motion"
-import { Tap , ServicesTap} from "../component/productTaps";
+import { ServicesTap, FlexTap} from "../component/productTaps";
 import { useState } from "react";
 import { Projects , technicalSuport} from "../data/services";
 import Accordioncmp from "../component/accordion";
@@ -34,8 +34,8 @@ export default function Services() {
     <main className="flex min-h-screen flex-col pt-20">
     <section className="flex w-full">
     <div className="flex flex-col w-[25rem] list-none mr-4">
-    <Tap bg={'#991b1b'} color={'white'} title={'Projects'} openTab={openTab} setOpenTab={setOpenTab} i={1}/>
-    <Tap bg={"black"} color={"#991b1b"} title={'Technical Support'} openTab={openTab} setOpenTab={setOpenTab} i={2}/>
+    <FlexTap bg={'#991b1b'} color={'white'} title={'Projects'} openTab={openTab} setOpenTab={setOpenTab} i={1}/>
+    <FlexTap bg={"black"} color={"#991b1b"} title={'Technical Support'} openTab={openTab} setOpenTab={setOpenTab} i={2}/>
     </div>
     <div className="content w-11/12 mx-auto">
     <ServicesTap openTab={openTab} i={1}>

@@ -112,6 +112,10 @@ export const companiesLevelOne = [
       title: "Siemens Automation",
       intro: <h1>Industrial Automation Hardware & Software</h1>,
       content: <>
+              <p>
+              El Sewedy Automation provides different Industrial Automation Systems using Siemens products which are consistent and efficient, The scalable portfolio of the SIMATIC family ensures an optimal solution for every application area. Take advantage of the system’s end-to-end consistency: Together with integrated engineering in the TIA Portal, it will help you substantially reduce your costs and time to market.
+              </p>
+
                 <ul className="list-decimal p-5">
                   <li className="underline hover:text-blue-500">
             <p>
