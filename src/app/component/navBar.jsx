@@ -106,7 +106,7 @@ function classNames(...classes) {
                             href={item.href}
                             className={classNames(
                               item.current
-                                ? 'bg-white text-white'
+                                ? 'redBg text-white'
                                 : 'transtion duration-300 hover:bg-white hover:text-black',
                               'rounded-md lg:px-3 py-2 text-sm font-medium'
                             )}
@@ -133,14 +133,14 @@ function classNames(...classes) {
               </div>
 
               <Disclosure.Panel className="md:hidden">
-                <div className="transition duration-300 space-y-1 px-2 pb-3 pt-2 sm:px-3">
+                <div className="transition duration-300 bg-white text-black space-y-1 px-2 pb-3 pt-2 sm:px-3">
                   {navigation.map((item) => (
                     <Disclosure.Button
                       key={item.name}
                       as="a"
                       href={item.href}
                       className={classNames(
-                        item.current ? 'bg-gray-900 text-white' : 'hover:bg-red-700 hover:text-white',
+                        item.current ? 'bg-gray-900 text-black' : 'hover:bg-red-700 hover:text-white',
                         'transition duration-300 block rounded-md px-3 py-2 text-base font-medium'
                       )}
                       aria-current={item.current ? 'page' : undefined}

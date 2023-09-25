@@ -52,7 +52,9 @@
   .css-zipzvv{
     white-space: initial !important;
   }
-
+  .timeline-el{
+   padding-top: 0 !important;
+  }
 }
 @media (max-width: 768px) {
   .k-timeline .k-timeline-date{

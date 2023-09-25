@@ -146,12 +146,12 @@ export default function About() {
           <div
         ref={aboutRef} 
         className=''>
-          <div className="flex  lg:mx-8">
+          <div className="sm:flex  lg:mx-8">
           <motion.div
            initial={{x:-50}}        
            animate={{  x: wIsInView ? 0 : -50 }}
            transition={{duration:.5}}
-          className="w-1/2 text-justify text-sm redBg p-5 text-white">El Sewedy Automation is a leading Egyptian Company in designing, supplying, installing, and
+          className="sm:w-1/2 text-justify text-sm redBg p-5 text-white">El Sewedy Automation is a leading Egyptian Company in designing, supplying, installing, and
           commissioning of industrial automation systems for a wide range of industrial markets. Company
           Founders have over 25 years of proven technical expertise, they established the Legal Form of El
           Sewedy Automation Company as S.A.E for Industrial Automation Solutions/Services Provider since
@@ -176,7 +176,7 @@ export default function About() {
           </li>
           </ul>
           </motion.div>
-          <div className="flex items-center justify-center sm:w-1/2">
+          <div className="sm:flex items-center justify-center sm:w-1/2">
             <motion.img 
             initial={{x : 50}}
             animate={{x:wIsInView ? 0 : 50}}
@@ -214,7 +214,7 @@ export default function About() {
         <ValuesCards key={index} value={value}  />
       ))}
       </motion.div>
-      <div className="flex items-center justify-center sm:w-1/2">
+      <div className="sm:flex items-center justify-center sm:w-1/2">
         <motion.img 
         initial={{x : 40}}
         animate={{x:isValuesInview ? 0 : 40}}

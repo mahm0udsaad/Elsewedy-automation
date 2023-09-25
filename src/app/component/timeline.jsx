@@ -6,7 +6,7 @@ const TimeLine = () => {
   const ref = React.useRef(null)
   const isInview = useInView(ref)
    return (
-     <ol ref={ref} className="items-start flex sm:flex-row flex-col justify-center sm:justify-around mx-auto w-11/12">
+     <ol ref={ref} className="sm:pt-0 pt-4 items-start flex sm:flex-row flex-col justify-center sm:justify-around mx-auto w-11/12">
        {events.map((li, i) => (
          <motion.div
          initial={{ y:100 }}
@@ -14,12 +14,12 @@ const TimeLine = () => {
          transition={{ duration: i / 5}}
          key={i}
          style={{  paddingTop: `${i*3}%`}}
-         className='sm:w-[30%]'
+         className='timeline-el w-full sm:w-[30%]'
          >
            <time style={{color:`${li.color}`}} className="block mb-2 text-xl font-semibold leading-none  text-start px-4">{li.subtitle}</time>
            <li
              style={{ borderColor:`${li.color}`}}
-             className={` sm:h-[22rem] rounded-lg border-t-4 border-l-4 border-l-0 border-${li.color} sm:mx-3 sm:p-4 relative sm:mb-6 sm:mb-0`}
+             className={`h-40 sm:h-[22rem] rounded-lg border-t-4 border-l-4 border-l-0 border-${li.color} sm:mx-3 p-4 relative sm:mb-6 sm:mb-0`}
            >
              <div className="flex items-center">
              </div>

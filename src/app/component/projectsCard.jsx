@@ -8,9 +8,9 @@ const ProjectCard = ({project , i}) =>{
   const [currentSlide, setCurrentSlide] = useState(0);
 
     return(
-        <div className="lg:h-[45vh] h-[55rem] shadow-lg rounded-xl flex flex-col justify-around p-4"> 
+        <div className="lg:h-[35rem] shadow-lg rounded-xl flex flex-col justify-around p-4"> 
          {project && <div className="flex sm:flex-row flex-col justify-around h-full sm:justify-between text-justify">
-            <div className="sm:w-1/2 md:w-[40%] h-1/2 sm:h-full">
+            <div className="sm:w-1/2 md:w-[40%] lg:h-1/2 sm:h-full">
             <img src={project.image} alt="logo" width={150}/>
             <h1 className="py-8">{project.clientName}</h1>
             <p>{project.description}</p>
@@ -20,7 +20,7 @@ const ProjectCard = ({project , i}) =>{
               infiniteLoop={true}
               showArrows={false} 
               showThumbs={false} 
-              className="sm:w-1/2"
+              className="sm:w-1/2 w-5/6 mx-auto"
               autoPlay={true}> 
               {project.projectImages.map((slide, index) => (
                 <img
