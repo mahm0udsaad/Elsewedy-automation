@@ -3,8 +3,14 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const Tap = ({title,logo , openTab , setOpenTab , i , bg , color})=>{
-    return(
-        <li className={`-mb-px mr-2 last:mr-0 flex items-center flex-col justify-center h-[5rem] ${openTab === i ? '' : 'shadow-lg'}`}>
+  return(
+    <li 
+    style={{
+      background: openTab === i ? (bg ? bg : 'red') : 'initial',
+      color:openTab === i ? (color ? color : '#ff0000') : '#991b1b',
+    }}
+        
+        className={`-mb-px mr-2 last:mr-0 flex items-center flex-col justify-center w-full h-[5rem] ${openTab === i ? '' : 'shadow-lg'}`}>
             {logo ? (
                <a
                className={
@@ -25,12 +31,8 @@ const Tap = ({title,logo , openTab , setOpenTab , i , bg , color})=>{
              </a>
             ):(
               <a
-              style={{
-                background: openTab === i ? (bg ? bg : 'red') : 'initial',
-                color:openTab === i ? (color ? color : '#ff0000') : '#991b1b',
-              }}
               className={
-                `sm:text-lg font-bold py-5 rounded block leading-normal text-center px-12 sm:px-20 hover:opacity-50`}
+                `sm:text-lg font-bold py-5 rounded block leading-normal text-center px-4 sm:px-20 hover:opacity-50`}
                 onClick={e => {
                   e.preventDefault();
                   setOpenTab(i);

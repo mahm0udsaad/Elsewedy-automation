@@ -14,6 +14,8 @@ import { PagesNav } from "../component/navBar"
 
 export default function Training() {
   const [openTab, setOpenTap] = useState(1);
+  const ref = useRef(null) 
+  const isAgreeInview = useInView(ref)
   return (
     <>
     <PagesNav />
@@ -21,10 +23,11 @@ export default function Training() {
     <section className="w-5/6 mx-auto my-5">
         <div className="intro sm:text-justify">
           <div className="sm:flex justify-around py-4">
-            <div className="flex w-1/2">
-            <img className="lg:w-4/5" src="/images/gallery/training/IMG-20230513-WA0012.jpg" alt="image" />
+            <div className="flex justify-center sm:w-1/2">
+            <img className="w-11/12" src="/images/gallery/training/IMG-20230513-WA0012.jpg" alt="image" />
             </div>
-          <div className= "grid w-auto lg:w-1/2 justify-center items-center grid-cols-1">
+          <div className= "flex w-1/2 justify-center">
+          <div className="w-11/12 flex flex-col justify-around">
           <div className="">
             <h1 className=" text-start text-xl font-semibold"> Who Can Join ? </h1>
             <p className="text-sm">Maintenance Engineers, Programmers, and there are special training programs for students.</p>
@@ -35,19 +38,21 @@ export default function Training() {
           </div>
           </div>
           </div>
-          <div className="lg:flex justify-around flex-row-reverse">
-            <div className="flex justify-end w-1/2">
-            <img className="lg:w-4/5" src="/images/gallery/training/IMG_1105.JPG" alt="image" />
+          </div>
+          <div className="sm:flex justify-around flex-row-reverse">
+            <div className="flex justify-center sm:w-1/2">
+            <img className="w-11/12" src="/images/gallery/training/IMG_1105.JPG" alt="image" />
             </div>
-          <div className="grid lg:w-1/2 items-center grid-cols-1 gap-y-4">
+          <div className="flex w-1/2 justify-center">
+          <div className="w-11/12 flex flex-col justify-around">
           <div>
           <h1 className="text-xl font-semibold text-star">Who Are Your Instructors? </h1>
             <p className="text-sm">El-Sewedy Automation has a team of professionals “Group of Ph.D. Engineers” in Allen Bradly, SIMATIC, SCADA, HMI, and Drives. The training team is using training kits dedicated to training courses to let trainees test and check their automation exercises practically.</p>
           </div>
-         
           <div>
             <h1 className="text-xl font-semibold text-start">Where Training Courses Can Be Conducted?</h1>
             <p className="text-sm">El-Sewedy Automation has its own training class in the company location. Also, El-Sewedy Automation offers onsite training for its customers' convenience or even in any suitable training places (Hotels, Other Training Centers... etc.).</p>
+          </div>
           </div>
           </div>
           </div>
@@ -62,7 +67,7 @@ export default function Training() {
             role="tablist"
           >
         {data.map((title,i)=>(
-            <CourseTap key={i + generateUniqueKey()} logo={title.imgUrl} color={title.color}  openTab={openTab} setOpenTap={setOpenTap} i={i + 1} />
+            <CourseTap key={title.color} logo={title.imgUrl} color={title.color}  openTab={openTab} setOpenTap={setOpenTap} i={i + 1} />
         ))}
         </ul>
 
@@ -88,36 +93,46 @@ export default function Training() {
         </ServicesTap>
       </section>
       <section>
-      <div style={{borderRadius:`0 20px`}} className=" redBg sm:w-1/2 mx-auto my-10">
-        <h1 className="text-5xl font-semibold text-center text-white p-10">
+      <motion.div
+        ref={ref}
+        initial={{ x:-300 }}
+        animate={{ x: isAgreeInview ? 0 : -300 }}
+        className=" redBg w-[25%] mt-10">
+        <h1 className="text-3xl font-semibold text-center text-white p-4">
         Service Agreement
         </h1>
-        </div>
+        </motion.div>
         <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-      <div className="mb-4">
-        <p className="text-lg font-semibold">Reservation:</p>
-        <p>Before 2 weeks of the starting date</p>
+        <div className="mb-4">
+          <p className="text-lg font-semibold">Reservation:</p>
+          <p>Before 2 weeks of the starting date</p>
+        </div>
+        <div className="mb-4">
+          <p className="text-lg font-semibold">Course Location:</p>
+          <p>At our training center:</p>
+          <p>27 Orabi St, El-Azbakia, Downtown, 11111 – Cairo, Egypt</p>
+        </div>
+        <div className="mb-4">
+          <p className="text-lg font-semibold">Course Transfer:</p>
+          <p>The course can be transferred to the customer on-site in case of a complete group booking.</p>
+        </div>
+        <div className="mb-4">
+          <p className="text-lg font-semibold">Group Booking for Other Dates:</p>
+          <p>In Case of Conducting the training course for the complete group (consisting of 5 persons as minimum) in other dates, please suggest the training programs dates and please inform us before two weeks of these dates to be able to manage the training requirements from our side.</p>
+        </div>
+        <div className="mb-4">
+          <p className="text-lg font-semibold">Training Lab:</p>
+          <p>Fully equipped training lab for Allen Bradley and Siemens courses (Laptop and hardware training simulator for each two trainees).</p>
+        </div>
+        <div className="mb-4">
+          <p className="text-lg font-semibold">Contact with Training Director:</p>
+          <p>E-mail: noha.samir@elsewedy-automation.com</p>
+          <p>Tel: (+202) 25763462</p>
+          <p>FAX: (+202) 25763463</p>
+          <p>Mobile: (+2010) 28833712</p>
+          <p>WhatsApp: (+2010) 28833712</p>
+        </div>
       </div>
-      <div className="mb-4">
-        <p className="text-lg font-semibold">Course Location:</p>
-        <p>At our training center:</p>
-        <p>27 Orabi St, El-Azbakia, Downtown, 11111 – Cairo, Egypt</p>
-      </div>
-      <div className="mb-4">
-        <p className="text-lg font-semibold">Course Transfer:</p>
-        <p>The course can be transferred to the customer on-site in case of a complete group booking.</p>
-      </div>
-      {/* Add more sections for other terms */}
-      {/* You can use similar structures for each section */}
-      <div className="mb-4">
-        <p className="text-lg font-semibold">Contact with Training Director:</p>
-        <p>E-mail: noha.samir@elsewedy-automation.com</p>
-        <p>Tel: (+202) 25763462</p>
-        <p>FAX: (+202) 25763463</p>
-        <p>Mobile: (+2010) 28833712</p>
-        <p>WhatsApp: (+2010) 28833712</p>
-      </div>
-    </div>
       </section>
     </main>
     </>

@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Projects , technicalSuport} from "../data/services";
 import Accordioncmp from "../component/accordion";
 import AccordionCmp from "../component/accordion";
+import { PagesNav } from "../component/navBar";
 
 export default function Services() {
   const [openTab, setOpenTab] = useState(1);
@@ -29,9 +30,10 @@ export default function Services() {
   }
   return (
     <>
-    <main className="flex min-h-screen flex-col space-y-8 pt-20">
-    <section className="flex flex-col space-y-10 pt-8">
-    <div className="flex justify-center list-none w-5/6 mx-auto">
+    <PagesNav />
+    <main className="flex min-h-screen flex-col pt-20">
+    <section className="flex w-full">
+    <div className="flex flex-col w-[25rem] list-none mr-4">
     <Tap bg={'#991b1b'} color={'white'} title={'Projects'} openTab={openTab} setOpenTab={setOpenTab} i={1}/>
     <Tap bg={"black"} color={"#991b1b"} title={'Technical Support'} openTab={openTab} setOpenTab={setOpenTab} i={2}/>
     </div>
@@ -43,6 +45,7 @@ export default function Services() {
     </div>
     {Projects.map((project, index) => (
         <AccordionCmp
+          i={index}
           key={index}
           toggle={expandAll}
           title={project.title}

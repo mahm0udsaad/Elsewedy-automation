@@ -22,9 +22,9 @@ const Slide = ({ text, parag, imgSrc , isActive}) => {
               animate={{y:0, opacity: 1 }}
               exit={{y:10, opacity: 0 }}
               transition= {{duration: .7}}
-              className="rounded shadow-lg text-white"
+              className="rounded text-white"
             >
-              <div className="text-shadow text-xl sm:text-3xl sm:text-4xl font-bold py-5">{text}</div>
+              <div style={{textShadow: '1px 3px #423838'}} className="text-shadow text-xl sm:text-3xl sm:text-4xl font-bold py-5">{text}</div>
               <p className="sm:text-xl text-shadow text-white font-semibold">{parag}</p>
             </motion.div>
           )}

@@ -181,7 +181,7 @@ export default function About() {
             initial={{x : 50}}
             animate={{x:wIsInView ? 0 : 50}}
            transition={{duration:.5}}
-            src="images\about\headway.jpg" alt="image" />
+            src="images\about\carol-jeng.jpg" alt="image" />
           </div>
           </div>
           </div>

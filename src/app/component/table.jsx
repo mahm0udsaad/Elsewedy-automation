@@ -110,7 +110,7 @@ export function CondensedCourseTable({ courseData , title}){
       </Thead>
       {courseData.data.map((course , i)=>(
        <Tbody>
-       <CondensedTableRow key={generateUniqueKey() + i + course.code} course={course} i={i}/>
+       <CondensedTableRow key={course.code+'condensed'} course={course} i={i}/>
        </Tbody>
       ))}
        </Table>
