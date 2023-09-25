@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import {  NavigationS, NavigationR } from "./product";
+import { Rockwell } from "../data/productsDetails";
 
 const Tap = ({title,logo , openTab , setOpenTab , i , bg , color})=>{
     return(
@@ -91,10 +93,10 @@ const CourseTap =({logo, openTab , setOpenTap , i , color })=>{
   </li>
   )
 }
-const TapContent = ({ title, content, openTab, i, id, image, intro }) => (
+const TapContent = ({ title , openTab, i, id, image, intro}) => (
   <div className={openTab === i ? "block w-full" : "hidden"} id={id}>
     <div className="content">
-      <div className="header text-2xl sm:text-4xl font-semibold py-5">{intro}</div>
+      <div className="header text-2xl sm:text-4xl font-semibold py-5">{title}</div>
       <div>
         <div className="justify-center py-8 w-full">
           <div className="wrapper flex justify-justify">
@@ -108,7 +110,13 @@ const TapContent = ({ title, content, openTab, i, id, image, intro }) => (
               null
             )}
           </div>
-          <div className="content-p pt-10 text-justify">{content}</div>
+          <div className="content-p pt-10 text-justify">
+            <p>{intro}</p>
+            <ul className="pt-4">
+              {title.split(" ")[0] === "Rockwell" && <NavigationR />}
+              {title.split(" ")[0] === "Siemens" && <NavigationS />}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -151,4 +159,32 @@ const GalleryContent = ({children , openTab , i})=>{
   </div>
   )
 }
-export {TapContent ,CourseTap, Tap , ServicesTap , GalleryTap , GalleryContent , FlexTap} ;
+const ProductTap = ({title , openTab , setOpenTab , i })=>{
+  return(
+      <li 
+      className="underline hover:text-blue-400 block text-start"
+        style={{
+          color:openTab === i ? 'blue' : 'black',
+        }}>
+              <a
+                onClick={e => {
+                  e.preventDefault();
+                  setOpenTab(i);
+                }}
+                data-toggle="tab"
+                href="#link2"
+                role="tablist"
+                >
+                 {title}
+              </a>
+            </li>
+    )
+}
+const ProductsContent = ({children , openTab , i})=>{
+  return(
+    <div className={openTab === i ? "block w-full" : "hidden"}>
+     { children }
+  </div>
+  )
+}
+export {ProductTap , ProductsContent ,TapContent ,CourseTap, Tap , ServicesTap , GalleryTap , GalleryContent , FlexTap} ;

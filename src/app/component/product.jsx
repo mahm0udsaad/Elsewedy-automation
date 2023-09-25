@@ -1,0 +1,59 @@
+"use client"
+
+import { useState } from "react";
+import { ProductTap, ProductsContent } from "./productTaps";
+import { Siemens, Rockwell } from "../data/productsDetails";
+import { Details } from "./details";
+import { generateUniqueKey } from "./table";
+
+const NavigationR = () => {
+    const [openTab , setOpenTab] = useState(0)
+    let [productData , setProductData] = useState(Rockwell[openTab])
+
+   return(
+    <div className="flex">
+        <ul className="pt-4 w-[40%]">
+    {Rockwell.map((product , i)=>(
+    <ProductTap key={i} title={product.title} i={i} setOpenTab={setOpenTab} openTab={openTab} />
+    ))}
+    </ul> 
+    
+    {Rockwell.map((item , i)=>(
+        <ProductsContent openTab={openTab} i={i}>
+        <div className="grid gap-8 w-11/12 mx-auto">
+            {productData && (
+                <Details key={generateUniqueKey()} item={item} />
+                )}
+                 </div>
+        </ProductsContent>
+    ))}
+    </div>
+
+   )
+}
+const NavigationS = () => {
+    const [openTab , setOpenTab] = useState(0)
+    let [productData , setProductData] = useState(Rockwell[openTab])
+
+   return(
+    <div className="flex">
+        <ul className="pt-4 w-[40%]">
+    {Siemens.map((product , i)=>(
+    <ProductTap key={i} title={product.title} i={i} setOpenTab={setOpenTab} openTab={openTab} />
+    ))}
+    </ul> 
+    
+    {Siemens.map((item , i)=>(
+        <ProductsContent openTab={openTab} i={i}>
+        <div className="grid gap-8 w-11/12 mx-auto">
+            {productData && (
+                <Details key={generateUniqueKey()} item={item} />
+                )}
+                 </div>
+        </ProductsContent>
+    ))}
+    </div>
+
+   )
+}
+export {NavigationS , NavigationR}

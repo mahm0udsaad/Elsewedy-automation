@@ -15,7 +15,7 @@ const productsLogos = [
 
 export default function Products() {
   const {openTab, setOpenTab} = useContext(MyContext)
-  
+  console.log(companiesLevelOne[0].title.split(" ")[0]);
   return (
     <>
     <PagesNav />
@@ -37,8 +37,9 @@ export default function Products() {
               <div className="tab-content tab-space">
               {companiesLevelOne.map((info, i) => (
               <TapContent
+                arr={info.title.split(" ")[0]}
                 key={info.id || `${info.title}-${i}`}
-                content={info.content}
+                products={info.products}
                 openTab={openTab}
                 intro={info.intro}
                 i={i + 1}
