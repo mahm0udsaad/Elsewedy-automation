@@ -66,7 +66,7 @@ const CourseTap =({logo, openTab , setOpenTap , i , color })=>{
   </li>
   )
 }
-const TapContent = ({ title, content, openTab, i, id, image, intro ,link}) => (
+const TapContent = ({ title, content, openTab, i, id, image, intro }) => (
   <div className={openTab === i ? "block w-full" : "hidden"} id={id}>
     <div className="content">
       <div className="header text-2xl sm:text-4xl font-semibold py-5">{intro}</div>
@@ -84,9 +84,9 @@ const TapContent = ({ title, content, openTab, i, id, image, intro ,link}) => (
             )}
           </div>
           <div className="content-p pt-10 text-justify">{content}</div>
-          <Link  href={link ? link : `products/${encodeURIComponent(title.split(" ")[0]) || title}`} className="text-blue-500">
+          {/* <Link  href={link ? link : `products/${encodeURIComponent(title.split(" ")[0]) || title}`} className="text-blue-500">
             More information...
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

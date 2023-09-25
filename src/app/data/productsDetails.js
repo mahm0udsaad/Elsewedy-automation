@@ -9,99 +9,99 @@ export const companiesLevelOne = [
         <p>Rockwell Automation Products:</p>
         <ul className="list-decimal p-5">
           <li className="underline hover:text-blue-500">
-            <a href="/products/Rockwell/#Programmable">
+            <p>
             Programmable Controllers (PLC and PAC)
-            </a>
+            </p>
           </li>
           <li className="underline hover:text-blue-500">
-            <a href="/products/Rockwell/#Input">
+            <p>
             Input/Output (I/O) Modules
-            </a>
+            </p>
           </li>
           <li className="underline hover:text-blue-500">
-            <a href="/products/Rockwell/#Networks">
+            <p>
             Networks Security & Infrastructure
-            </a>
+            </p>
           </li>
           <li className="underline hover:text-blue-500">
-            <a href="/products/Rockwell/#Condition">
+            <p>
             Condition Monitoring
-            </a>
+            </p>
           </li>
           <li className="underline hover:text-blue-500">
-            <a href="/products/Rockwell/#Motion">
+            <p>
             Motion Control
-            </a>
+            </p>
           </li>
           <li className="underline hover:text-blue-500">
-            <a href="/products/Rockwell/#Drives">
+            <p>
             Drives & Motors
-            </a>
+            </p>
           </li>
           <li className="underline hover:text-blue-500">
-            <a href="/products/Rockwell/#Power">
+            <p>
             Power Supplies
-            </a>
+            </p>
           </li>
           <li className="underline hover:text-blue-500">
-            <a href="/products/Rockwell/#Rockwell">
+            <p>
             Rockwell Software (SCADA)
-            </a>
+            </p>
           </li>
           <li className="underline hover:text-blue-500">
-            <a href="/products/Rockwell/#Motor">
+            <p>
             Motor Control Contactors
-            </a>
+            </p>
           </li>
           <li className="underline hover:text-blue-500">
-            <a href="/products/Rockwell/#Connection">
+            <p>
             Connection Devices
-            </a>
+            </p>
           </li>
           <li className="underline hover:text-blue-500">
-            <a href="/products/Rockwell/#Circuit">
+            <p>
             Circuit & Load Protection
-            </a>
+            </p>
           </li>
           <li className="underline hover:text-blue-500">
-            <a href="/products/Rockwell/#Lighting">
+            <p>
             Lighting Control
-            </a>
+            </p>
           </li>
           <li className="underline hover:text-blue-500">
-            <a href="/products/Rockwell/#Sensors">
+            <p>
             Sensors & Switches
-            </a>
+            </p>
           </li>
           <li className="underline hover:text-blue-500">
-            <a href="/products/Rockwell/#Operator">
+            <p>
             Operator Interfaces (HMI)
-            </a>
+            </p>
           </li>
           <li className="underline hover:text-blue-500">
-            <a href="/products/Rockwell/#Push">
+            <p>
             Push Buttons & Signaling Devices
-            </a>
+            </p>
           </li>
           <li className="underline hover:text-blue-500">
-            <a href="/products/Rockwell/#Relays">
+            <p>
             Relays & Timers
-            </a>
+            </p>
           </li>
           <li className="underline hover:text-blue-500">
-            <a href="/products/Rockwell/#Safety">
+            <p>
             Safety Products
-            </a>
+            </p>
           </li>
           <li className="underline hover:text-blue-500">
-            <a href="/products/Rockwell/#Signal">
+            <p>
             Signal Interface
-            </a>
+            </p>
           </li>
           <li className="underline hover:text-blue-500">
-            <a href="/products/Rockwell/#Energy">
+            <p>
             Energy Monitoring
-            </a>
+            </p>
           </li>
         </ul>
         </>
@@ -114,39 +114,39 @@ export const companiesLevelOne = [
       content: <>
                 <ul className="list-decimal p-5">
                   <li className="underline hover:text-blue-500">
-            <a href="/products/Siemens/#Distributed">
+            <p>
                     Distributed I/O Systems
-            </a>
+            </p>
                   </li>
                   <li className="underline hover:text-blue-500">
-            <a href="/products/Siemens/#Industrial">
+            <p>
                     Industrial Controls
-            </a>
+            </p>
                   </li>
                   <li className="underline hover:text-blue-500">
-            <a href="/products/Siemens/#SIMATIC">
+            <p>
                     SIMATIC HMI
-            </a>
+            </p>
                   </li>
                   <li className="underline hover:text-blue-500">
-            <a href="/products/Siemens/#Field">
+            <p>
                     Field Process Instrumentation
-            </a>
+            </p>
                   </li>
                   <li className="underline hover:text-blue-500">
-            <a href="/products/Siemens/#Automation">
+            <p>
                     Automation & SCADA Software
-            </a>
+            </p>
                   </li>
                   <li className="underline hover:text-blue-500">
-            <a href="/products/Siemens/#Drive">
+            <p>
                     Drive Technology (Low voltage Converters)
-            </a>
+            </p>
                   </li>
                   <li className="underline hover:text-blue-500">
-            <a href="/products/Siemens/#Drive">
+            <p>
                     Drive Technology (Servo Converters)
-            </a>
+            </p>
                   </li>
                 </ul>
               </>,

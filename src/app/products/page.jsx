@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import {Tap , TapContent} from "../component/productTaps"
 import { companiesLevelOne } from "../data/productsDetails";
 import { MyContext } from "../context";
+import NavBar, { PagesNav } from "../component/navBar";
 
 const productsLogos = [
   '/images/partners/partner-tab2.png',
@@ -17,6 +18,7 @@ export default function Products() {
   
   return (
     <>
+    <PagesNav />
     <main className="flex min-h-screen justify-center pt-20">
     <div className="w-11/12 mx-auto">
         <div className="w-full">
@@ -41,7 +43,6 @@ export default function Products() {
                 intro={info.intro}
                 i={i + 1}
                 id={`link${i}`}
-                link={info.link}
                 title={info.title}
                 image={info.image}
               />

@@ -79,22 +79,22 @@ const valuesInfo = [...coreValuesFirst   , ...coreValuesSeconed]
 
 function ValuesCards({value }){
   const ref = useRef(null);
-  const isInView = useInView(ref,{once:true});
+  const isInView = useInView(ref , {once:true});
   const shadow = useRef(null);
   const shadowInview = useInView(shadow);
-
+  console.log(isInView);
   return (
     <motion.div
-    initial={{y:50}}
-    animate={{y:isInView?0:30}}
+    initial={{y:30}}
+    ref={ref}
+    animate={{y:isInView? 0: 30}}
     transition={{duration:.7}}
-    className="relative pl-16 pb-3">
+    className="relative pl-12 lg:pl-16 pb-3">
       <dt className="text-base font-semibold text-white">
         <motion.div
-        style={{backgroundColor:'#ffe05c'}}
          initial={{ boxShadow: '0px 0px 0px rgba(0, 0, 0, 0)' }}
          animate={{ boxShadow: isInView?'0px 5px 20px rgba(255, 0, 0, 0.2)':'0px 0px 0px rgba(0, 0, 0, 0)' }}
-        className="icon absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-red-800 shadow-2xl">
+        className="redBg icon absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-red-800 shadow-2xl">
           {value.icon && (
             <value.icon  className="shadow-2xl h-6 w-6 text-white" aria-hidden="true" />
           )}
@@ -138,7 +138,7 @@ export default function About() {
             />
         ))}
       </Carousel>
-      <section className="w-11/12 mx-auto">
+      <section className="pt-12 lg:w-11/12 mx-auto">
       <motion.div 
        className="welcome">
        <h1 
@@ -146,7 +146,7 @@ export default function About() {
           <div
         ref={aboutRef} 
         className=''>
-          <div className="flex mx-8">
+          <div className="flex  lg:mx-8">
           <motion.div
            initial={{x:-50}}        
            animate={{  x: wIsInView ? 0 : -50 }}
@@ -156,7 +156,7 @@ export default function About() {
           Founders have over 25 years of proven technical expertise, they established the Legal Form of El
           Sewedy Automation Company as S.A.E for Industrial Automation Solutions/Services Provider since
           2009.
-          <ul className="pt-8 list-disc flex flex-col">
+          <ul className="pt-3 lg:pt-8 list-disc flex flex-col">
           <li>
           Over the years, "El Sewedy Automation" has gained its Goodwell and Reputation for its quality
           products & services through its talented team who brings their extensive knowledge in industrial
@@ -200,16 +200,16 @@ export default function About() {
         <h1 className="text-4xl font-semibold redColor text-center">Company Historical Evolution</h1>
        <TimeLine />
       </section>
-      <section className=" w-11/12 mx-auto my-5 h-screen">
+      <section className=" w-11/12 mx-auto my-5">
         <h1 className="text-4xl py-8 font-semibold redColor font-semibold text-center">
           Core Values
         </h1>
-       <div ref={lastRef} className="sm:flex justify-around h-[75%]">
+       <div ref={lastRef} className="sm:flex items-center justify-around md:h-full ">
        <motion.div 
        initial={{ x:-40 }}
        animate={{ x:isValuesInview ?  0 : -40 }}
        transition={{duration:.2}}
-       className="sm:w-1/2 redBg h-full pl-4">
+       className="sm:w-1/2 redBg h-[50%] pl-2 lg:pl-4 p-3">
       {valuesInfo.map((value, index) => (
         <ValuesCards key={index} value={value}  />
       ))}
@@ -222,16 +222,6 @@ export default function About() {
         src="images\about\headway.jpg" alt="image" />
         </div>
        </div>
-       {/* <div className="lg:pt-8 sm:flex justify-around flex-row-reverse">
-        <div className="flex items-center justify-center sm:w-1/2">
-        <img src="images\about\headway.jpg" alt="image" />
-        </div>
-       <div className="py-10 grid content-center  sm:w-1/2 grid-cols-1 gap-x-8 gap-y-12">
-      {coreValuesSeconed.map((value, index) => (
-        <ValuesCards key={index} value={value}  />
-      ))}
-      </div>
-       </div> */}
       </section>
     </main>
     </>
