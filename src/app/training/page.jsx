@@ -10,43 +10,44 @@ import { useContext, useEffect, useRef, useState } from "react"
 import { CourseTable} from "../component/table"
 import { MyContext } from "../context"
 import { usePathname } from "next/navigation"
+import { PagesNav } from "../component/navBar"
 
 export default function Training() {
   const [openTab, setOpenTap] = useState(1);
   return (
     <>
+    <PagesNav />
     <main className="flex flex-col min-h-screen pt-20">
-    <section className=" w-11/12 mx-auto my-5">
+    <section className="w-5/6 mx-auto my-5">
         <div className="intro sm:text-justify">
-          <div className="lg:flex justify-around py-4">
-            <div className="flex lg:w-[60%]">
-            <img className="w-5/6" src="images\training\training1.jpg" alt="image" />
+          <div className="sm:flex justify-around py-4">
+            <div className="flex w-1/2">
+            <img className="lg:w-4/5" src="/images/gallery/training/IMG-20230513-WA0012.jpg" alt="image" />
             </div>
-          <div className= "grid lg:w-1/2 grid-cols-1">
-          <div>
-          <h1 className="text-xl font-semibold text-star">Who Are Your Instructors? </h1>
-            <p className="text-sm">El-Sewedy Automation has a team of professionals “Group of Ph.D. Engineers” in Allen Bradly, SIMATIC, SCADA, HMI, and Drives. The training team is using training kits dedicated to training courses to let trainees test and check their automation exercises practically.</p>
-          </div>
-          <div>
-            <h1 className="text-xl font-semibold text-start">Where Training Courses Can Be Conducted?</h1>
-            <p className="text-sm">El-Sewedy Automation has its own training class in the company location. Also, El-Sewedy Automation offers onsite training for its customers' convenience or even in any suitable training places (Hotels, Other Training Centers... etc.).</p>
-          </div>
-          </div>
-          </div>
-          <div className="lg:flex justify-around flex-row-reverse">
-            <div className="flex justify-end lg:w-[60%]">
-            <img className="w-5/6" src="images\training\training2.jpg" alt="image" />
-            </div>
-          <div className="grid lg:w-1/2 grid-cols-1 gap-x-8 gap-y-24">
-          <div className="">
-          <div className="">
-            <h1 className=" text-start text-xl font-semibold">Why Should You Join El-Sewedy Automation Training Courses? </h1>
-            <p className="text-sm">If you would like to benefit from long working experience and talented experts and to learn how to operate and solve sophisticated automation control problems in a short time with minimal effort, you have to register with El-Sewedy Automation since it owns worldwide experts in Programming of PLC, SCADA, Drives...etc.</p>
-          </div>
+          <div className= "grid w-auto lg:w-1/2 justify-center items-center grid-cols-1">
           <div className="">
             <h1 className=" text-start text-xl font-semibold"> Who Can Join ? </h1>
             <p className="text-sm">Maintenance Engineers, Programmers, and there are special training programs for students.</p>
           </div>
+          <div className="">
+            <h1 className=" text-start text-xl font-semibold">Why Should You Join El-Sewedy Automation Training Courses? </h1>
+            <p className="text-sm">If you would like to benefit from long working experience and talented experts and to learn how to operate and solve sophisticated automation control problems in a short time with minimal effort, you have to register with El-Sewedy Automation since it owns worldwide experts in Programming of PLC, SCADA, Drives...etc.</p>
+          </div>
+          </div>
+          </div>
+          <div className="lg:flex justify-around flex-row-reverse">
+            <div className="flex justify-end w-1/2">
+            <img className="lg:w-4/5" src="/images/gallery/training/IMG_1105.JPG" alt="image" />
+            </div>
+          <div className="grid lg:w-1/2 items-center grid-cols-1 gap-y-4">
+          <div>
+          <h1 className="text-xl font-semibold text-star">Who Are Your Instructors? </h1>
+            <p className="text-sm">El-Sewedy Automation has a team of professionals “Group of Ph.D. Engineers” in Allen Bradly, SIMATIC, SCADA, HMI, and Drives. The training team is using training kits dedicated to training courses to let trainees test and check their automation exercises practically.</p>
+          </div>
+         
+          <div>
+            <h1 className="text-xl font-semibold text-start">Where Training Courses Can Be Conducted?</h1>
+            <p className="text-sm">El-Sewedy Automation has its own training class in the company location. Also, El-Sewedy Automation offers onsite training for its customers' convenience or even in any suitable training places (Hotels, Other Training Centers... etc.).</p>
           </div>
           </div>
           </div>

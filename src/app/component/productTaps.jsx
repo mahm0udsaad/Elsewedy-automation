@@ -84,9 +84,6 @@ const TapContent = ({ title, content, openTab, i, id, image, intro }) => (
             )}
           </div>
           <div className="content-p pt-10 text-justify">{content}</div>
-          {/* <Link  href={link ? link : `products/${encodeURIComponent(title.split(" ")[0]) || title}`} className="text-blue-500">
-            More information...
-          </Link> */}
         </div>
       </div>
     </div>
