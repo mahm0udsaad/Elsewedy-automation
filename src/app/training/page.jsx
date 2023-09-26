@@ -11,35 +11,41 @@ import { CourseTable} from "../component/table"
 import { MyContext } from "../context"
 import { usePathname } from "next/navigation"
 import { PagesNav } from "../component/navBar"
+import Lable from "../component/lable"
 
 export default function Training() {
   const [openTab, setOpenTap] = useState(1);
-  const ref = useRef(null) 
-  const isAgreeInview = useInView(ref)
+  
   return (
     <>
     <PagesNav />
     <main className="flex flex-col min-h-screen pt-20">
     <section className="sm:w-5/6 mx-auto my-5">
         <div className="intro sm:text-justify">
-          <div className="sm:flex justify-around py-4">
+          <div className="sm:flex sm:h-[22rem] justify-around py-4">
             <div className="flex justify-center sm:w-1/2">
             <img className="w-11/12" src="/images/gallery/training/IMG-20230513-WA0012.jpg" alt="image" />
             </div>
           <div className= "flex sm:w-1/2 justify-center">
           <div className="w-11/12 flex flex-col justify-around">
+          <div
+          className="redBg">
+          <h1 className="lg:text-3xl md:text-xl font-semibold text-center text-white p-3">
+           Our Training Center
+          </h1>
+        </div>
           <div className="">
             <h1 className=" text-start text-xl font-semibold"> Who Can Join ? </h1>
-            <p className="text-sm">Maintenance Engineers, Programmers, and there are special training programs for students.</p>
+            <p className="">Maintenance Engineers, Programmers, and there are special training programs for students.</p>
           </div>
           <div className="">
             <h1 className=" text-start text-xl font-semibold">Why Should You Join El-Sewedy Automation Training Courses? </h1>
-            <p className="text-sm">If you would like to benefit from long working experience and talented experts and to learn how to operate and solve sophisticated automation control problems in a short time with minimal effort, you have to register with El-Sewedy Automation since it owns worldwide experts in Programming of PLC, SCADA, Drives...etc.</p>
+            <p className="">If you would like to benefit from long working experience and talented experts and to learn how to operate and solve sophisticated automation control problems in a short time with minimal effort, you have to register with El-Sewedy Automation since it owns worldwide experts in Programming of PLC, SCADA, Drives...etc.</p>
           </div>
           </div>
           </div>
           </div>
-          <div className="sm:flex justify-around flex-row-reverse">
+          <div className="sm:flex sm:h-[22rem] justify-around flex-row-reverse">
             <div className="flex justify-center sm:w-1/2">
             <img className="w-11/12" src="/images/gallery/training/IMG_1105.JPG" alt="image" />
             </div>
@@ -47,11 +53,11 @@ export default function Training() {
           <div className="w-11/12 flex flex-col justify-around">
           <div>
           <h1 className="text-xl font-semibold text-star">Who Are Your Instructors? </h1>
-            <p className="text-sm">El-Sewedy Automation has a team of professionals “Group of Ph.D. Engineers” in Allen Bradly, SIMATIC, SCADA, HMI, and Drives. The training team is using training kits dedicated to training courses to let trainees test and check their automation exercises practically.</p>
+            <p className="pt-3">El-Sewedy Automation has a team of professionals “Group of Ph.D. Engineers” in Allen Bradly, SIMATIC, SCADA, HMI, and Drives. The training team is using training kits dedicated to training courses to let trainees test and check their automation exercises practically.</p>
           </div>
           <div>
             <h1 className="text-xl font-semibold text-start">Where Training Courses Can Be Conducted?</h1>
-            <p className="text-sm">El-Sewedy Automation has its own training class in the company location. Also, El-Sewedy Automation offers onsite training for its customers' convenience or even in any suitable training places (Hotels, Other Training Centers... etc.).</p>
+            <p className="pt-3">El-Sewedy Automation has its own training class in the company location. Also, El-Sewedy Automation offers onsite training for its customers' convenience or even in any suitable training places (Hotels, Other Training Centers... etc.).</p>
           </div>
           </div>
           </div>
@@ -93,15 +99,7 @@ export default function Training() {
         </ServicesTap>
       </section>
       <section>
-      <motion.div
-        ref={ref}
-        initial={{ x:-300 }}
-        animate={{ x: isAgreeInview ? 0 : -300 }}
-        className=" redBg sm:w-[25%] mt-10">
-        <h1 className="text-3xl font-semibold text-center text-white p-4">
-        Service Agreement
-        </h1>
-        </motion.div>
+      <Lable text={"Service Agreement"}/>
         <div className="bg-gray-100 p-6 rounded-lg shadow-md">
         <div className="mb-4">
           <p className="text-lg font-semibold">Reservation:</p>

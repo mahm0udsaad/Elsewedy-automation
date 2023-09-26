@@ -66,7 +66,7 @@ const MarketCard = ({isInView , imgurl , title , to}) =>{
       <div 
       ref={marketsRef}
       className="bg-white">
-        <div className="mx-auto w-11/12 items-center py-12 ">
+        <div className="mx-auto w-11/12 items-center ">
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 lg:grid-row-2">
             {markets.map((market , i)=>(
               <MarketCard to={market.to} key={i} imgurl={market.image} title={market.name} isInView={isInView}/>

@@ -93,7 +93,7 @@ export function Clients() {
     return () => clearInterval(intervalId);
   }, [x]);
   return (
-      <div className="bg-white py-10 overflow-x-hidden">
+      <div className="bg-white overflow-x-hidden">
       <div className="mx-auto lg:px-8">
         <div ref={logosContainer} className="overflow-x-hidden flex items-center pt-5 ">
           {clientsLogos.map((logoUrl, index) => (
@@ -160,7 +160,7 @@ export default function Home() {
        <motion.div 
        className="welcome">
        <h1 
-        className='text-center text-4xl font-semibold redColor py-10'>Welcome to El Sewedy Automation</h1>
+        className='text-center text-4xl font-semibold redColor py-16'><span className='text-black'>Welcome to</span> El Sewedy Automation</h1>
         <div 
         className="flex sm:flex-row flex-col w-full justify-between text-justify leading-10">
         <div
@@ -170,7 +170,7 @@ export default function Home() {
            initial={{opacity:0 , x:-50}}        
            animate={{ opacity: wIsInView ? 1 : 0, x: wIsInView ? 0 : -50 }}
            transition={{duration:.5}}
-          className="text-lg">El-Sewedy Automation Company S.A.E. offers a comprehensive range of products and services, starting from control system Design, Integration, Retrofitting, and Development. The company delivers its services through the assembly of control and distribution panels. The company also offers system testing, field Installation, and commissioning as well as providing capacity-building services through its training center or even onsite based on customer needs. Finally, the company offers outstanding technical support and consultancy services for its customers.</motion.p>
+          className="text-lg ">El-Sewedy Automation Company S.A.E. offers a comprehensive range of products and services, starting from control system Design, Integration, Retrofitting, and Development. The company delivers its services through the assembly of control and distribution panels. The company also offers system testing, field Installation, and commissioning as well as providing capacity-building services through its training center or even onsite based on customer needs. Finally, the company offers outstanding technical support and consultancy services for its customers.</motion.p>
           </div>
           <br />
           <div className='sm:w-[45%]'>
@@ -185,28 +185,28 @@ export default function Home() {
           <motion.div
           initial={{opacity:0}}
           animate={{opacity:isInView? 1:0}}
-          className="solution-section w-11/12 mx-auto pt-10">
-            <h1  className="text-4xl font-semibold redColor text-center">
+          className="solution-section w-11/12 mx-auto ">
+            <h1  className="text-4xl font-semibold redColor text-center py-16">
               Solution & Services
             </h1>
             <div 
             ref={solutionRef} 
-            className="py-10 grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+            className=" grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
             {services.map((feature, index) => (
               <ServicesCard isInView={isInView} feature={feature} key={index} to={feature.to} />
               ))}
             </div>
           </motion.div>
       </section>
-      <section>
-        <div className="markets pt-10">
-          <h1 className="text-4xl font-semibold redColor text-center">
+      <section className='pb-20'>
+        <div className="markets ">
+          <h1 className="text-4xl font-semibold redColor text-center py-16">
             Industrial Markets
           </h1>
           <Markets />
         </div>
-        <div className="products">
-          <h1 className="text-4xl font-semibold redColor text-center">Products</h1>
+        <div className="products ">
+          <h1 className="text-4xl font-semibold redColor text-center py-16">Products</h1>
           <div className="w-11/12 mx-auto grid sm:grid-cols-4 grid-cols-2">
           {productsLogos.map((imageUrl, index) => (
             <Link href={imageUrl.link} onClick={e => {
@@ -232,7 +232,7 @@ export default function Home() {
         ))}
           </div>
         </div>
-      <h2 className="text-center text-4xl font-semibold redColor text-center">
+      <h2 className="text-center text-4xl font-semibold redColor text-center py-16">
         Our Clients
       </h2>
       <Clients />
