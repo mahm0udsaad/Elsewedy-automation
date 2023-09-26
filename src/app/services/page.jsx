@@ -32,8 +32,8 @@ export default function Services() {
     <>
     <PagesNav />
     <main className="flex min-h-screen flex-col pt-20">
-    <section className="flex w-full">
-    <div className="flex flex-col w-[25rem] list-none mr-4">
+    <section className="sm:flex w-full">
+    <div className="flex flex-col mx-auto w-11/12 sm:w-[25rem] list-none sm:py-0 py-4 mr-4">
     <FlexTap bg={'#991b1b'} color={'white'} title={'Projects'} openTab={openTab} setOpenTab={setOpenTab} i={1}/>
     <FlexTap bg={"black"} color={"#991b1b"} title={'Technical Support'} openTab={openTab} setOpenTab={setOpenTab} i={2}/>
     </div>

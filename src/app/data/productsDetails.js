@@ -356,8 +356,5 @@ export const Rockwell = [
     ] 
     }
     ]
-export const ProductsDetails = {
 
-
-}
 

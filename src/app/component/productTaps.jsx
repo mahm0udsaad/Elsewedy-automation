@@ -6,11 +6,11 @@ import { Rockwell } from "../data/productsDetails";
 
 const Tap = ({title,logo , openTab , setOpenTab , i , bg , color})=>{
     return(
-        <li className={`-mb-px mr-2 last:mr-0 flex items-center flex-col justify-center h-[5rem] ${openTab === i ? '' : 'shadow-lg'}`}>
+        <li className={`-mb-px mr-2 last:mr-0 flex items-center flex-col justify-center sm:h-[5rem] ${openTab === i ? '' : 'shadow-lg'}`}>
             {logo ? (
                <a
                className={
-                 `p-4 rounded block h-full flex flex-col justify-center` +
+                 `p-2 sm:p-4 rounded block h-full flex flex-col justify-center` +
                  (openTab === i
                    ? "text-white border border-[#9c1c27]"
                    : "text-red-600 bg-white hover:opacity-50")
@@ -72,7 +72,7 @@ const FlexTap = ({title,logo , openTab , setOpenTab , i , bg , color})=>{
             </li>
     )
 }
-const CourseTap =({logo, openTab , setOpenTap , i , color })=>{
+const CourseTap =({logo, openTab , setOpenTap , i , color  })=>{
   return(
           <li 
           style={{borderColor :openTab === i ? `${color}` : 'white' ,color:openTab === i ? 'white': `${color}`}}
@@ -93,7 +93,7 @@ const CourseTap =({logo, openTab , setOpenTap , i , color })=>{
   </li>
   )
 }
-const TapContent = ({ title , openTab, i, id, image, intro}) => (
+const TapContent = ({ title , openTab, i, id, image, intro , products}) => (
   <div className={openTab === i ? "block w-full" : "hidden"} id={id}>
     <div className="content">
       <div className="header text-2xl sm:text-4xl font-semibold py-5">{title}</div>
@@ -115,6 +115,13 @@ const TapContent = ({ title , openTab, i, id, image, intro}) => (
             <ul className="pt-4">
               {title.split(" ")[0] === "Rockwell" && <NavigationR />}
               {title.split(" ")[0] === "Siemens" && <NavigationS />}
+              {title.split(" ")[0] === "GHM" ||title.split(" ")[0] === "Deutschmann" ? 
+              (
+              products.map((item)=>(
+                <li>{item}</li>
+              ))
+              ): null }
+              
             </ul>
           </div>
         </div>
@@ -162,7 +169,7 @@ const GalleryContent = ({children , openTab , i})=>{
 const ProductTap = ({title , openTab , setOpenTab , i })=>{
   return(
       <li 
-      className="underline hover:text-blue-400 block text-start"
+      className="underline hover:text-blue-400 block text-start sm:w-full w-48 px-4"
         style={{
           color:openTab === i ? 'blue' : 'black',
         }}>

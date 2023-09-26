@@ -5,7 +5,9 @@
 :root{
   --icon-color: #991b1b ;
 }
-
+input[type="checkbox"] {
+  accent-color: var(--icon-color);
+  }
 .slide-item{
   position: relative;
 }

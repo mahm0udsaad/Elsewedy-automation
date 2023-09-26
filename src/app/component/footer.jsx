@@ -16,14 +16,14 @@ const  Footer =()=>{
              className="
               border-t-[1px] border-red-800">
             <div className="sm:px-10 px-4 lg:flex pt-10">
-              <div className="flex sm:w-[70%] ml-20">
+              <div className="flex sm:w-[70%] sm:ml-20">
               <div
                className="flex">
                <div>
                     <p className="font-medium 
                     ">Contact</p>
                     <ul className="mt-6 space-y-4 text-sm">
-                    <li className="w-5/6 text-balck">
+                    <li className="sm:w-5/6 text-balck">
                         <FaMapMarkerAlt className="inline-block mr-2 text-blue-500" />
                         Address:<br /> Head Quarter: 27 Orabi St., 7th Floor, Office (706), Orabi Street, Al-Azbakia, 11111 - Cairo.
                     </li>

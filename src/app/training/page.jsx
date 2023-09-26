@@ -20,13 +20,13 @@ export default function Training() {
     <>
     <PagesNav />
     <main className="flex flex-col min-h-screen pt-20">
-    <section className="w-5/6 mx-auto my-5">
+    <section className="sm:w-5/6 mx-auto my-5">
         <div className="intro sm:text-justify">
           <div className="sm:flex justify-around py-4">
             <div className="flex justify-center sm:w-1/2">
             <img className="w-11/12" src="/images/gallery/training/IMG-20230513-WA0012.jpg" alt="image" />
             </div>
-          <div className= "flex w-1/2 justify-center">
+          <div className= "flex sm:w-1/2 justify-center">
           <div className="w-11/12 flex flex-col justify-around">
           <div className="">
             <h1 className=" text-start text-xl font-semibold"> Who Can Join ? </h1>
@@ -43,7 +43,7 @@ export default function Training() {
             <div className="flex justify-center sm:w-1/2">
             <img className="w-11/12" src="/images/gallery/training/IMG_1105.JPG" alt="image" />
             </div>
-          <div className="flex w-1/2 justify-center">
+          <div className="flex sm:w-1/2 justify-center">
           <div className="w-11/12 flex flex-col justify-around">
           <div>
           <h1 className="text-xl font-semibold text-star">Who Are Your Instructors? </h1>
@@ -63,7 +63,7 @@ export default function Training() {
         Our Courses
         </h1>
         <ul
-            className="w-11/12 flex justify-between sm:justify-around sm:mx-auto items-center mb-0 list-none pt-3 pb-4"
+            className="sm:w-11/12 flex justify-between sm:justify-around sm:mx-auto items-center mb-0 list-none pt-3 pb-4"
             role="tablist"
           >
         {data.map((title,i)=>(
@@ -97,7 +97,7 @@ export default function Training() {
         ref={ref}
         initial={{ x:-300 }}
         animate={{ x: isAgreeInview ? 0 : -300 }}
-        className=" redBg w-[25%] mt-10">
+        className=" redBg sm:w-[25%] mt-10">
         <h1 className="text-3xl font-semibold text-center text-white p-4">
         Service Agreement
         </h1>

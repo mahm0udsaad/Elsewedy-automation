@@ -267,6 +267,18 @@ const siemensCourses = {
       days: 2 , 
       hours: 15 , 
     } , 
+    {
+      code: 'AB-P1' , 
+      type:'packages',
+      title: 'ControlLogix & CompactLogix Fundamental Maintenance and Troubleshooting' , 
+      content: [
+      'Fundamentals of Logix/Studio 5000 Systems' , 
+      'Basic Ladder Logic Editing' , 
+      'Logix/Studio 5000 Maintenance and Troubleshooting' , 
+      ] , 
+      days: 5 , 
+      hours: 30 , 
+  } , 
 ]
 }
 const electricalPowerCourses = {

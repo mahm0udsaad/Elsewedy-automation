@@ -11,8 +11,8 @@ const NavigationR = () => {
     let [productData , setProductData] = useState(Rockwell[openTab])
 
    return(
-    <div className="flex">
-        <ul className="pt-4 w-[40%]">
+    <div className="sm:flex">
+        <ul className="pt-4 sm:w-[40%] sm:block flex overflow-x-scroll">
     {Rockwell.map((product , i)=>(
     <ProductTap key={i} title={product.title} i={i} setOpenTab={setOpenTab} openTab={openTab} />
     ))}
@@ -36,8 +36,8 @@ const NavigationS = () => {
     let [productData , setProductData] = useState(Rockwell[openTab])
 
    return(
-    <div className="flex">
-        <ul className="pt-4 w-[40%]">
+    <div className="flex sm:flex-row flex-col">
+        <ul className="pt-4 sm:w-[40%] sm:block flex overflow-x-scroll ">
     {Siemens.map((product , i)=>(
     <ProductTap key={i} title={product.title} i={i} setOpenTab={setOpenTab} openTab={openTab} />
     ))}
@@ -45,7 +45,7 @@ const NavigationS = () => {
     
     {Siemens.map((item , i)=>(
         <ProductsContent openTab={openTab} i={i}>
-        <div className="grid gap-8 w-11/12 mx-auto">
+        <div className="grid gap-8 mx-auto">
             {productData && (
                 <Details key={generateUniqueKey()} item={item} />
                 )}

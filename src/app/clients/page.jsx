@@ -21,7 +21,7 @@ export default function ClientsPage(){
                                 <div>
                                     <img
                                     key={url.split("/")[4]} 
-                                    className="h-28 px-2  object-contain mx-4 w-20"
+                                    className="h-28 px-2  object-contain mx-4 w-24"
                                     src={url}
                                     alt={`Client Logo ${i + 1}`}/>
                                 </div>

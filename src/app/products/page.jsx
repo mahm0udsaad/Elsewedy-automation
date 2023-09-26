@@ -37,7 +37,6 @@ export default function Products() {
               <div className="tab-content tab-space">
               {companiesLevelOne.map((info, i) => (
               <TapContent
-                arr={info.title.split(" ")[0]}
                 key={info.id || `${info.title}-${i}`}
                 products={info.products}
                 openTab={openTab}
