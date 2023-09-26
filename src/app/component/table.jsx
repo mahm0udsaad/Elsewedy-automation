@@ -132,6 +132,7 @@ export function CondensedCourseTable({ courseData , title}){
           <Th >{title}</Th>
           <Th className="redBg">Days</Th>
           <Th className='redBg'>Hours</Th>
+          <Th className='redBg sm:px-5'>PDF</Th>
           </motion.tr>
       </Thead>
       {courseData.data.map((course , i)=>(

@@ -35,17 +35,17 @@ export default function Training() {
           </h1>
         </div>
           <div className="">
-            <h1 className=" text-start text-xl font-semibold"> Who Can Join ? </h1>
+            <h1 className=" text-start text-lg font-semibold"> Who Can Join ? </h1>
             <p className="">Maintenance Engineers, Programmers, and there are special training programs for students.</p>
           </div>
           <div className="">
-            <h1 className=" text-start text-xl font-semibold">Why Should You Join El-Sewedy Automation Training Courses? </h1>
-            <p className="">If you would like to benefit from long working experience and talented experts and to learn how to operate and solve sophisticated automation control problems in a short time with minimal effort, you have to register with El-Sewedy Automation since it owns worldwide experts in Programming of PLC, SCADA, Drives...etc.</p>
+            <h1 className=" text-start text-lg font-semibold">Why Should You Join El-Sewedy Automation Training Courses? </h1>
+            <p className=" pt-1">If you would like to benefit from long working experience and talented experts and to learn how to operate and solve sophisticated automation control problems in a short time with minimal effort, you have to register with El-Sewedy Automation since it owns worldwide experts in Programming of PLC, SCADA, Drives...etc.</p>
           </div>
           </div>
           </div>
           </div>
-          <div className="sm:flex sm:h-[22rem] justify-around flex-row-reverse">
+          <div className="sm:flex sm:h-[22rem] justify-around flex-row-reverse pt-2">
             <div className="flex justify-center sm:w-1/2">
             <img className="w-11/12" src="/images/gallery/training/IMG_1105.JPG" alt="image" />
             </div>

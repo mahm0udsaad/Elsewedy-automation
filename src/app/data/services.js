@@ -18,7 +18,7 @@ export const Projects = [
           <li>On job training for customer staff.</li>
           <li>After sales technical support approaches.</li>
         </ul>
-        <div className="flex items-center lg:pt-0 pt-4 w-[90%] lg:mx-0 sm:mx-auto md:w-[60%] lg:w-[30%]">
+        <div className="flex items-center lg:pt-0 pt-4 w-[90%] lg:mx-4 sm:mx-auto md:w-[60%] lg:w-[30%]">
         <img className="h-full w-full" src="images/gallery/projects/IMG-20230513-WA0037.jpg" alt="system" />
         </div>
          </div>
@@ -41,7 +41,7 @@ export const Projects = [
           <li>Commissioning and training.</li>
           <li>System validation.</li>
         </ul>
-        <div className="flex items-center lg:pt-0 pt-4 w-[90%]  lg:mx-0 sm:mx-auto md:w-[60%] lg:w-[30%] lg:h-[50%] lg:mt-8">
+        <div className="flex items-center lg:pt-0 pt-4 w-[90%]  lg:mx-4 sm:mx-auto md:w-[60%] lg:w-[30%] lg:h-[50%] lg:mt-8">
         <img className="h-full w-full" src="/images/gallery/projects/WhatsApp Image 2023-09-22 at 12.20.289.jpg" alt="system" />
         </div>
         </div>
@@ -63,7 +63,7 @@ export const Projects = [
           <li>Power distribution and Motor Control Centre (MCC).</li>
           <li>Conducting panel tests.</li>
         </ul>
-        <div className="flex items-center lg:pt-0 pt-8 w-[70%] lg:mx-0 sm:mx-auto md:w-[60%] lg:w-[30%] lg:h-[25rem]">
+        <div className="flex items-center lg:pt-0 pt-8 w-[70%] lg:mx-4 sm:mx-auto md:w-[60%] lg:w-[30%] lg:h-[25rem]">
         <img className="h-full w-full" src="/images/gallery/projects/WhatsApp Image 2023-09-22 at 12.20.28.jpg" alt="system" />
         </div>
         </div>
@@ -84,7 +84,7 @@ export const Projects = [
           <li>Provide long-term remote assistant on 24/7 basis.</li>
           <li>Provide preemptive maintenance and training services.</li>
         </ul>
-        <div className="flex items-center lg:pt-0 pt-4 w-[70%] lg:mx-0 sm:mx-auto md:w-[60%] lg:w-[30%] lg:h-[25rem] ">
+        <div className="flex items-center lg:pt-0 pt-4 w-[70%] lg:mx-4 sm:mx-auto md:w-[60%] lg:w-[30%] lg:h-[25rem] ">
         <img className="h-full w-full" src="/images/gallery/projects/IMG-20230626-WA0007.jpg" alt="system" />
         </div>
         </div>
@@ -103,7 +103,7 @@ export const Projects = [
           <li>Provide operation guidelines and simple user manual and for troubleshooting.</li>
           <li>Redesign graphics for multi-screen environments.</li>
         </ul>
-        <div className="flex items-center lg:pt-8 pt-4  w-[70%]  lg:mx-0 sm:mx-auto md:w-[60%] lg:w-[30%] h-1/2 ">
+        <div className="flex items-center lg:pt-8 pt-4  w-[70%]  lg:mx-4 sm:mx-auto md:w-[60%] lg:w-[30%] h-1/2 ">
         <img className="h-full w-full" src="images/gallery/projects/13692547_585390788300558_7231199091215631566_n.jpg" alt="SCADA" />
         </div>
         </div>
@@ -147,7 +147,7 @@ export const technicalSuport = [
         <li>Plan for outages and corresponding corrective actions.</li>
         <li>Develop technical training programs and documentation.</li>
       </ul>
-      <div className="flex items-center lg:pt-0 pt-4 w-[90%] lg:mx-0 sm:mx-auto md:w-[60%] lg:w-[30%] h-1/2">
+      <div className="flex items-center lg:pt-0 pt-4 w-[90%] lg:mx-4 sm:mx-auto md:w-[60%] lg:w-[30%] h-1/2">
         <img className="h-full w-full" src="images/gallery/services/IMG_5769.JPG" alt="system" />
         </div>
        </div>
