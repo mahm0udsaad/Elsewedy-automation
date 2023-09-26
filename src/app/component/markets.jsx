@@ -42,8 +42,8 @@ const MarketCard = ({isInView , imgurl , title , to}) =>{
    <div className="flex flex-col items-center mt-5">
     <h1 className="text-xl sm:text-2xl text-center py-5">{title}</h1>
     <motion.div
-    initial={{opacity:0}}              
-    animate={{opacity:isInView?1:0}}
+    initial={{opacity:0 ,y:30 }}              
+    animate={{opacity:isInView?1:0 ,y:isInView? 0:30 }}
     transition={{duration:1}}
     className="h-[7rem] sm:h-[12rem]"
   >
@@ -61,7 +61,7 @@ const MarketCard = ({isInView , imgurl , title , to}) =>{
 }
   export default function Markets() {
     const marketsRef = useRef(null)
-    const isInView = useInView(marketsRef)
+    const isInView = useInView(marketsRef ,{once:true})
     return (
       <div 
       ref={marketsRef}

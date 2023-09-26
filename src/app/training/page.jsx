@@ -89,11 +89,12 @@ export default function Training() {
         <CourseTable courseData={electricalPowerCourses} title={"Electrical Power"}/>
         </ServicesTap>
         <ServicesTap i={4} openTab={openTab}>
-        <CourseTable courseData={mechanicalCourses} title={"Mechanical"}/>
-        </ServicesTap>
-        <ServicesTap i={5} openTab={openTab}>
         <CourseTable courseData={instrumentationControlCourses} title={"Instrumentaion Control"}/>
         </ServicesTap>
+        <ServicesTap i={5} openTab={openTab}>
+        <CourseTable courseData={mechanicalCourses} title={"Mechanical"}/>
+        </ServicesTap>
+       
         <ServicesTap i={6} openTab={openTab}>
         <CourseTable courseData={softSkillsCourses} title={'Soft Skills'} />
         </ServicesTap>

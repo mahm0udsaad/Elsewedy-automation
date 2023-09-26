@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState ,useRef, useContext} from 'react';
-import Slide from './component/slide'
+import {Slide} from './component/slide'
 import Link from 'next/link';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import CountUp from 'react-countup';
@@ -158,7 +158,7 @@ export default function Home() {
       </div>
       <section className='w-11/12 mx-auto'>
        <motion.div 
-       className="welcome">
+       className="welcome pt-10">
        <h1 
         className='text-center text-4xl font-semibold redColor py-16'><span className='text-black'>Welcome to</span> El Sewedy Automation</h1>
         <div 
@@ -185,8 +185,8 @@ export default function Home() {
           <motion.div
           initial={{opacity:0}}
           animate={{opacity:isInView? 1:0}}
-          className="solution-section w-11/12 mx-auto ">
-            <h1  className="text-4xl font-semibold redColor text-center py-16">
+          className="solution-section w-11/12 mx-auto pt-8">
+            <h1  className="text-4xl font-semibold redColor text-center py-20">
               Solution & Services
             </h1>
             <div 
@@ -199,13 +199,13 @@ export default function Home() {
           </motion.div>
       </section>
       <section className='pb-20'>
-        <div className="markets ">
+        <div className="markets pt-10">
           <h1 className="text-4xl font-semibold redColor text-center py-16">
             Industrial Markets
           </h1>
           <Markets />
         </div>
-        <div className="products ">
+        <div className="products pt-10">
           <h1 className="text-4xl font-semibold redColor text-center py-16">Products</h1>
           <div className="w-11/12 mx-auto grid sm:grid-cols-4 grid-cols-2">
           {productsLogos.map((imageUrl, index) => (
@@ -213,14 +213,14 @@ export default function Home() {
               setOpenTab(index + 1);
             }}>
             <motion.div
-              ref={productsRef}
               key={index}
-              initial={{ y:-20,opacity: 0}}
-              animate={{y:productsisInView?-20:0, opacity:productsisInView? 1:0}}
+              initial={{opacity:0 ,y:30 }}              
+              animate={{opacity:productsisInView?1:0 ,y:productsisInView? 0:30 }}
               transition={{duration:.7}}
               className='h-52 flex items-center justify-center'
             >
             <img
+              ref={productsRef}
               src={imageUrl.imgUrl}
               alt={`Partner ${index + 1}`}
               className="rounded-lg sm:w-[200px] w-[150px]"

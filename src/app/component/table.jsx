@@ -3,6 +3,7 @@ import React, { useContext, useRef, useState } from 'react';
 import { Table, TableContainer, Th, Td ,Thead, Tr , Tbody} from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { MyContext } from '../context';
+import {FaFilePdf} from 'react-icons/fa'
 
 export  function TableRow({course , i , booked}) {
   const tr = useRef(null)
@@ -21,15 +22,18 @@ export  function TableRow({course , i , booked}) {
        transition={{ duration:.5 }}
        className={`border-b text-center border-b-2 ${i % 2 !== 0 ? 'bg-gray-200': 'bg-white'}`}
     >
-      <Td className="lg:whitespace-nowrap sm:px-6 flex justify-between">
-        <input onChange={handleBook} type="checkbox" name="book" style={{color:'red'}} className='w-[30%] flex justify-start cursor-pointer' id={course.code} />
-        <div className="w-[18%] text-start">
+      <Td className="lg:whitespace-nowrap">
         {course.code}
-        </div>
         </Td>
-      <Td className="lg:whitespace-nowrap sm:px-6  w-[60%] sm:w-[50%] text-lg text-start">{course.title}</Td>
+      <Td className="lg:whitespace-nowrap sm:px-6  w-[60%] sm:w-1/2 text-lg text-start">{course.title}</Td>
       <Td className="lg:whitespace-nowrap sm:px-6 ">{course.days}</Td>
       <Td className="lg:whitespace-nowrap sm:px-6 ">{course.hours}</Td>
+      <Td> 
+        <a href={course.link} className='flex justify-center cursor-pointer'>
+        <FaFilePdf className="text-red-800 text-xl mr-4"/>
+         <span>Content</span>
+        </a>
+        </Td>
     </motion.tr>
   );
 }
@@ -38,7 +42,7 @@ export function CourseTable({ courseData , title  , isRockWell , bookCourse}){
 
   const isTrViwed = useInView(tr)
   return(
-    <TableContainer className='sm:w-11/12 w-5/6 mx-auto'>
+    <TableContainer className='w-11/12 mx-auto'>
         <Table size={'sm'} variant='striped' colorScheme='teal' className='w-full'>
         <Thead>
           <motion.tr 
@@ -48,15 +52,13 @@ export function CourseTable({ courseData , title  , isRockWell , bookCourse}){
           transition={{ duration:.5 }}
           style={{backgroundColor:`${courseData.color}`}}
           className="h-16 text-white py-3">
-          <Th className="">
-            <div className="flex justify-between">
-              <button onClick={bookCourse} className='h-full w-1/2 p-6 redBg'>Book</button>
-              <h1 className='flex items-center'>code</h1>
-            </div>
+          <Th className=""> 
+           code
           </Th>
           <Th >{title}</Th>
           <Th className={`sm:px-5 ${isRockWell ? 'redBg':''}`}>Days</Th>
           <Th className={`${isRockWell ? 'redBg':'' }`}>Hours</Th>
+          <Th className='redBg sm:px-5'>PDF</Th>
           </motion.tr>
       </Thead>
       {courseData.data.map((course , i)=>(
@@ -80,9 +82,7 @@ export  function CondensedTableRow({course , i}) {
        transition={{ duration:.5 }}
        className={`border-b text-center border-b-2 ${i % 2 !== 0 ? 'bg-gray-200': 'bg-white'}`}
     >
-      <Td className="lg:whitespace-nowrap sm:pr-6 w-[15%]">
-        <input type="checkbox" name="book" className='w-1/2' id={course.code} />
-        {course.code}</Td>
+      <Td className="lg:whitespace-nowrap "> {course.code}</Td>
       <Td className='flex flex-col sm:flex-row items-center sm:justify-between'>
         <h1 className='sm:w-1/2 md:w-[46%] w-full text-start'>
       {course.title.split(" ").map((word, i) => (
@@ -101,7 +101,12 @@ export  function CondensedTableRow({course , i}) {
         </Td>
       <Td className="lg:whitespace-nowrap sm:px-6 ">{course.days}</Td>
       <Td className="whitespace-nowrap sm:px-6 ">{course.hours}</Td>
-      
+      <Td> 
+        <a href={course.link} className='flex justify-center cursor-pointer'>
+        <FaFilePdf className="text-red-800 text-xl mr-4"/>
+         <span>Content</span>
+        </a>
+        </Td>
     </motion.tr>
   );
 }

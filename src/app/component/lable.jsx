@@ -10,6 +10,7 @@ const Lable = ({text}) =>{
         <motion.div
         initial={{ x:-300 }}
         animate={{ x: isAgreeInview ? 0 : -300 }}
+        transition={{duration: .3}}
         className="redBg sm:w-[25%] mt-10">
         <h1 className="text-3xl font-semibold text-center text-white p-4">
         {text}

@@ -7,6 +7,7 @@ import { Projects , technicalSuport} from "../data/services";
 import Accordioncmp from "../component/accordion";
 import AccordionCmp from "../component/accordion";
 import { PagesNav } from "../component/navBar";
+import { PageSlide } from "../component/slide";
 
 export default function Services() {
   const [openTab, setOpenTab] = useState(1);
@@ -30,7 +31,7 @@ export default function Services() {
   }
   return (
     <>
-    <PagesNav />
+     <PageSlide text={"Solution & Services"} imgSrc={'/images/services/head.jpg'}/>
     <main className="flex min-h-screen flex-col pt-20">
     <section className="sm:flex w-full">
     <div className="flex flex-col mx-auto w-11/12 sm:w-[25rem] list-none sm:py-0 py-4 mr-4">

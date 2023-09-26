@@ -166,12 +166,12 @@ const GalleryContent = ({children , openTab , i})=>{
   </div>
   )
 }
-const ProductTap = ({title , openTab , setOpenTab , i })=>{
+const ProductTap = ({title , openTab , setOpenTab , i , siemens})=>{
   return(
       <li 
-      className="underline hover:text-blue-400 block text-start sm:w-full w-48 px-4"
+      className="hover:text-red block text-start sm:w-full w-48 px-4 py-2 border border-gray-300"
         style={{
-          color:openTab === i ? 'blue' : 'black',
+          color:openTab === i ? `${siemens ? '#019699':'#e10000'}` : 'black',
         }}>
               <a
                 onClick={e => {
@@ -181,6 +181,7 @@ const ProductTap = ({title , openTab , setOpenTab , i })=>{
                 data-toggle="tab"
                 href="#link2"
                 role="tablist"
+                className="hover:text-red-600"
                 >
                  {title}
               </a>

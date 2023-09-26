@@ -9,7 +9,7 @@ export default function AccordionCmp({title , content , toggle , i}) {
       <AccordionItem className='border-b border-gray-200 py-[17px]'>
         <h2>
           <AccordionButton className='flex justify-between'>
-            <Box as="span" flex='1' textAlign='left'>
+            <Box as="span" flex='1' textAlign='left' className="text-xl font-semibold hover:bg-red">
              {title}
             </Box>
             <AccordionIcon className='text-left !text-navy-900'/>

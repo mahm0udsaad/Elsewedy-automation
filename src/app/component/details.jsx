@@ -1,7 +1,7 @@
 const Details = ({ item }) => {
     return (
       <>
-          <div id={item.link} className=" pt-8">
+          <div id={item.link} className=" py-10 px-4 shadow-lg">
             <h2 className='text-start text-2xl px-8 sm:text-4xl pb-5'>{item.title}</h2>
             <div  className='lg:flex-row flex flex-col flex-col-reverse text-justify sm:justify-between'>
             <div className="flex flex-col lg:w-[60%] lg:px-8 lg:pt-0 pt-4">

@@ -74,7 +74,7 @@ function classNames(...classes) {
                         key={"newLogo"}
                         initial={{opacity: 0}}
                         animate={{opacity: 1}}
-                        className=" sm:h-20 sm:w-56 w-40 h-16 transtion duration-600 pt-4"
+                        className=" sm:h-20 sm:w-56 w-40 h-16 transtion duration-600"
                         src={"/images/oldLogo.png"}
                         alt="Company's logo"
                       />
@@ -100,7 +100,7 @@ function classNames(...classes) {
                             className={classNames(
                               item.current
                                 ? 'redBg text-white'
-                                : 'transtion duration-300 hover:bg-white hover:text-black',
+                                : 'transtion duration-300 hover:bg-red-800 hover:text-white',
                               'rounded-md  p-2 text-lg font-medium'
                             )}
                             aria-current={item.current ? 'page' : undefined}

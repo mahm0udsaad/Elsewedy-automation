@@ -5,6 +5,8 @@ import {GalleryGrid} from "../component/gallery";
 import { GalleryTap, GalleryContent } from "../component/productTaps";
 import { events, projects, services, training, All, Products } from '../data/gallery'
 import { generateUniqueKey } from "../component/table";
+import { PagesNav } from "../component/navBar";
+import Lable from "../component/lable";
 export default  function Gallery()  {
     const [openTab , setOpenTab] = useState(1)
     const orderedProducts = {
@@ -15,19 +17,11 @@ export default  function Gallery()  {
     };
     const productsTitles = Object.keys(orderedProducts)
     return (
-      <main className="">
-        <motion.h1
-         initial={{opacity: 0}}
-         animate={{opacity: 1}}
-         transition={{ duration : .8}}
-         className="text-center font-semibold text-5xl text-gray-800 italic pt-16">
-           <div style={{borderRadius:`0 20px`}} className=" redBg sm:w-1/2 mx-auto my-10">
-        <h1 className="text-5xl font-semibold text-center text-white p-4">
-          Our Gallery
-        </h1>
-        </div>
-         </motion.h1>
-        <div className="relative gallery overflow-y-scroll h-[80vh] mx-auto">
+      <>
+      <PagesNav />
+      <main className="pt-16 ">
+        <div className="relative gallery overflow-y-scroll h-screen mx-auto">
+        <Lable text={"Our Gallery"} />
         <div className="sticky sm:overflow-hidden overflow-x-scroll w-full sm:w-full top-0 bg-white taps sm:h-[5rem] flex sm:justify-center container py-2">
             <GalleryTap i={0} title={'events'} openTab={openTab} setOpenTab={setOpenTab}/>
             <GalleryTap i={1} title={'projects'} openTab={openTab} setOpenTab={setOpenTab}/>
@@ -74,6 +68,7 @@ export default  function Gallery()  {
         </GalleryContent>
         </div>
       </main>
+      </>
     );
   };
   

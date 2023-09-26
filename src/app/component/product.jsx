@@ -12,7 +12,7 @@ const NavigationR = () => {
 
    return(
     <div className="sm:flex">
-        <ul className="pt-4 sm:w-[40%] sm:block flex overflow-x-scroll">
+        <ul className="pt-4 sm:w-[40%] sm:block flex overflow-x-scroll sm:overflow-hidden">
     {Rockwell.map((product , i)=>(
     <ProductTap key={i} title={product.title} i={i} setOpenTab={setOpenTab} openTab={openTab} />
     ))}
@@ -37,9 +37,9 @@ const NavigationS = () => {
 
    return(
     <div className="flex sm:flex-row flex-col">
-        <ul className="pt-4 sm:w-[40%] sm:block flex overflow-x-scroll ">
+        <ul className="pt-4 sm:w-[40%] sm:block flex overflow-x-scroll sm:overflow-hidden ">
     {Siemens.map((product , i)=>(
-    <ProductTap key={i} title={product.title} i={i} setOpenTab={setOpenTab} openTab={openTab} />
+    <ProductTap siemens={true} key={i} title={product.title} i={i} setOpenTab={setOpenTab} openTab={openTab} />
     ))}
     </ul> 
     
