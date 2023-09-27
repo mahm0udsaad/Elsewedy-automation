@@ -20,7 +20,7 @@ const NavigationR = () => {
     
     {Rockwell.map((item , i)=>(
         <ProductsContent openTab={openTab} i={i}>
-        <div className="grid gap-8 w-11/12 mx-auto">
+        <div className="grid gap-8 w-11/12 mx-auto pt-16">
             {productData && (
                 <Details key={generateUniqueKey()} item={item} />
                 )}

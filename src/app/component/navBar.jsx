@@ -85,7 +85,7 @@ function classNames(...classes) {
                           transition={{duration:.5}}
                           className=" sm:h-20 sm:w-56 w-40 h-16 transtion duration-600 pt-4"
                           >
-                         <Logo />
+                         <Logo color={color}/>
                       </motion.div>         
                       )}
                       </Link>

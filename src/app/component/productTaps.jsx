@@ -93,7 +93,7 @@ const CourseTap =({logo, openTab , setOpenTap , i , color  })=>{
   </li>
   )
 }
-const TapContent = ({ title , openTab, i, id, image, intro , products}) => (
+const TapContent = ({ title , openTab, i, id, image, intro , products , link}) => (
   <div className={openTab === i ? "block w-full" : "hidden"} id={id}>
     <div className="content">
       <div className="header text-2xl sm:text-4xl font-semibold py-5">{title}</div>
@@ -112,17 +112,21 @@ const TapContent = ({ title , openTab, i, id, image, intro , products}) => (
           </div>
           <div className="content-p pt-10 text-justify">
             <p>{intro}</p>
-            <ul className="pt-4">
               {title.split(" ")[0] === "Rockwell" && <NavigationR />}
               {title.split(" ")[0] === "Siemens" && <NavigationS />}
+              <ul className="pt-4 w-[20%]">
               {title.split(" ")[0] === "GHM" ||title.split(" ")[0] === "Deutschmann" ? 
               (
-              products.map((item)=>(
-                <li>{item}</li>
+                products.map((item)=>(
+                <li       
+                className="hover:text-red block text-start sm:w-full w-48 px-4 py-2 border border-gray-300">
+                {item}
+                </li>
               ))
               ): null }
+              {link && <Link href={link} className="text-blue-400 px-4">more Information...</Link>}
+              </ul>
               
-            </ul>
           </div>
         </div>
       </div>

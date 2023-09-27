@@ -54,6 +54,7 @@ export const companiesLevelOne = [
     "Software & Programming Devices & Accessories",
   ],
   image: ["/images/details/ghm.jpg"],
+  link:'https://www.ghm-group.de/en/products/'
 },
 {
   title: "Deutschmann Automation",
@@ -66,6 +67,7 @@ export const companiesLevelOne = [
     "Starter Kits & Accessories",
   ],
   image: ["/images/details/dutchman.jpg"],
+  link:"https://www.deutschmann.de/en/products/"
 },
 ];
 export const Rockwell = [

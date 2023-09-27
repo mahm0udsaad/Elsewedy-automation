@@ -1,5 +1,6 @@
 "use client"
 import { FaLock, FaUser, FaHandshake, FaFlag, FaHeart, FaCheck, FaBalanceScale } from 'react-icons/fa';
+import {BiRightArrow} from 'react-icons/bi'
 import {LuBrainCircuit , LuHardHat} from 'react-icons/lu'
 import { Carousel } from "react-responsive-carousel";
 import { motion, useInView } from "framer-motion";
@@ -82,15 +83,14 @@ function ValuesCards({value }){
   const isInView = useInView(ref , {once:true});
   const shadow = useRef(null);
   const shadowInview = useInView(shadow);
-  console.log(isInView);
   return (
     <motion.div
     initial={{y:30}}
     ref={ref}
     animate={{y:isInView? 0: 30}}
     transition={{duration:.7}}
-    className="relative pl-12 lg:pl-16 pb-3">
-      <dt className="text-base font-semibold text-white">
+    className="relative pl-12 lg:pl-16 mb-2">
+      <dt className="text-lg font-semibold text-white text-justify">
         <motion.div
          initial={{ boxShadow: '0px 0px 0px rgba(0, 0, 0, 0)' }}
          animate={{ boxShadow: isInView?'0px 5px 20px rgba(255, 0, 0, 0.2)':'0px 0px 0px rgba(0, 0, 0, 0)' }}
@@ -102,7 +102,7 @@ function ValuesCards({value }){
         <h1 className="text-lg font-semibold leading-6 text-white">
           {value.title}
         </h1>
-        <p className="text-sm  font-light">{value.description}</p>
+        <p className="text-sm  font-light pt-2">{value.description}</p>
       </dt>
     </motion.div>
   )
@@ -151,24 +151,27 @@ export default function About() {
            initial={{x:-50}}        
            animate={{  x: wIsInView ? 0 : -50 }}
            transition={{duration:.5}}
-          className="sm:w-1/2 text-justify lg:text-lg md:text-md text-sm redBg p-5 text-white">El Sewedy Automation is a leading Egyptian Company in designing, supplying, installing, and
+          className="sm:w-1/2 text-justify text-sm redBg p-3 text-white">El Sewedy Automation is a leading Egyptian Company in designing, supplying, installing, and
           commissioning of industrial automation systems for a wide range of industrial markets. Company
           Founders have over 25 years of proven technical expertise, they established the Legal Form of El
           Sewedy Automation Company as S.A.E for Industrial Automation Solutions/Services Provider since
           2009.
           <ul className="pt-2 space-y-2 flex flex-col">
-          <li>
+          <li className='flex'>
+          <span><BiRightArrow /></span>
           Over the years, "El Sewedy Automation" has gained its Goodwell and Reputation for its quality
           products & services through its talented team who brings their extensive knowledge in industrial
           automation technology and practices to provide the company customers with innovative, reliable,
           and cost-effective automation solutions/services "On-time and within Budget".
           </li>
-          <li>
+          <li className='flex '>
+          <span><BiRightArrow /></span>
            El Sewedy Automation offers the lowest market price while maintaining the high quality of its
           solution/service to help its customers to improve business efficiency and maximize their
           organization's profitability.
           </li>
-          <li>
+          <li className='flex '>
+          <span><BiRightArrow /></span>
            El-Sewedy Automation, one of the top ranked companies in Egypt for providing outstanding,
           remarkable, and professional training courses such as (PLC programming, SCADA systems and
           HMI...etc.) through its training centre using its own original working stations with the guidance

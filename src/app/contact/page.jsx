@@ -20,6 +20,7 @@ export default function Contact() {
        <Lable text={"Contact Us"}/>
        <div className="flex w-11/12 justify-around pt-8">
        <ul>
+        <h1 className="text-xl pb-4 font-semibold">Company Brochures :</h1>
         {pdfFiles.map((pdf, index) => (
           <li key={index}>
             <a href={pdf} target="_blank" rel="noopener noreferrer" className="flex pb-3 text-lg hover:text-red-800 transtion duration-300">

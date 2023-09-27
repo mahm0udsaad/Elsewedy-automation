@@ -41,6 +41,7 @@ export default function Products() {
                 products={info.products}
                 openTab={openTab}
                 intro={info.intro}
+                link={info.link}
                 i={i + 1}
                 id={`link${i}`}
                 title={info.title}

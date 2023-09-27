@@ -5,6 +5,9 @@
 :root{
   --icon-color: #991b1b ;
 }
+svg{
+  transition: .5s ease-in-out;
+}
 input[type="checkbox"] {
   accent-color: var(--icon-color);
   }

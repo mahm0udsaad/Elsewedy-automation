@@ -31,7 +31,6 @@ export  function TableRow({course , i , booked}) {
       <Td> 
         <a href={course.link} className='flex justify-center cursor-pointer'>
         <FaFilePdf className="text-red-800 text-xl mr-4"/>
-         <span>Content</span>
         </a>
         </Td>
     </motion.tr>
@@ -58,7 +57,7 @@ export function CourseTable({ courseData , title  , isRockWell , bookCourse}){
           <Th >{title}</Th>
           <Th className={`sm:px-5 ${isRockWell ? 'redBg':''}`}>Days</Th>
           <Th className={`${isRockWell ? 'redBg':'' }`}>Hours</Th>
-          <Th className='redBg sm:px-5'>PDF</Th>
+          <Th className='redBg sm:px-5'>Course Content</Th>
           </motion.tr>
       </Thead>
       {courseData.data.map((course , i)=>(
@@ -104,7 +103,6 @@ export  function CondensedTableRow({course , i}) {
       <Td> 
         <a href={course.link} className='flex justify-center cursor-pointer'>
         <FaFilePdf className="text-red-800 text-xl mr-4"/>
-         <span>Content</span>
         </a>
         </Td>
     </motion.tr>
@@ -132,7 +130,7 @@ export function CondensedCourseTable({ courseData , title}){
           <Th >{title}</Th>
           <Th className="redBg">Days</Th>
           <Th className='redBg'>Hours</Th>
-          <Th className='redBg sm:px-5'>PDF</Th>
+          <Th className='redBg sm:px-5'>Course <br /> Content</Th>
           </motion.tr>
       </Thead>
       {courseData.data.map((course , i)=>(
