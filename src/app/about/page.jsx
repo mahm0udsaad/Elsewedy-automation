@@ -151,7 +151,7 @@ export default function About() {
            initial={{x:-50}}        
            animate={{  x: wIsInView ? 0 : -50 }}
            transition={{duration:.5}}
-          className="sm:w-1/2 text-justify text-sm redBg p-3 text-white">El Sewedy Automation is a leading Egyptian Company in designing, supplying, installing, and
+          className="sm:w-1/2 text-justify flex justify-around flex-col sm:text-sm lg:text-lg redBg p-3 text-white">El Sewedy Automation is a leading Egyptian Company in designing, supplying, installing, and
           commissioning of industrial automation systems for a wide range of industrial markets. Company
           Founders have over 25 years of proven technical expertise, they established the Legal Form of El
           Sewedy Automation Company as S.A.E for Industrial Automation Solutions/Services Provider since

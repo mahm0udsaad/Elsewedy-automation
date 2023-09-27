@@ -124,7 +124,7 @@ const TapContent = ({ title , openTab, i, id, image, intro , products , link}) =
                 </li>
               ))
               ): null }
-              {link && <Link href={link} className="text-blue-400 px-4">more Information...</Link>}
+              {link && <Link href={link} target="_blank" className="text-blue-400 px-4">more Information...</Link>}
               </ul>
               
           </div>

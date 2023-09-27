@@ -29,7 +29,7 @@ export  function TableRow({course , i , booked}) {
       <Td className="lg:whitespace-nowrap sm:px-6 ">{course.days}</Td>
       <Td className="lg:whitespace-nowrap sm:px-6 ">{course.hours}</Td>
       <Td> 
-        <a href={course.link} className='flex justify-center cursor-pointer'>
+        <a href={course.link} target="_blank" className='flex justify-center cursor-pointer'>
         <FaFilePdf className="text-red-800 text-xl mr-4"/>
         </a>
         </Td>
@@ -101,7 +101,7 @@ export  function CondensedTableRow({course , i}) {
       <Td className="lg:whitespace-nowrap sm:px-6 ">{course.days}</Td>
       <Td className="whitespace-nowrap sm:px-6 ">{course.hours}</Td>
       <Td> 
-        <a href={course.link} className='flex justify-center cursor-pointer'>
+        <a href={course.link} target="_blank" className='flex justify-center cursor-pointer'>
         <FaFilePdf className="text-red-800 text-xl mr-4"/>
         </a>
         </Td>

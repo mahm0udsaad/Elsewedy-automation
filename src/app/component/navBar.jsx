@@ -146,11 +146,11 @@ function classNames(...classes) {
             </>
           )}
         </Disclosure>
-          <a title='chat with us' href='https://web.whatsapp.com/send?phone=+201028833734' className=' bg-transparent fixed z-20 bottom-5 left-5 text-6xl text-green-600 hover:text-green-300'>
+          <a title='chat with us' target="_blank" href='https://web.whatsapp.com/send?phone=+201028833734' className=' bg-transparent fixed z-20 bottom-5 left-5 text-6xl text-green-600 hover:text-green-300'>
           {isFooterInview ? <span className={`animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75`}></span> : null}
             <IoLogoWhatsapp />
           </a>
-          <a title='chat with us' className=' bg-transparent fixed z-20 bottom-5 right-5 text-6xl text-blue-600 hover:text-blue-300' href="https://www.facebook.com/messages/t/195682397271401">
+          <a title='chat with us' target="_blank" className=' bg-transparent fixed z-20 bottom-5 right-5 text-6xl text-blue-600 hover:text-blue-300' href="https://www.facebook.com/messages/t/195682397271401">
           {isFooterInview ? <span className={`animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75`}></span> : null}
           <BsMessenger />
           </a>
