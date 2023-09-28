@@ -23,6 +23,7 @@ export default function ClientsPage(){
                                 {category.imagesUrl.map((url , i)=>(
                                 <div>
                                     <img
+                                    fetchPriority="high"
                                     key={url.split("/")[4]} 
                                     className="h-28 px-2  object-contain mx-4 w-28"
                                     src={url}

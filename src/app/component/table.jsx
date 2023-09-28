@@ -58,7 +58,7 @@ export function CourseTable({ courseData , title  , isRockWell , bookCourse}){
         <Tbody>
         
         {course.type && 
-            <h1 className='text-xl text-center sm:w-40 py-4 flex'>Packages</h1>
+            <span className='text-xl text-center sm:w-40 py-4 flex'>Packages</span>
         }
         {course.type ? (
                course.packages.map((course ,i)=>(

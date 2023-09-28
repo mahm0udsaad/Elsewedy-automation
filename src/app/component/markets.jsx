@@ -49,6 +49,7 @@ const MarketCard = ({isInView , imgurl , title , to}) =>{
   >
     <Link href={to}>
     <img
+      fetchPriority="low"
       loading="lazy"
       className="h-full rounded-xl "
       src={imgurl}

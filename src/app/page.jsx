@@ -52,7 +52,7 @@ const ProgressBar = ({ title, number, icon, widthClass }) => {
 
   );
 };
-export function ServicesCard({isInView, feature , to}) {
+export function ServicesCard({isInView, feature , to }) {
   return (
     <motion.div
     initial={{y:50}}
@@ -98,6 +98,7 @@ export function Clients() {
         <div ref={logosContainer} className="overflow-x-hidden flex items-center pt-5 ">
           {clientsLogos.map((logoUrl, index) => (
             <img
+              fetchPriority={"low"}
               key={index} 
               className="h-32 col-span-2  object-contain mx-4 w-40"
               src={logoUrl}
@@ -209,7 +210,7 @@ export default function Home() {
           <h1 className="text-4xl font-semibold redColor text-center py-16">Products</h1>
           <div className="w-11/12 mx-auto grid sm:grid-cols-4 grid-cols-2">
           {productsLogos.map((imageUrl, index) => (
-            <Link href={imageUrl.link} onClick={e => {
+            <Link key={index} href={imageUrl.link} onClick={e => {
               setOpenTab(index + 1);
             }}>
             <motion.div
@@ -221,6 +222,7 @@ export default function Home() {
             >
             <img
               ref={productsRef}
+              fetchPriority={"low"}
               src={imageUrl.imgUrl}
               alt={`Partner ${index + 1}`}
               className="rounded-lg sm:w-[200px] w-[150px]"
