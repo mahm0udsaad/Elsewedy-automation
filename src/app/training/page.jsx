@@ -53,11 +53,11 @@ export default function Training() {
           <div className="w-11/12 flex flex-col justify-around">
           <div>
           <h1 className="text-xl font-semibold text-star">Who Are Your Instructors? </h1>
-            <p className="pt-3">El-Sewedy Automation has a team of professionals “Group of Ph.D. Engineers” in Allen Bradly, SIMATIC, SCADA, HMI, and Drives. The training team is using training kits dedicated to training courses to let trainees test and check their automation exercises practically.</p>
+            <p className="pt-3 md:pt-0">El-Sewedy Automation has a team of professionals “Group of Ph.D. Engineers” in Allen Bradly, SIMATIC, SCADA, HMI, and Drives. The training team is using training kits dedicated to training courses to let trainees test and check their automation exercises practically.</p>
           </div>
           <div>
             <h1 className="text-xl font-semibold text-start">Where Training Courses Can Be Conducted?</h1>
-            <p className="pt-3">El-Sewedy Automation has its own training class in the company location. Also, El-Sewedy Automation offers onsite training for its customers' convenience or even in any suitable training places (Hotels, Other Training Centers... etc.).</p>
+            <p className="pt-3 md:pt-0">El-Sewedy Automation has its own training class in the company location. Also, El-Sewedy Automation offers onsite training for its customers' convenience or even in any suitable training places (Hotels, Other Training Centers... etc.).</p>
           </div>
           </div>
           </div>
@@ -69,7 +69,7 @@ export default function Training() {
         Our Courses
         </h1>
         <ul
-            className="sm:w-11/12 flex justify-between sm:justify-around sm:mx-auto items-center mb-0 list-none pt-3 pb-4"
+            className="sm:w-11/12 flex justify-between sm:justify-around sm:mx-auto items-center mb-0 list-none pt-3 md:pt-0 pb-4"
             role="tablist"
           >
         {data.map((title,i)=>(
@@ -83,7 +83,7 @@ export default function Training() {
         <CourseTable isRockWell={true} name='Rockwell' courseData={allenBradleyLegacyCourses} title={"Allen Bradley (Legacy Courses)"}/>
         </ServicesTap>
         <ServicesTap i={2} openTab={openTab}>
-        <CourseTable courseData={siemensCourses} title={"siemens"}/>
+        <CourseTable courseData={siemensCourses} title={"Siemens"}/>
         </ServicesTap>
         <ServicesTap i={3} openTab={openTab}>
         <CourseTable courseData={electricalPowerCourses} title={"Electrical Power"}/>

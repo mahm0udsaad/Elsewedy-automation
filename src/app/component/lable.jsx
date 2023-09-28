@@ -4,7 +4,6 @@ const { useRef } = require("react")
 const Lable = ({text}) =>{
     const ref = useRef(null) 
     const isAgreeInview = useInView(ref , {once:true})
-    console.log(isAgreeInview);
     return(
          <div ref={ref} className="w-full">
         <motion.div

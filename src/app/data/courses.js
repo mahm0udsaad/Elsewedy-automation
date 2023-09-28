@@ -192,6 +192,7 @@ const allenBradleyLegacyCourses = {
     } , 
 ]
 }
+
 const siemensCourses = {
   color: '#3e959c',
   data: [
@@ -259,40 +260,52 @@ const siemensCourses = {
       link: './pdf/SIEMENS/SS-09 SIEMENS WinCC SCADA.pdf',
     },
     {
-      code: 'SS-P1',
-      title: 'Siemens Step 7 300-400 Level 1 & 2',
-      days: 7,
-      hours: 50,
+      code: 'SS-10',
+      title: 'Profibus Communication Network',
+      days: 3,
+      hours: 20,
       link: './pdf/SIEMENS/SS-10 Siemens S7 PROFIBUS Network.pdf',
     },
     {
-      code: 'SS-P2',
-      title: 'Human Machine Interface (HMI) WinCC flexible SIEMENS + SIEMENS WinCC SCADA',
-      days: 5,
-      hours: 30,
+      code: 'SS-11',
+      title: 'Profinet Communication Network',
+      days: 3,
+      hours: 20,
       link: './pdf/SIEMENS/SS-11 Siemens S7 PROFINET Network.pdf',
     },
     {
-      code: 'SS-P3',
-      title: 'Variable Speed Drive SIEMENS SINAMICS G120 Operator and Maintenance',
-      days: 2,
-      hours: 15,
-      link: './pdf/SIEMENS/SS-12 Some Other Course.pdf', // Update with the correct link
-    },
-    {
-      code: 'AB-P1',
+      text:'Condensed Training Packages',
       type: 'packages',
-      title: 'ControlLogix & CompactLogix Fundamental Maintenance and Troubleshooting',
-      content: [
-        'Fundamentals of Logix/Studio 5000 Systems',
-        'Basic Ladder Logic Editing',
-        'Logix/Studio 5000 Maintenance and Troubleshooting',
-      ],
-      days: 5,
-      hours: 30,
-    },
+      packages:[
+        {
+          code: 'SS-P1',
+          title: 'Siemens Step 7 300-400 Level 1 & 2',
+          days: 7,
+          hours: 50,
+        },
+        {
+          code: 'SS-P2',
+          title: 'Human Machine Interface (HMI) WinCC flexible SIEMENS + SIEMENS WinCC SCADA',
+          days: 5,
+          hours: 30,
+        },
+        {
+          code: 'SS-P3',
+          title: 'Variable Speed Drive SIEMENS SINAMICS G120 Operator and Maintenance',
+          days: 2,
+          hours: 15,
+        },
+        {
+          code: 'SS-P4',
+          title: 'Profibus & Profinet Communication Network',
+          days: 5,
+          hours: 30,
+        },
+      ]
+    }
   ],
 };
+
 
 const electricalPowerCourses = {
   color:'#e6af00' , 

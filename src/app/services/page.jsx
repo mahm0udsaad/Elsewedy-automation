@@ -47,6 +47,8 @@ export default function Services() {
     {Projects.map((project, index) => (
         <AccordionCmp
           i={index}
+          text={project.text}
+          imgUrl={project.imgUrl}
           key={index}
           toggle={expandAll}
           title={project.title}
@@ -62,6 +64,8 @@ export default function Services() {
     {technicalSuport.map((project, index) => (
         <AccordionCmp
           key={index}
+          text={project.text}
+          imgUrl={project.imgUrl}
           toggle={expandAll}
           title={project.title}
           content={project.content}

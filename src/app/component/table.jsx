@@ -63,7 +63,14 @@ export function CourseTable({ courseData , title  , isRockWell , bookCourse}){
       {courseData.data.map((course , i)=>(
         <Tbody>
         
-        {course.type ? <CondensedTableRow course={course} i={i} /> :<TableRow course={course} key={generateUniqueKey()} i={i}/>}
+        {course.type && 
+            <h1 className='text-xl text-center w-40 py-4 flex'>Packages :</h1>
+        }
+        {course.type ? (
+               course.packages.map((course ,i)=>(
+                <TableRow course={course} key={generateUniqueKey()} i={i}/>
+               ))
+        ):(<TableRow course={course} key={generateUniqueKey()} i={i}/>)}
         </Tbody>
       ))}
         </Table>

@@ -114,7 +114,7 @@ const TapContent = ({ title , openTab, i, id, image, intro , products , link}) =
             <p>{intro}</p>
               {title.split(" ")[0] === "Rockwell" && <NavigationR />}
               {title.split(" ")[0] === "Siemens" && <NavigationS />}
-              <ul className="pt-4 w-[20%]">
+              <ul className="pt-4 w-[30%]">
               {title.split(" ")[0] === "GHM" ||title.split(" ")[0] === "Deutschmann" ? 
               (
                 products.map((item)=>(
@@ -124,9 +124,9 @@ const TapContent = ({ title , openTab, i, id, image, intro , products , link}) =
                 </li>
               ))
               ): null }
-              {link && <Link href={link} target="_blank" className="text-blue-400 px-4">more Information...</Link>}
               </ul>
               
+              {link && <Link href={link} target="_blank" className="flex text-blue-400 px-3 pt-4">More Information...</Link>}
           </div>
         </div>
       </div>
