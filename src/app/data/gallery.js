@@ -303,9 +303,6 @@ export const All = [
     "images/gallery/Products/Rockwell Automation - Allen Bradly/WhatsApp Image 2023-05-12 at 7.11.35 PM (32).jpeg",
     "images/gallery/Products/Rockwell Automation - Allen Bradly/WhatsApp Image 2023-05-12 at 7.11.35 PM (34).jpeg"
 ],
-[
-    "images/gallery/Products/Rockwell Automation - Allen Bradly/WhatsApp Image 2023-05-12 at 7.11.35 PM (35).jpeg"
-]
 ];
  const GHM = [
     [
@@ -337,7 +334,8 @@ export const All = [
 ]
 ];
 export const Products =[
-  ...siemens,
-  ...rockwell,
-  ...GHM,
-  ...deutschmann]
+  {data: [...siemens],title:"Siemens", length : siemens.length},
+  {data:[...rockwell] ,title: "Rockwell",  length: rockwell.length},
+  {data:[...GHM],title:"GHM", length: GHM.length},
+  {data:[ ...deutschmann],title:"Deutschmann", length: deutschmann.length}
+]

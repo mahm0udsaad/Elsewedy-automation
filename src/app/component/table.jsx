@@ -8,12 +8,6 @@ import {FaFilePdf} from 'react-icons/fa'
 export  function TableRow({course , i , booked}) {
   const tr = useRef(null)
   const isTrViwed = useInView(tr)
-  const {bookingData , setBookingData} = useContext(MyContext)
-  const handleBook = (e) => {
-    // setBookingData((prev) => {
-    //   return prev ? [prev ,{ course }]: [{course}];
-    //  });
-  };
   return (
     <motion.tr 
        ref={tr}
@@ -30,7 +24,7 @@ export  function TableRow({course , i , booked}) {
       <Td className="lg:whitespace-nowrap sm:px-6 ">{course.hours}</Td>
       <Td> 
         <a href={course.link} target="_blank" className='flex justify-center cursor-pointer'>
-        <FaFilePdf className="text-red-800 text-xl mr-4"/>
+       {course.link &&  <FaFilePdf className="text-red-800 text-xl mr-4"/>}
         </a>
         </Td>
     </motion.tr>

@@ -34,7 +34,6 @@ export default  function Gallery()  {
         { events.map((coll , i)=>(
         <GalleryGrid center={true} key={generateUniqueKey()+i+'events'} arr={coll} />
        ))}
-       
         </GalleryContent>
         <GalleryContent openTab={openTab} i={1}>
         { projects.map((coll , i)=>(
@@ -43,13 +42,14 @@ export default  function Gallery()  {
         </GalleryContent>
 
         <GalleryContent openTab={openTab} i={2}>
-        { Products.map((grid , i)=>(
-        <>
-        <h1 className="text-center py-10 text-4xl font-semibold">{productsTitles[i]}</h1>
-        <GalleryGrid key={generateUniqueKey()+i+'products'} arr={grid} />
-        </>
-       ))}
-        </GalleryContent>
+        {Products.map((product, i) => (
+          <React.Fragment key={i}>
+            {product.data.map((grid, j) => (
+              <GalleryGrid arr={grid} key={j} />
+            ))}
+          </React.Fragment>
+        ))}
+      </GalleryContent>
 
         <GalleryContent openTab={openTab} i={3}>
         { services.map((coll , i)=>(
