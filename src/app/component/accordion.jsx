@@ -27,7 +27,7 @@ export default function AccordionCmp({title , content , toggle ,text,imgUrl, i})
          </div>
          {imgUrl && 
          <div className="sm:w-[45%] flex items-center h-[20rem]">
-          <img src={imgUrl} alt="" />
+          <img src={imgUrl} alt="image" className="h-full w-full" />
           </div>}
        </div>
         </AccordionPanel>

@@ -88,7 +88,7 @@ const CourseTap =({logo, openTab , setOpenTap , i , color  })=>{
               href="#link2"
               role="tablist"
               >
-                <img className={`${i > 2 ? "h-20":"w-11/12"}`} src={logo} alt="" />
+                <img className={`${i > 2 ? "sm:h-20":"w-11/12"}`} src={logo} alt="" />
             </a>
   </li>
   )

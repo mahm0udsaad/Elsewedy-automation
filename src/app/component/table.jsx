@@ -64,7 +64,7 @@ export function CourseTable({ courseData , title  , isRockWell , bookCourse}){
         <Tbody>
         
         {course.type && 
-            <h1 className='text-xl text-center w-40 py-4 flex'>Packages :</h1>
+            <h1 className='text-xl text-center sm:w-40 py-4 flex'>Packages</h1>
         }
         {course.type ? (
                course.packages.map((course ,i)=>(
@@ -88,7 +88,7 @@ export  function CondensedTableRow({course , i}) {
        transition={{ duration:.5 }}
        className={`border-b text-center border-b-2 ${i % 2 !== 0 ? 'bg-gray-200': 'bg-white'}`}
     >
-      <Td className="lg:whitespace-nowrap "> {course.code}</Td>
+      <Td className="lg:whitespace-nowrap"> {course.code}</Td>
       <Td className='flex flex-col sm:flex-row items-center sm:justify-between'>
         <h1 className='sm:w-1/2 md:w-[46%] w-full text-start'>
       {course.title.split(" ").map((word, i) => (
