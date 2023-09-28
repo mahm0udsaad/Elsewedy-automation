@@ -37,13 +37,13 @@ const  Footer =()=>{
                         Fax: +20 (2) 2576 3463
                     </li>
                     <li>
-                      <a href="https://web.whatsapp.com/send?phone=+201028833734" className="hover:text-gray-700 transition">
+                      <a target='_blank' href="https://web.whatsapp.com/send?phone=+201028833734" className="hover:text-gray-700 transition">
                         <FaWhatsapp className="inline-block mr-2 text-green-600" />
                         WhatsApp: +201028833734
                       </a>
                     </li>
                     <li>
-                      <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzDsRSSLMjJDGLpJqdlgVbrRGpGZBSVQgFRgSVLFKpSkXdTQXmZJBBpzVvvwwJkSRsRtLzj" className="hover:text-gray-700 transition">
+                      <a target='_blank' href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzDsRSSLMjJDGLpJqdlgVbrRGpGZBSVQgFRgSVLFKpSkXdTQXmZJBBpzVvvwwJkSRsRtLzj" className="hover:text-gray-700 transition">
                         <FaEnvelope className="inline-block mr-2 text-red-700" />
                         E-mail: info@elsewedy-automation.com
                       </a>
