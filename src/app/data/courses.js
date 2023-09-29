@@ -78,7 +78,7 @@ const allenBradleyCourses = {
       code: 'AB-12' , 
       title: 'DeviceNet Network Communication' , 
       days: 2 , 
-      hours: 20 , 
+      hours: 15 , 
     } , 
     {
       code: 'AB-13' , 
@@ -577,7 +577,6 @@ const softSkillsCourses = {
     },
   ],
 };
-
 const data = [
   { imgUrl: "/images/partners/partner-tab2.png", color: "black" },
   { imgUrl: "/images/partners/semins-tqp.png", color: "#3e959c" },
