@@ -7,9 +7,9 @@ import { PagesNav } from "../component/navBar";
 const pdfFiles = [
   './pdf/SA - COMPANY PROFILE.pdf',
   './pdf/SA - Projects References.pdf',
-  './pdf/SA - Solutions & Services.pdf',
+  './pdf/SA - Soultions & Services.pdf',
   './pdf/SA - Products.pdf',
-  './pdf/SA - Training .pdf',
+  './pdf/SA - Training Brochure.pdf',
 ];
 
 export default function Contact() {

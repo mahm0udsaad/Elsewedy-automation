@@ -1,3 +1,4 @@
+import { PagesNav } from '@/app/component/navBar'
 import { projectsData} from '../../data/clients'
 
 export const dynamicParams = 'false'
@@ -13,6 +14,8 @@ export default async function projectDetails({params})  {
     const project = projectsData[params.client];
     
   return (
+    <>
+    <PagesNav />
     <main className="pt-24">
      <div className="sm:flex">
      <div className="rounded-xl text-black flex flex-col space-y-8 mx-4 p-10 text-justify w-11/12">
@@ -40,6 +43,7 @@ export default async function projectDetails({params})  {
               ))}
              </div>
     </main>
+    </>
   );
 };
 
