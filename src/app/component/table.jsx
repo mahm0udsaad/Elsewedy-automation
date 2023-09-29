@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 import { MyContext } from '../context';
 import {FaFilePdf} from 'react-icons/fa'
 
-export  function TableRow({course , i , booked}) {
+export  function TableRow({course , i }) {
   const tr = useRef(null)
-  const isTrViwed = useInView(tr)
+  const isTrViwed = useInView(tr ,{once:true})
   return (
     <motion.tr 
        ref={tr}
@@ -24,13 +24,14 @@ export  function TableRow({course , i , booked}) {
       <Td className="lg:whitespace-nowrap sm:px-6 ">{course.hours}</Td>
       <Td> 
         <a href={course.link} target="_blank" className='flex justify-center cursor-pointer'>
-       {course.link &&  <FaFilePdf className="text-red-800 text-xl mr-4"/>}
+        <FaFilePdf className="text-red-800 text-xl mr-4"/>
         </a>
         </Td>
     </motion.tr>
   );
 }
-export function CourseTable({ courseData , title  , isRockWell , bookCourse}){
+
+export function CourseTable({ courseData , title  , isRockWell }){
   const tr = useRef(null)
 
   const isTrViwed = useInView(tr)
@@ -71,9 +72,10 @@ export function CourseTable({ courseData , title  , isRockWell , bookCourse}){
       </TableContainer>
   )
 }
+
 export  function CondensedTableRow({course , i}) {
   const tr = useRef(null)
-  const isTrViwed = useInView(tr)
+  const isTrViwed = useInView(tr , {once:true})
   return (
     <motion.tr 
        ref={tr}
@@ -109,9 +111,11 @@ export  function CondensedTableRow({course , i}) {
     </motion.tr>
   );
 }
+
 export function generateUniqueKey() {
   return Date.now().toString(36) + Math.random().toString(36).substring(2);
 }
+
 export function CondensedCourseTable({ courseData , title}){
   const tr = useRef(null)
   const isTrViwed = useInView(tr)
