@@ -108,7 +108,7 @@ export const Projects = [
               "Develop technical training programs and documentation.",
             ],
           ],
-          imgUrl: "images/gallery/services/IMG_5757.jpg",
+          imgUrl: "/images/gallery/services/IMG_5757.JPG",
         },
         {
           title: "Remote Assistant Services (24/7)",
