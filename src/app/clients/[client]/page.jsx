@@ -20,11 +20,11 @@ export default async function projectDetails({params})  {
      <div className="sm:flex">
      <div className="rounded-xl text-black flex flex-col space-y-8 mx-4 p-10 text-justify w-11/12">
             <img src={project.image && project.image} alt="logo" width={150}/>
-            <h1 className='text-3xl'>{project.clientName}</h1>
+            <h1 className='text-3xl text-start'>{project.clientName}</h1>
             <p>{project.description}</p>
              {project.project && project.project.map((el)=>(
             <div> 
-                <h1 className='text-2xl font-semibold'>{el.title}</h1>
+                <h1 className='text-2xl font-semibold text-start'>{el.title}</h1>
                 <ul className='pt-4'>
                 {el.list.map(li => <li className='py-2'>{li}</li>)}
               </ul>
