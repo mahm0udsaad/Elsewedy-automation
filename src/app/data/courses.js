@@ -154,6 +154,7 @@ const condensedTrainingPackages = {
       title: 'PowerFlex AC Drives Configuration and Startup (4-Class ,  520 Class ,  and PF-7 Class)',
       content: [
         'PowerFlex 750-Series Configuration and Startup',
+        'PowerFlex 520-Series Configuration and Startup'
       ],
       days: 3,
       hours: 20,
