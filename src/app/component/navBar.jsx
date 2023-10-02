@@ -30,18 +30,7 @@ function classNames(...classes) {
   )
   const [bg  , setBg] = useState('transparent')
   const [color  , setColor] = useState('white')
-  const [showOldLogo , setShowOldLogo] = useState(false)
   
-  useEffect(() => {
-    const intervalDuration = !showOldLogo ? 1000 : 7000; 
-    const time = setInterval(() => {
-      setShowOldLogo((prevShowOldLogo) => !prevShowOldLogo);
-    }, intervalDuration);
-    
-    return () => {
-      clearInterval(time);
-    };
-  }, [showOldLogo]);
   useEffect(() => {
     const handleScroll = () => {
       const newY = window.scrollY;
@@ -69,25 +58,14 @@ function classNames(...classes) {
                   <div className="flex items-center">
                     <div className="flex-shrink-0 ">
                     <Link href={'/'} className=''>
-                      {!showOldLogo ? (
-                        <motion.img
-                        key={"newLogo"}
-                        initial={{opacity: 0}}
-                        animate={{opacity: 1}}
-                        className=" sm:h-20 sm:w-56 w-40 h-16 transtion duration-600"
-                        src={"/images/oldLogo.png"}
-                        alt="Company's logo"
-                      />
-                      ):(
                        <motion.div
                           initial={{opacity: 0}}
                           animate={{opacity: 1}}
                           transition={{duration:.5}}
-                          className=" sm:h-20 sm:w-56 w-40 h-16 transtion duration-600 pt-4"
+                          className=" sm:h-20 sm:w-56 w-40 h-16 transtion duration-600"
                           >
                          <Logo color={color}/>
                       </motion.div>         
-                      )}
                       </Link>
                        </div>
                   </div>

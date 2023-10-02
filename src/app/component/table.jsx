@@ -34,7 +34,7 @@ export  function TableRow({course , i }) {
 export function CourseTable({ courseData , title  , isRockWell }){
   const tr = useRef(null)
 
-  const isTrViwed = useInView(tr)
+  const isTrViwed = useInView(tr , {once:true})
   return(
     <TableContainer className='w-11/12 mx-auto'>
         <Table size={'sm'} variant='striped' colorScheme='teal' className='w-full'>
@@ -85,17 +85,18 @@ export  function CondensedTableRow({course , i}) {
        className={`border-b text-center border-b-2 ${i % 2 !== 0 ? 'bg-gray-200': 'bg-white'}`}
     >
       <Td className="lg:whitespace-nowrap"> {course.code}</Td>
-      <Td className='flex flex-col sm:flex-row items-center sm:justify-between'>
+      <Td className='flex flex-col sm:flex-row items-center sm:justify-around'>
         <h1 className='sm:w-1/2 md:w-[46%] w-full text-start'>
       {course.title.split(" ").map((word, i) => (
+      <>
+      {i == 6 && <br />}
       <span key={i}>
-        {i > 0 && i % 4 === 0 ? <br /> : null}
         {word}{' '}
       </span>
+      </>
     ))}
-        :
         </h1> 
-     <ul className='sm:w-1/2 w-full text-start'>
+     <ul className='sm:w-[45%] w-full text-start'>
       {course.content.map((el , i)=>(
         <li key={generateUniqueKey() + i} className='border-b-[1px] border-black py-2'>{el}</li>
         ))}
