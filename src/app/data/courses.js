@@ -55,14 +55,14 @@ const allenBradleyCourses = {
       title: 'FactoryTalk View Machine Edition for PVP applications',
       days: 3,
       hours: 20,
-      link: './pdf/Allen bradley courses/AB-7 FactoryTalk View Machine Edition for PVP applications.pdf',
+      link: './pdf/Allen bradley courses/AB-07 FactoryTalk View Machine Edition for PVP applications.pdf',
     },
     {
       code: 'AB-8',
       title: 'FactoryTalk View Site Edition for AB SCADA applications',
       days: 4,
       hours: 30,
-      link: './pdf/Allen bradley courses/AB-8 FactoryTalk View Site Edition for AB SCADA applications.pdf',
+      link: './pdf/Allen bradley courses/AB-8 FactoryTalk View SE Course.pdf',
     },
     {
       code: 'AB-9',
@@ -97,7 +97,7 @@ const allenBradleyCourses = {
       title: 'Motion Control Fundamentals and Programming (Ultra & Kinetix)',
       days: 3,
       hours: 20,
-      link: './pdf/Allen bradley courses/AB-13 Allen Bradley Motion Control Fundamentals (Ultra _ Kinetix ).pdf',
+      link: './pdf/Allen bradley courses/AB-13 Allen Bradley Motion Control Fundamentals (Ultra _  Kinetix ).pdf',
     },
     {
       code: 'AB-14',
