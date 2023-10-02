@@ -392,7 +392,7 @@ const electricalPowerCourses = {
       title: 'MV Drives and Soft Starters',
       days: 2,
       hours: 15,
-      link: './pdf/Electrical courses/M-01 PNEUMATIC & HYDraulic Systems.pdf',
+      link: './pdf/Electrical courses/MV Drives and Soft Starters.pdf',
     },
     {
       code: 'E-9',
@@ -411,6 +411,7 @@ const mechanicalCourses = {
       title: 'Pneumatic & Hydraulic Systems',
       days: 3,
       hours: 20,
+      link:'./pdf/Mechanical Courses Outlines/M-01 PNEUMATIC & HYDraulic Systems.pdf'
     },
     {
       code: 'M-2',
