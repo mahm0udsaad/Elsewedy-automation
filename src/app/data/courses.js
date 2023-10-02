@@ -133,6 +133,17 @@ const condensedTrainingPackages = {
     },
     {
       code: 'AB-P2',
+      title: 'ControlLogix Advanced Programming',
+      content: [
+        'Advanced Ladder Logic Editing',
+        'AB Function Block Programming in Logix/Studio 5000',
+      ],
+      days: 5,
+      hours: 30,
+      link: './pdf/Allen bradley courses/AB-P2 ControlLogix Advanced Programming Course.pdf',
+    },
+    {
+      code: 'AB-P3',
       title: 'Allen Bradley NetLinx Communication',
       content: [
         'EtherNet Network Communication',
@@ -143,17 +154,7 @@ const condensedTrainingPackages = {
       hours: 30,
       link: './pdf/Allen bradley courses/AB-P3 NetLinx Industrial Communication -EtherNet IP Network, ControlNet _ DeviceNet Communication.pdf',
     },
-    {
-      code: 'AB-P3',
-      title: 'ControlLogix Advanced Programming',
-      content: [
-        'Advanced Ladder Logic Editing',
-        'AB Function Block Programming in Logix/Studio 5000',
-      ],
-      days: 5,
-      hours: 30,
-      link: './pdf/Allen bradley courses/AB-P3 ControlLogix Advanced Programming_.pdf',
-    },
+  
     {
       code: 'AB-P4',
       title: 'Visualization - FactoryTalk (SCADA / HMI)',
@@ -218,7 +219,6 @@ const allenBradleyLegacyCourses = {
     },
   ],
 };
-
 const siemensCourses = {
   color: '#3e959c',
   data: [
@@ -335,10 +335,6 @@ const siemensCourses = {
     },
   ],
 };
-
-
-
-
 const electricalPowerCourses = {
   color: '#e6af00',
   data: [
