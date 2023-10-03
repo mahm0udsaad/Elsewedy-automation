@@ -4,7 +4,7 @@ import UploadBtn from "../component/uploadBtn"
 const Form = () =>{
     return (
         <>
-        <form className="sm:w-full max-w-lg sm:w-5/6 h-fit">
+        <form action="mailto:info@elsewedy-automation.com" className="sm:w-full max-w-lg sm:w-5/6 h-fit">
           <div className="flex -mx-3">
             <div className="w-full md:w-1/2 px-3 md:mb-0">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-first-name">
@@ -38,9 +38,7 @@ const Form = () =>{
           <UploadBtn />
         <div className="md:flex md:items-center">
           <div className="md:w-1/3 py-5">
-            <button className="shadow w-full bg-red-800 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
-              Send
-            </button>
+            <input type="submit" value="send" className="shadow w-full bg-red-800 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" />
           </div>
           <div className="md:w-2/3"></div>
         </div>
