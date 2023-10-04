@@ -158,7 +158,7 @@ const projectsData = [
       ]
     },
     {
-      image: 'images/clients/aluminum/شركة_التعدين_العربية_السعودية_removebg_preview.png',
+      image: 'images/clients/aluminum/soudi.png',
       title: "Industry Type: Mining & Aluminium",
       clientName: "Client Name: Maaden Bauxite - Saudi Arabia",
       description: "Work Description: El Sewedy Automation delivered its solution and services in Saudi Arabia through Rockwell Automation outsourcing in upgrading scheme...",

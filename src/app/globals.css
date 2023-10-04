@@ -48,15 +48,14 @@ input[type="checkbox"] {
 .k-timeline .k-timeline-flag, .k-timeline-circle {
   background-color: var(--icon-color) !important;
 }
-@media (min-width: 1400px) {
- 
-}
+
 @media (min-width: 1400px) {
   .refrences{
     grid-template-columns: repeat(2, minmax(0, 2fr)) !important;
   }
   .about-paragraph{
     line-height: 2rem;
+    font-size: large;
   }
   .parag-parent{
     line-height: 2.5rem;

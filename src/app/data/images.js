@@ -1,5 +1,5 @@
 export const clientsLogos = [
-  '/images/clients/steel/شركة_التعدين_العربية_السعودية_removebg_preview.png',
+  '/images/clients/steel/soudi.png',
   '/images/clients/aluminum/images-removebg-preview.png',
   '/images/clients/aluminum/facebook-removebg-preview.png',
   '/images/clients/aluminum/alba-logo-4313103B0B-seeklogo.com.png',
@@ -43,8 +43,8 @@ export const clientsLogos = [
   '/images/clients/oil/total-logo-removebg-preview.png',
   '/images/clients/oil/Toyo_Engineering_Corporation-Logo.wine.png',
   '/images/clients/oil/zeitco-logo-removebg-preview.png',
-  '/images/clients/oil/قارون-removebg-preview.png',
-  '/images/clients/oil/وظائف_خالية_فى_شركة_جنوب_الضبعة_للبترول_دابتكو_للبترول_removebg.png',
+  '/images/clients/oil/qarun.png',
+  '/images/clients/oil/dab3a.png',
   '/images/clients/power/2560px-Elsewedy_Electric_Logo.svg.png',
   '/images/clients/power/c244949img_XL-comp244949-removebg-preview.png',
   '/images/clients/power/download__3_-removebg-preview.png',
@@ -56,11 +56,11 @@ export const clientsLogos = [
   '/images/clients/steel/EzzSteel.png',
   '/images/clients/steel/Zamil_Steel_Holding_Logo.webp',
   '/images/clients/steel/zeitco-logo-removebg-preview.png',
-  '/images/clients/steel/شركة_التعدين_العربية_السعودية_removebg_preview.png',
-  '/images/clients/steel/شركة_مصانع_الدلتا_للصلب.png',
-  '/images/clients/steel/شعار_حديد_المصريين.svg.png',
-  '/images/clients/steel/قارون-removebg-preview.png',
-  '/images/clients/steel/وظائف_خالية_فى_شركة_جنوب_الضبعة_للبترول_دابتكو_للبترول_removebg.png',
+  '/images/clients/steel/soudi.png',
+  '/images/clients/steel/delta.png',
+  '/images/clients/steel/egysteel.png',
+  '/images/clients/steel/qarun.png',
+  '/images/clients/steel/dab3a.png',
 ];
 
 export const productsLogos = [
@@ -101,8 +101,8 @@ export const categoriesClients =[
       '/images/clients/oil/total-logo-removebg-preview.png',
       '/images/clients/oil/Toyo_Engineering_Corporation-Logo.wine.png',
       '/images/clients/oil/zeitco-logo-removebg-preview.png',
-      '/images/clients/oil/قارون-removebg-preview.png',
-      '/images/clients/oil/وظائف_خالية_فى_شركة_جنوب_الضبعة_للبترول_دابتكو_للبترول_removebg.png',
+      '/images/clients/oil/qarun.png',
+      '/images/clients/oil/dab3a.png',
     ]
   },
   {
@@ -126,11 +126,11 @@ export const categoriesClients =[
       '/images/clients/steel/EzzSteel.png',
       '/images/clients/steel/Zamil_Steel_Holding_Logo.webp',
       '/images/clients/steel/zeitco-logo-removebg-preview.png',
-      '/images/clients/steel/شركة_التعدين_العربية_السعودية_removebg_preview.png',
-      '/images/clients/steel/شركة_مصانع_الدلتا_للصلب.png',
-      '/images/clients/steel/شعار_حديد_المصريين.svg.png',
-      '/images/clients/steel/قارون-removebg-preview.png',
-      '/images/clients/steel/وظائف_خالية_فى_شركة_جنوب_الضبعة_للبترول_دابتكو_للبترول_removebg.png',
+      '/images/clients/steel/soudi.png',
+      '/images/clients/steel/delta.png',
+      '/images/clients/steel/egysteel.png',
+      '/images/clients/steel/qarun.png',
+      '/images/clients/steel/dab3a.png',
     ]
   },
   {
