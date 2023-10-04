@@ -146,17 +146,17 @@ export default function About() {
           <div
         ref={aboutRef} 
         className=''>
-          <div className="sm:flex  lg:mx-8">
+          <div className="sm:flex parag-parent lg:mx-8">
           <motion.div
            initial={{x:-50}}        
            animate={{  x: wIsInView ? 0 : -50 }}
            transition={{duration:.5}}
-          className="about-paragraph leading-6 sm:w-1/2 text-justify flex justify-around flex-col text-sm redBg p-3 text-white">El Sewedy Automation is a leading Egyptian Company in designing, supplying, installing, and
+          className="about-paragraph xl:leading-8 sm:w-1/2 text-justify flex justify-around flex-col text-sm redBg p-3 text-white">El Sewedy Automation is a leading Egyptian Company in designing, supplying, installing, and
           commissioning of industrial automation systems for a wide range of industrial markets. Company
           Founders have over 25 years of proven technical expertise, they established the Legal Form of El
           Sewedy Automation Company as S.A.E for Industrial Automation Solutions/Services Provider since
           2009.
-          <ul className="pt-2 space-y-2 flex flex-col">
+          <ul className="pt-2 space-y-2 flex flex-col xl:h-[60%] justify-around text-[10px]  lg:text-sm">
           <li className='flex'>
           <span><BiRightArrow /></span>
           Over the years, "El Sewedy Automation" has gained its Goodwell and Reputation for its quality
