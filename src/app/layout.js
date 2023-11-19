@@ -16,6 +16,17 @@ export default function RootLayout({ children }) {
     <html lang="en">
        <head>
         <link rel="icon" className='w-28' href="/LOGO-fa.png" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VPVP6F38V7"></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-VPVP6F38V7');
+              `,
+            }}
+          />
       </head>
       <CounterProvider>
       <body suppressHydrationWarning={true} className={inter.className}>
