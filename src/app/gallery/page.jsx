@@ -1,12 +1,12 @@
 "use client"
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import {GalleryGrid} from "../component/gallery";
 import { GalleryTap, GalleryContent } from "../component/productTaps";
 import { events, projects, services, training, All, Products } from '../data/gallery'
 import { generateUniqueKey } from "../component/table";
 import { PagesNav } from "../component/navBar";
 import Lable from "../component/lable";
+
 export default  function Gallery()  {
     const [openTab , setOpenTab] = useState(1)
     const orderedProducts = {

@@ -20,7 +20,7 @@ function classNames(...classes) {
     [
       { name: 'Home', href: '/', current: false },
       { name: 'About US', href: '/about', current: false },
-      { name: 'Products', href: '../products', current: false },
+      { name: 'Products', href: '/products', current: false },
       { name: 'Solutions & Services', href: '/services', current: false },
       { name: 'Training', href: '/training', current: false },
       { name: 'Clients', href: '/clients', current: false },
@@ -71,17 +71,16 @@ function classNames(...classes) {
                   </div>
                     <div className="hidden md:block">
                       <div className="ml-10 flex items-baseline space-x-4">
-                        {navigation.map((item) => (
+                        {navigation.map((item , i) => (
                           <Link
                             key={item.name}
-                            href={item.href}
+                            href={i> 0 ?`${item.href}.html`:item.href}
                             className={classNames(
                               item.current
                                 ? 'redBg text-white'
                                 : 'transtion duration-300 hover:bg-red-800 hover:text-white',
-                              'rounded-md  p-2 text-lg font-medium'
+                              'rounded-md  p-2 text-md font-medium'
                             )}
-                            aria-current={item.current ? 'page' : undefined}
                           >
                             {item.name}
                           </Link>
@@ -105,16 +104,15 @@ function classNames(...classes) {
 
               <Disclosure.Panel className="md:hidden">
                 <div className="transition duration-300 bg-white text-black space-y-1 px-2 pb-3 pt-2 sm:px-3">
-                  {navigation.map((item) => (
+                  {navigation.map((item , i) => (
                     <Disclosure.Button
                       key={item.name}
                       as="a"
-                      href={item.href}
+                      href={i> 0 ?`${item.href}.html`:item.href}
                       className={classNames(
                         item.current ? 'bg-gray-900 text-black' : 'hover:bg-red-700 hover:text-white',
                         'transition duration-300 block rounded-md px-3 py-2 text-base font-medium'
                       )}
-                      aria-current={item.current ? 'page' : undefined}
                     >
                       {item.name}
                     </Disclosure.Button>
@@ -124,11 +122,11 @@ function classNames(...classes) {
             </>
           )}
         </Disclosure>
-          <a title='chat with us' target="_blank" href='https://wa.me/+201028833734' className=' bg-transparent fixed z-20 bottom-5 left-5 text-6xl text-green-600 hover:text-green-300'>
+          <a title='chat with us' target="_blank" href='https://wa.me/+201028833734' className=' bg-transparent fixed z-20 bottom-5 left-5 text-4xl text-green-600 hover:text-green-300'>
           {isFooterInview ? <span className={`animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75`}></span> : null}
             <IoLogoWhatsapp />
           </a>
-          <a title='chat with us' target="_blank" className=' bg-transparent fixed z-20 bottom-5 right-5 text-6xl text-blue-600 hover:text-blue-300' href="https://www.facebook.com/messages/t/195682397271401">
+          <a title='chat with us' target="_blank" className=' bg-transparent fixed z-20 bottom-5 right-5 text-4xl text-blue-600 hover:text-blue-300' href="https://www.facebook.com/messages/t/195682397271401">
           {isFooterInview ? <span className={`animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75`}></span> : null}
           <BsMessenger />
           </a>
@@ -175,10 +173,10 @@ const PagesNav = () =>{
                   </div>
                     <div className="hidden md:block">
                       <div className="ml-10 flex items-center space-x-4">
-                        {navigation.map((item) => (
+                        {navigation.map((item , i) => (
                           <Link
                             key={item.name}
-                            href={item.href}
+                            href={i> 0 ?`${item.href}.html`:item.href}
                             className={classNames(
                               item.current
                                 ? 'bg-white text-white'
@@ -209,16 +207,15 @@ const PagesNav = () =>{
 
               <Disclosure.Panel className="md:hidden">
                 <div className="transition duration-300 space-y-1 px-2 pb-3 pt-2 sm:px-3">
-                  {navigation.map((item) => (
+                  {navigation.map((item ,i) => (
                     <Disclosure.Button
                       key={item.name}
                       as="a"
-                      href={item.href}
+                      href={i> 0 ?`${item.href}.html`:item.href}
                       className={classNames(
                         item.current ? 'bg-gray-900 text-white' : 'hover:bg-red-700 hover:text-white',
                         'transition duration-300 block rounded-md px-3 py-2 text-base font-medium'
                       )}
-                      aria-current={item.current ? 'page' : undefined}
                     >
                       {item.name}
                     </Disclosure.Button>

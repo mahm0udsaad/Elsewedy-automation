@@ -1,15 +1,16 @@
 "use client"
-import { FaLock, FaUser, FaHandshake, FaFlag, FaHeart, FaCheck, FaBalanceScale } from 'react-icons/fa';
+
+import { FaLock, FaUser, FaHandshake, FaFlag, FaHeart, FaCheck } from 'react-icons/fa';
 import {BiRightArrow} from 'react-icons/bi'
 import {LuBrainCircuit , LuHardHat} from 'react-icons/lu'
 import { Carousel } from "react-responsive-carousel";
 import { motion, useInView } from "framer-motion";
 import TimeLine from "../component/timeline";
-import { useContext, useRef, useState , useEffect } from "react";
+import { useRef, useState } from "react";
 import { ServicesCard } from "../page";
 import {Slide} from "../component/slide";
-import { MyContext } from '../context';
 import { usePathname } from 'next/navigation';
+
 
 const slidesData = [
   {
@@ -89,20 +90,20 @@ function ValuesCards({value }){
     ref={ref}
     animate={{y:isInView? 0: 30}}
     transition={{duration:.7}}
-    className="relative pl-12 lg:pl-16 mb-2">
-      <dt className="text-lg font-semibold text-white text-justify">
+    className="relative pl-12 lg:pl-16 mb-1">
+      <dt className="text-md font-semibold text-white text-justify">
         <motion.div
          initial={{ boxShadow: '0px 0px 0px rgba(0, 0, 0, 0)' }}
          animate={{ boxShadow: isInView?'0px 5px 20px rgba(255, 0, 0, 0.2)':'0px 0px 0px rgba(0, 0, 0, 0)' }}
         className="redBg icon absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-red-800 shadow-2xl">
           {value.icon && (
-            <value.icon  className="shadow-2xl h-6 w-6 text-white" aria-hidden="true" />
+            <value.icon  className="shadow-2xl h-5 w-5 text-white" aria-hidden="true" />
           )}
         </motion.div>
-        <h1 className="text-lg font-semibold leading-6 text-white">
+        <h1 className="text-md font-semibold leading-6 text-white">
           {value.title}
         </h1>
-        <p className="text-sm  font-light pt-2">{value.description}</p>
+        <p className="text-sm  font-light pt-1">{value.description}</p>
       </dt>
     </motion.div>
   )
@@ -120,6 +121,10 @@ export default function About() {
 
   return (
     <>
+   <head>
+  <title>About El Sewedy Automation</title>
+    <meta name="description" content="Discover the comprehensive range of automation solutions and industrial technology offered by El Sewedy Automation. Learn about our commitment to innovation, quality, and client satisfaction." />
+  </head>
     <main className="w-full">
       <Carousel
         onChange={(index) => setCurrentSlide(index)}
@@ -146,32 +151,32 @@ export default function About() {
           <div
         ref={aboutRef} 
         className=''>
-          <div className="sm:flex parag-parent lg:mx-8">
+          <div className="sm:flex lg:mx-8">
           <motion.div
            initial={{x:-50}}        
            animate={{  x: wIsInView ? 0 : -50 }}
            transition={{duration:.5}}
-          className="about-paragraph sm:w-1/2 text-justify flex justify-around flex-col text-sm redBg p-3 text-white">El Sewedy Automation is a leading Egyptian Company in designing, supplying, installing, and
+          className="parag-parent 2xl:text-lg 2xl:leading-9 sm:w-1/2 text-justify flex justify-around flex-col redBg p-3 text-white text-sm">El Sewedy Automation is a leading Egyptian Company in designing, supplying, installing, and
           commissioning of industrial automation systems for a wide range of industrial markets. Company
           Founders have over 25 years of proven technical expertise, they established the Legal Form of El
           Sewedy Automation Company as S.A.E for Industrial Automation Solutions/Services Provider since
           2009.
-          <ul className="pt-2 space-y-2 flex flex-col xl:h-[60%] justify-around text-[12px]  xl:text-[13px]">
-          <li className='flex'>
-          <span className='pt-2'><BiRightArrow /></span>
+          <ul className="pt-2 space-y-2 2xl:text-lg  flex flex-col xl:h-[60%] justify-around text-sm">
+          <li className='flex 2xl:leading-7'>
+          <span className=''><BiRightArrow /></span>
           Over the years, "El Sewedy Automation" has gained its Goodwell and Reputation for its quality
           products & services through its talented team who brings their extensive knowledge in industrial
           automation technology and practices to provide the company customers with innovative, reliable,
           and cost-effective automation solutions/services "On-time and within Budget".
           </li>
-          <li className='flex '>
-          <span className='pt-2'><BiRightArrow /></span>
+          <li className='flex 2xl:leading-7 '>
+          <span className=''><BiRightArrow /></span>
            El Sewedy Automation offers the lowest market price while maintaining the high quality of its
           solution/service to help its customers to improve business efficiency and maximize their
           organization's profitability.
           </li>
-          <li className='flex '>
-          <span className='pt-2'><BiRightArrow /></span>
+          <li className='flex 2xl:leading-7 '>
+          <span className=''><BiRightArrow /></span>
            El-Sewedy Automation, one of the top ranked companies in Egypt for providing outstanding,
           remarkable, and professional training courses such as (PLC programming, SCADA systems and
           HMI...etc.) through its training centre using its own original working stations with the guidance

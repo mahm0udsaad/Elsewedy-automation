@@ -1,18 +1,11 @@
 "use client"
 
-import { AnimatePresence ,motion} from "framer-motion"
 import { ServicesTap, FlexTap} from "../component/productTaps";
 import { useState } from "react";
 import { Projects , technicalSuport} from "../data/services";
-import Accordioncmp from "../component/accordion";
-import AccordionCmp from "../component/accordion";
-import { PagesNav } from "../component/navBar";
-import { PageSlide } from "../component/slide";
 
 export default function Services() {
   const [openTab, setOpenTab] = useState(1);
-  const [expand , setExpand] = useState(false)
-
     const collapse = () =>{
       const panal = document.querySelectorAll('.chakra-collapse')
       panal.forEach((el)=>{
@@ -31,6 +24,10 @@ export default function Services() {
   }
   return (
     <>
+    <head>
+    <title>El Sewedy Automation Automation Services</title>
+    <meta name="description" content="Experience excellence with El Sewedy Automation's comprehensive range of automation services. From consultancy to implementation, we provide tailored solutions utilizing cutting-edge technology for enhanced efficiency and productivity." />
+  </head>
      <PageSlide text={"Solution & Services"} imgSrc={'/images/services/head.jpg'}/>
     <main className="flex min-h-screen flex-col pt-20">
     <section className="sm:flex w-full">

@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "sitemap": "next-sitemap",
     "export": "next build && next export",
     "lint": "next lint"
   },
@@ -23,16 +24,19 @@
     "eslint-config-next": "13.4.19",
     "framer-motion": "^10.16.4",
     "next": "13.4.19",
+    "nodemailer": "^6.9.7",
     "react": "18.2.0",
     "react-awesome-slider": "^4.1.0",
     "react-countup": "^6.4.2",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.48.2",
     "react-icons": "^4.11.0",
     "react-responsive-carousel": "^3.2.23",
     "tw-elements-react": "^1.0.0-alpha1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.15",
+    "next-sitemap": "^4.2.3",
     "postcss": "^8.4.29",
     "tailwindcss": "^3.3.3"
   }

@@ -1,23 +1,21 @@
 "use client"
 
-import Slide from "../component/slide"
 import { CourseTap , ServicesTap} from "../component/productTaps"
-import CourseTaple, { CondensedCourseTable, generateUniqueKey } from "../component/table"
-import { motion, useInView } from "framer-motion"
-import { Table, TableContainer, Th, Td ,Thead, Tr , Tbody} from '@chakra-ui/react';
+import  { CondensedCourseTable} from "../component/table"
 import {data ,allenBradleyLegacyCourses,allenBradleyCourses,siemensCourses,electricalPowerCourses,mechanicalCourses,instrumentationControlCourses,softSkillsCourses, condensedTrainingPackages, coursesCategory} from '../data/courses'
-import { useContext, useEffect, useRef, useState } from "react"
+import {useState } from "react"
 import { CourseTable} from "../component/table"
-import { MyContext } from "../context"
-import { usePathname } from "next/navigation"
 import { PagesNav } from "../component/navBar"
 import Lable from "../component/lable"
 
 export default function Training() {
   const [openTab, setOpenTap] = useState(1);
-  
   return (
     <>
+    <head>
+    <title>El Sewedy Automation Training Center</title>
+    <meta name="description" content="Empower your career in automation with El Sewedy Automation Training Center. Explore our cutting-edge courses, led by industry experts, designed to enhance your skills and drive success in the field of automation our courses includ Rockwell Automation Courses , semins courses , Dutchmann ." />
+  </head>
     <PagesNav />
     <main className="flex flex-col min-h-screen pt-20">
     <section className="sm:w-5/6 mx-auto my-5">

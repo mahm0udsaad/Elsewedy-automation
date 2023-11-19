@@ -53,16 +53,14 @@ input[type="checkbox"] {
   .refrences{
     grid-template-columns: repeat(2, minmax(0, 2fr)) !important;
   }
-  .about-paragraph{
-    line-height: 2rem;
-    font-size: large;
-  }
   .parag-parent{
-    line-height: 2.5rem;
-    padding: 2rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    /* padding: 2rem; */
   }
   .parag-parent ul{
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1200px){

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Carousel } from "react-responsive-carousel"
-import Slide from "./slide";
 
 
 const ProjectCard = ({project , i}) =>{
@@ -33,7 +32,7 @@ const ProjectCard = ({project , i}) =>{
               </Carousel>
             </div>}
             <div className="flex sm:mx-4 mx-11">
-          <Link href={`/clients/${i}`} className="flex justify-center items-center px-3 h-12 w-36 hover:opacity-75 rounded redBg text-white ">Read More</Link>
+          <Link href={`/clients/${i}.html`} className="flex justify-center items-center px-3 h-12 w-36 hover:opacity-75 rounded redBg text-white ">Read More</Link>
             </div>
             </div>
             )

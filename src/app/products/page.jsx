@@ -1,10 +1,10 @@
 "use client"
 
-import { useContext, useState } from "react";
+import { useContext} from "react";
 import {Tap , TapContent} from "../component/productTaps"
 import { companiesLevelOne } from "../data/productsDetails";
 import { MyContext } from "../context";
-import NavBar, { PagesNav } from "../component/navBar";
+import{ PagesNav } from "../component/navBar";
 
 const productsLogos = [
   '/images/partners/partner-tab2.png',
@@ -18,6 +18,10 @@ export default function Products() {
   console.log(companiesLevelOne[0].title.split(" ")[0]);
   return (
     <>
+    <head>
+    <title>El Sewedy Automation Products</title>
+    <meta name="description" content="Discover a diverse portfolio of innovative automation products by El Sewedy Automation. From cutting-edge technology to reliable solutions, explore our range designed to optimize operations and drive efficiency in various industries." />
+  </head>
     <PagesNav />
     <main className="flex min-h-screen justify-center pt-20">
     <div className="w-11/12 mx-auto">
