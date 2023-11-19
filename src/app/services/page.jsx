@@ -3,6 +3,8 @@
 import { ServicesTap, FlexTap} from "../component/productTaps";
 import { useState } from "react";
 import { Projects , technicalSuport} from "../data/services";
+import { PageSlide } from "../component/slide";
+import AccordionCmp from "../component/accordion";
 
 export default function Services() {
   const [openTab, setOpenTab] = useState(1);
