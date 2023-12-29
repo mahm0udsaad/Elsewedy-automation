@@ -1,7 +1,7 @@
 "use client"
 import { useInView } from 'framer-motion';
-import React, { useContext, useRef, useState } from 'react';
-import { FaFacebookSquare, FaLinkedin, FaInstagram, FaYoutube, FaTwitter ,FaMapMarkerAlt, FaPhone, FaFax, FaWhatsapp, FaEnvelope} from 'react-icons/fa'; // Import icons from the "react-icons/fa" package
+import React, { useContext, useRef } from 'react';
+import { FaFacebookSquare, FaLinkedin, FaInstagram, FaYoutube, FaTwitter ,FaMapMarkerAlt, FaPhone, FaFax, FaWhatsapp, FaEnvelope} from 'react-icons/fa'; 
 import { MyContext } from '../context';
 
  

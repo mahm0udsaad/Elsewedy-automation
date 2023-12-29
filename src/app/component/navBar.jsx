@@ -1,12 +1,11 @@
 "use client"
 
-import { Fragment, useContext, useEffect ,useRef,useState} from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import {  useContext, useEffect ,useState} from 'react'
+import { Disclosure, } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link';
 import {BsMessenger} from 'react-icons/bs'
-import { AnimatePresence, motion } from 'framer-motion';
-import { usePathname, useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
 import { IoLogoWhatsapp } from "react-icons/io";
 import { MyContext } from '../context';
 import Logo from './logo';
@@ -74,7 +73,7 @@ function classNames(...classes) {
                         {navigation.map((item , i) => (
                           <Link
                             key={item.name}
-                            href={i> 0 ?`${item.href}.html`:item.href}
+                            href={item.href}
                             className={classNames(
                               item.current
                                 ? 'redBg text-white'
@@ -108,7 +107,7 @@ function classNames(...classes) {
                     <Disclosure.Button
                       key={item.name}
                       as="a"
-                      href={i> 0 ?`${item.href}.html`:item.href}
+                      href={item.href}
                       className={classNames(
                         item.current ? 'bg-gray-900 text-black' : 'hover:bg-red-700 hover:text-white',
                         'transition duration-300 block rounded-md px-3 py-2 text-base font-medium'
@@ -176,7 +175,7 @@ const PagesNav = () =>{
                         {navigation.map((item , i) => (
                           <Link
                             key={item.name}
-                            href={i> 0 ?`${item.href}.html`:item.href}
+                            href={item.href}
                             className={classNames(
                               item.current
                                 ? 'bg-white text-white'

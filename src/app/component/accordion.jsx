@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon , Box} from '@chakra-ui/react'
 
 export default function AccordionCmp({title , content , toggle ,text,imgUrl, i}) {

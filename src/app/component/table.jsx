@@ -1,8 +1,7 @@
 import { useInView } from 'framer-motion';
-import React, { useContext, useRef, useState } from 'react';
-import { Table, TableContainer, Th, Td ,Thead, Tr , Tbody} from '@chakra-ui/react';
+import React, {  useRef } from 'react';
+import { Table, TableContainer, Th, Td ,Thead, Tbody} from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import { MyContext } from '../context';
 import {FaFilePdf} from 'react-icons/fa'
 
 export  function TableRow({course , i }) {

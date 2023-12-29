@@ -2,7 +2,6 @@
 import Lable from "../component/lable"
 import ProjectCard from "../component/projectsCard"
 import { PageSlide } from "../component/slide"
-import { generateUniqueKey } from "../component/table"
 import { projectsData } from "../data/clients"
 import { categoriesClients } from "../data/images"
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
