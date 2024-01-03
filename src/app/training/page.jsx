@@ -12,10 +12,6 @@ export default function Training() {
   const [openTab, setOpenTap] = useState(1);
   return (
     <>
-    <head>
-    <title>El Sewedy Automation Training Center</title>
-    <meta name="description" content="Empower your career in automation with El Sewedy Automation Training Center. Explore our cutting-edge courses, led by industry experts, designed to enhance your skills and drive success in the field of automation our courses includ Rockwell Automation Courses , semins courses , Dutchmann ." />
-  </head>
     <PagesNav />
     <main className="flex flex-col min-h-screen pt-20">
     <section className="sm:w-5/6 mx-auto my-5">
